@@ -1,0 +1,55 @@
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache
+
+# LibSass #
+###########
+screen.css.map
+
+# editor tmp files #
+####################
+*.swp
+*.sublime-project
+*.sublime-workspace
+.idea/*
+
+# bytecode #
+############
+*.pyc
+
+# production apache files #
+###########################
+php54.cgi
+.htpasswd
+#.htaccess
+#.htaccess*
+
+# Node files #
+##############
+node_modules
+
+# Bower components #
+####################
+bower_components
+
+# Static Cache #
+################
+/static/CACHE/
+
+# development database #
+########################
+db.sqlite3
+
+

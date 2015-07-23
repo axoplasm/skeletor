@@ -1,0 +1,275 @@
+// # Base # //
+
+// ## Block-level HTML elements ## //
+html {
+  @include font-size(1);
+}
+section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
+  display: block;
+} 
+body {
+  font-family: $default-font;
+  line-height: $base-line-height;
+  @include font-size(1);
+  color: $body-color;
+}
+h1 {
+  @include font-size(4);
+  @include bigheader;
+}
+h2 {
+  @include font-size(3);
+  @include bigheader;
+}
+h3 {
+  @include font-size(2);
+  @include bigheader;
+}
+h4 {
+  font-weight: $bold-weight;
+  @include font-size(1);
+  @include mediumheader;
+}
+h5 {
+  @include font-size(0.9);
+  @include weeheader;
+}
+h6 {
+  @include font-size(0.8);
+  @include weeheader;
+}
+hgroup {
+  @include vspace(2);
+}
+p {
+  @include vspace(1);
+}
+blockquote {
+  @include vspace(2, true);
+  @include hspace(3);
+  font-style: italic;
+  padding: $vgutter 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: $whisper;
+  & p:last-child {
+    @include vspace(0);
+  }
+}
+hr {
+  @include vspace(1.5, top);
+  width: 50%;
+  padding: 0;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $whisper;
+}
+
+
+// ## Inline HTML elements ## //
+
+// ### Links ### //
+a {
+  &:link {
+    color: $link-unvisited;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $link-visited;
+  }
+  &:hover {
+    color: $link-hover;
+  }
+  &:active {
+    color: $link-active;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a, a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// #### Buttons #### //
+a.button {
+  @include make-button($link-unvisited);
+}
+a.button-hot {
+  @include make-button($emphasis);
+}
+a.button-cool {
+  @include make-button($hushed);
+}
+
+// ### bold things ### //
+strong, b, dfn, var {
+  font-weight: $bold-weight;
+}
+// ### italic things ### //
+em, i, cite, q {
+  font-style: italic;
+}
+// ### underlined things ### //
+u, ins {
+  text-decoration: underline;
+}
+// ### line-through things ### //
+del, s {
+  text-decoration: line-through;
+}
+// ### small things ### //
+small, sup, sub {
+  @include font-size(0.7);
+}
+// ### baseline-adjusted things ### //
+sup {
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
+// ### monospace things ### //
+kbd, code, samp {
+  font-family: $monospace-font;
+}
+// ### crazy misc inline elements ### //
+abbr {}
+dfn {}
+mark {
+  background: $highlight;
+}
+var {}
+
+
+// ## Lists ## //
+ul, ol {
+  @include vspace(1);
+  margin-left: $hgutter*3;
+  & ul, & ol {
+    @include vspace(0);
+  }
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+
+// ## Tables ## //
+// Data tables only!
+table {
+  border: 1px solid $hushed;
+  @include vspace(2, true);
+}
+tr {
+  border-bottom: 1px solid $whisper;
+}
+td, th {
+  padding: $vgutter/2;
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  font-weight: $bold-weight;
+}
+thead, tfoot {
+  background-color: $silent;
+}
+
+// ## Forms ## //
+form {} // IMPORTANT: do not add layout or styling to <form>!
+form ul {
+  list-style-type: none;
+  margin: 0;
+}
+fieldset {
+  display: block;
+  border: 1px solid $whisper;
+  background: $silent;
+  @include vspace(2, true);
+  padding: $vgutter/2;
+}
+legend {
+  margin-left: $hgutter;
+  padding: 0 $hgutter/2;
+  font-weight: $bold-weight;
+}
+label {
+  display: block;
+  font-weight: $bold-weight;
+}
+.field-container {
+  @include vspace(.5);
+}
+input, textarea, select, option {
+  font-family: $default-font;
+  font-size: 1rem;
+}
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=email],
+input[type=search],
+input[type=number],
+input[type=color],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=datetime],
+input[type=datetime-local],
+{
+  color: $body-color;
+  //background: $white;
+  width: 90%;
+  @include breakpoint($desktop) {
+    max-width: 50%;
+  }
+  padding: $hgutter/3;
+  @include input-placeholder {
+    color: $hushed;
+  }
+}
+input[type=submit], input[type=button], input[type=reset], button {
+  @include font-size(1);
+  font-family: $default-font;
+  @include make-button;
+  margin: 0;
+}
+input[type=submit] {
+  background-color: $link-unvisited;
+}
+input[type=reset] {
+  background-color: $whisper;
+}
+*[title='Required'], .required {
+  color: $danger;
+}
+.is-error {
+  border: 2px solid $danger;
+  background: transparentize($danger, 0.95);
+  @include input-placeholder {
+    color: $danger;
+  }
+}
+label.error {
+  color: $danger;
+}
+.is-valid {
+  border: 2px solid $success;
+  background: transparentize($success, 0.95);
+  @include input-placeholder {
+    color: $success;
+  }
+}
+label.valid {
+  color: $success;
+}
+.options { // fieldsets containing checkboxes & radio boxes
+  label {
+    font-weight: $normal-weight;
+  }
+}
+
