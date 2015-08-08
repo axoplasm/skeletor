@@ -3,6 +3,7 @@
 // ## Block-level HTML elements ## //
 html {
   @include font-size(1);
+  -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
 }
 section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
   display: block;

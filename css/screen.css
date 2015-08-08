@@ -49,7 +49,8 @@ elements-of-type(html5-block) {
  */
 html {
   font-size: 16px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  -webkit-text-size-adjust: 100%; }
   @media  (max-width: 960px) {
     html {
       font-size: 14.4px;
