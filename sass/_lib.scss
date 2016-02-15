@@ -2,19 +2,19 @@
 
 // # Mixins # //
 @mixin font-size($delta: 1) {
-  // translates px font sizes to rems (Relative Ems)
+  // no rems, too much work
   // $delta can be either a proper delta (i.e. a fractional value of the base font size) or a fixed size in px in which case it will calculate the proper delta against the base font size
-  $rem-size: ($base-font-size / 16px) * 1rem; // find multiplier for rems based on $base-font-size
   @if unitless($delta) {
     $delta: $delta;
   } @else {
     $delta: $delta / $base-font-size;
   }
-  font-size: $delta * $base-font-size; // fallback to px for older browsers
-  font-size: $delta * $rem-size;
+  font-size: $delta * $base-font-size; 
   @include breakpoint(max-width $desktop) {
-    font-size: $delta * $base-font-size * .9; // fallback to px for older browsers
-    font-size: $delta * $rem-size * .9;
+    font-size: $delta * $base-font-size * .9; 
+  }
+  @include breakpoint(max-width $mobile) {
+    font-size: $delta * $base-font-size * .8; 
   }
 }
 
