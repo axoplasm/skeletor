@@ -8,10 +8,9 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
-    "node-sass": "3.4.0",
     "grunt-sass": "1.1.0",
     "susy": "~2.2",
     "breakpoint-sass": "~2.7",
-    "compass-mixins": "~0.12.7"
+    "compass-mixins": "~0.12.8"
   }
 }
