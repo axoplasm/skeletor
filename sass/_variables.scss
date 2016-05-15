@@ -3,35 +3,47 @@
 // ## Colors ## //
 
 // ### Color primitives ### //
-$red:     hsl(355,100,40);
-$orange:  hsl(24,100,45);
-$yellow:  hsl(50,93,53);
-$green:   hsl(74,100,28);
-$teal:    hsl(169,97,36);
-$blue:    hsl(204,82,45);
-$purple:  hsl(256,52,56);
-$pink:    hsl(315,72,56);
+$red:     hsl(355,100,40); // #cc0011
+$orange:  hsl(24,100,45);  // #e65c00
+$yellow:  hsl(50,93,53);   // #f7d118
+$green:   hsl(74,100,32);  // #7da300
+$teal:    hsl(169,97,36);  // #03b594
+$blue:    hsl(204,82,45);  // #1586d1
+$purple:  hsl(256,52,56);  // #7454c9
+$pink:    hsl(315,72,56);  // #e03eb7
+$brown:   hsl(28, 54,35);  // #8b572a
 
 // ### Grays ### //
-$gray-3:    hsl(0,0,30%);
-$gray-4:    hsl(0,0,40%);
-$gray-5:    hsl(0,0,50%);
-$gray-6:    hsl(0,0,60%);
-$gray-7:    hsl(0,0,70%);
-$gray-8:    hsl(0,0,80%);
-$gray-9:    hsl(0,0,90%);
-$gray-95:   hsl(0,0,95%);
+$black: 	hsl(0,0,0%);   // #000000
+$gray-1:	hsl(0,0,10%);  // #1a1a1a
+$gray-2:	hsl(0,0,20%);  // #333333
+$gray-3:    hsl(0,0,30%);  // #4d4d4d
+$gray-4:    hsl(0,0,40%);  // #666666
+$gray-5:    hsl(0,0,50%);  // #808080
+$gray-6:    hsl(0,0,60%);  // #999999
+$gray-7:    hsl(0,0,70%);  // #b3b3b3
+$gray-8:    hsl(0,0,80%);  // #cccccc
+$gray-9:    hsl(0,0,90%);  // #e6e6e6
+$gray-95:   hsl(0,0,95%);  // #f2f2f2
+$white:		hsl(0,0,100%); // #ffffff
+
 
 // ### Color Abstraction ### //
 $body-color: $gray-3;
+$sottovoce: $gray-5;
 $hushed: $gray-7;
 $whisper: $gray-8;
 $silent: $gray-95;
-$emphasis: $red;
+$emphasis: $pink;
 $danger: $red;
 $warning: $orange;
 $success: $green;
+$info: $blue;
 $highlight: lighten($yellow, 30%);
+$hero: $teal;
+
+
+
 $link-unvisited: $blue;
 $link-visited: $purple;
 $link-hover: $red;
@@ -54,3 +66,50 @@ $mobile:  600px;
 // ## Layout ## //
 $vgutter: 1rem;
 $hgutter: $vgutter;
+
+// # Useful maps # //
+
+// #### a useful map of color names #### //
+$color-primitives: (
+	'red': $red,
+	'orange': $orange,
+	'yellow': $yellow,
+	'green': $green,
+	'teal': $teal,
+	'blue': $blue,
+	'purple': $purple,
+	'pink': $pink,
+	'brown': $brown
+);
+
+// #### a useful map of grays #### //
+$gray-primitives: (
+	'black': $black,
+	'gray-1': $gray-1,
+	'gray-2': $gray-2,
+	'gray-3': $gray-3,
+	'gray-4': $gray-4,
+	'gray-5': $gray-5,
+	'gray-6': $gray-6,
+	'gray-7': $gray-7,
+	'gray-8': $gray-8,
+	'gray-9': $gray-9,
+	'gray-95': $gray-95,
+	'white': $white,
+);
+
+// #### a useful map of abstract colors #### //
+$abstract-colors: (
+	'body-color': $body-color,
+	'sottovoce': $sottovoce,
+	'hushed': $hushed,
+	'whisper': $whisper,
+	'silent': $silent,
+	'emphasis': $emphasis,
+	'danger': $danger,
+	'warning': $warning,
+	'success': $success,
+	'info': $info,
+	'highlight': $highlight,
+	'hero': $hero
+);

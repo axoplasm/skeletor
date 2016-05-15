@@ -28,6 +28,10 @@
   padding-top: $vgutter * $delta;
   padding-bottom: $vgutter * $delta;
 }
+@mixin hpadding($delta: 1) {
+  padding-left: $vgutter * $delta;
+  padding-right: $vgutter * $delta;
+}
 @mixin hspace($delta: 1) {
   margin-left: $hgutter * $delta;
   margin-right: $hgutter * $delta;
@@ -65,6 +69,16 @@
   }
   &:after {
     clear: both;
+  }
+}
+@mixin color-selectors($map) {
+  @each $name, $color in $map {
+    .bg-#{$name} {
+      background: $color;
+    }
+    .fg-#{$name} {
+      color: $color;
+    }
   }
 }
 
