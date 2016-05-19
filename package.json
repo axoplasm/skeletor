@@ -1,10 +1,9 @@
 {
-  "name": "djangrunt",
+  "name": "skeletor",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
+  "description": "bare-bones frontend boilerplate",
+  "author": "Paul Souders <pj@axoplasm.com> (http://www.axoplasm.com)",
+  "license": "WTFPL",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
