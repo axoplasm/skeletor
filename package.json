@@ -5,11 +5,11 @@
   "author": "Paul Souders <pj@axoplasm.com> (http://www.axoplasm.com)",
   "license": "WTFPL",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "1.1.0",
-    "susy": "~2.2",
-    "breakpoint-sass": "~2.7",
-    "compass-mixins": "~0.12.8"
+    "grunt": "^1.0",
+    "grunt-contrib-watch": "^1.0",
+    "grunt-sass": "^1.2",
+    "susy": "^2.2",
+    "breakpoint-sass": "^2.7",
+    "compass-mixins": "^0.12"
   }
 }
