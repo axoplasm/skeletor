@@ -44,6 +44,8 @@
   border: none;
   &:hover {
     opacity: 0.8;
+    @include transition(all 0.2s ease-out);
+    cursor: pointer;
   }
   display: inline-block;
 }

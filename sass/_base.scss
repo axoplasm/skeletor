@@ -80,6 +80,7 @@ a {
   }
   &:hover {
     color: $link-hover;
+    @include transition(all 0.2s ease-out);
   }
   &:active {
     color: $link-active;
