@@ -14,18 +14,6 @@ $pink:    hsl(315,72,56);  // #e03eb7
 $brown:   hsl(28, 54,35);  // #8b572a
 
 // ### Grays ### //
-$black: 	hsl(0,0,0%);   // #000000
-$gray-1:	hsl(0,0,10%);  // #1a1a1a
-$gray-2:	hsl(0,0,20%);  // #333333
-$gray-3:    hsl(0,0,30%);  // #4d4d4d
-$gray-4:    hsl(0,0,40%);  // #666666
-$gray-5:    hsl(0,0,50%);  // #808080
-$gray-6:    hsl(0,0,60%);  // #999999
-$gray-7:    hsl(0,0,70%);  // #b3b3b3
-$gray-8:    hsl(0,0,80%);  // #cccccc
-$gray-9:    hsl(0,0,90%);  // #e6e6e6
-$gray-95:   hsl(0,0,95%);  // #f2f2f2
-$white:		hsl(0,0,100%); // #ffffff
 $gray-hue: 0;
 $gray-saturation: 0%;
 $black: 	  hsl($gray-hue, $gray-saturation, 0%);   // #000000
