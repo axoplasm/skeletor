@@ -26,6 +26,20 @@ $gray-8:    hsl(0,0,80%);  // #cccccc
 $gray-9:    hsl(0,0,90%);  // #e6e6e6
 $gray-95:   hsl(0,0,95%);  // #f2f2f2
 $white:		hsl(0,0,100%); // #ffffff
+$gray-hue: 0;
+$gray-saturation: 0%;
+$black: 	  hsl($gray-hue, $gray-saturation, 0%);   // #000000
+$gray-1:	  hsl($gray-hue, $gray-saturation, 10%);  // #1a1a1a
+$gray-2:	  hsl($gray-hue, $gray-saturation, 20%);  // #333333
+$gray-3:    hsl($gray-hue, $gray-saturation, 30%);  // #4d4d4d
+$gray-4:    hsl($gray-hue, $gray-saturation, 40%);  // #666666
+$gray-5:    hsl($gray-hue, $gray-saturation, 50%);  // #808080
+$gray-6:    hsl($gray-hue, $gray-saturation, 60%);  // #999999
+$gray-7:    hsl($gray-hue, $gray-saturation, 70%);  // #b3b3b3
+$gray-8:    hsl($gray-hue, $gray-saturation, 80%);  // #cccccc
+$gray-9:    hsl($gray-hue, $gray-saturation, 90%);  // #e6e6e6
+$gray-95:   hsl($gray-hue, $gray-saturation, 95%);  // #f2f2f2
+$white:		  hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 
 
 // ### Color Abstraction ### //
