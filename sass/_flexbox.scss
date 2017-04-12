@@ -1,0 +1,121 @@
+// ## fb! ## //
+@mixin fb-container($wrap: false) {
+  display: flex;
+  background: $gray-9;
+  padding: $vgutter $hgutter;
+  @if $wrap {
+    flex-wrap: wrap;
+    min-height: 300px;
+  }
+}
+
+// flex-direction
+.fb-1 {
+  @include fb-container;
+  flex-direction: row; // horizontal, LTR
+}
+.fb-2 {
+  @include fb-container;
+  flex-direction: row-reverse; // horizontal, RTL
+}
+.fb-3 {
+  @include fb-container;
+  flex-direction: column; // vertical
+}
+.fb-4 {
+  @include fb-container;
+  flex-direction: column-reverse; // vertical, bottom to top
+}
+
+// justify-content
+.fb-5 {
+  @include fb-container;
+  justify-content: flex-start;
+}
+.fb-6 {
+  @include fb-container;
+  justify-content: flex-end;
+}
+.fb-7 {
+  @include fb-container;
+  justify-content: center;
+}
+.fb-8 {
+  @include fb-container;
+  justify-content: space-between;
+}
+.fb-9 {
+  @include fb-container;
+  justify-content: space-around;
+}
+
+// align-items
+.fb-10 {
+  @include fb-container;
+  align-items: flex-start;
+}
+.fb-11 {
+  @include fb-container;
+  align-items: flex-end;
+}
+.fb-12 {
+  @include fb-container;
+  align-items: center;
+}
+.fb-13 {
+  @include fb-container;
+  align-items: stretch;
+}
+.fb-14 {
+  @include fb-container;
+  align-items: baseline;
+}
+
+// flex-wrap
+.fb-15 {
+  @include fb-container;
+  flex-wrap: nowrap;
+}
+.fb-16 {
+  @include fb-container;
+  flex-wrap: wrap;
+}
+.fb-17 {
+  @include fb-container;
+  flex-wrap: wrap-reverse;
+}
+
+// align-content
+.fb-18 {
+  @include fb-container(true);
+  align-content: flex-start;
+}
+.fb-19 {
+  @include fb-container(true);
+  align-content: flex-end;
+}
+.fb-20 {
+  @include fb-container(true);
+  align-content: center;
+}
+.fb-21 {
+  @include fb-container(true);
+  align-content: stretch;
+}
+.fb-22 {
+  @include fb-container(true);
+  align-content: space-between;
+}
+.fb-23 {
+  @include fb-container(true);
+  align-content: space-around;
+}
+
+// children
+.fb-box {
+  display: block;
+  padding: $vgutter $hgutter;
+  background: $gray-8;
+  border: 1px solid $gray-6;
+}
+
