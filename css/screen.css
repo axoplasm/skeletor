@@ -358,6 +358,22 @@ small, sup, sub {
   }
 }
 
+big {
+  font-size: 22.4px;
+}
+
+@media (max-width: 960px) {
+  big {
+    font-size: 20.16px;
+  }
+}
+
+@media (max-width: 600px) {
+  big {
+    font-size: 17.92px;
+  }
+}
+
 sup {
   vertical-align: super;
 }

@@ -125,6 +125,10 @@ del, s {
 small, sup, sub {
   @include font-size(0.7);
 }
+// ### big things ### //
+big {
+  @include font-size(1.4);
+}
 // ### baseline-adjusted things ### //
 sup {
   vertical-align: super;
