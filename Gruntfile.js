@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 			options: {
 				sourceMap: true,
 				outputStyle: 'expanded',
-        includePaths: [
+				includePaths: [
 					'node_modules/susy/sass',
 					'node_modules/breakpoint-sass/stylesheets',
 					'node_modules/compass-mixins/lib'
