@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang=en dir=ltr>
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<style type=text/css>
-@import url("css/screen.css");
-</style>
-
-<title>Page Title</title>
-</head>
-<body>
+<?php include("includes/_head.php") ?>
 <section class="layout-row">
   <div class="layout-inner-wrapper">
     <h2>Flex <em>container</em> properties</h2>
@@ -1085,6 +1074,4 @@
     </div>
   </div>
 </section>
-<script src="//localhost:35729/livereload.js"></script>
-</body>
-</html>
+<?php include("includes/_foot.php") ?>
