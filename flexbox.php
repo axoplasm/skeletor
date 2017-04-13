@@ -1,17 +1,26 @@
-<?php function makeManyBoxes($range=1, $break=false, $multi=false) { ?>
-  <?php foreach(range(1,$range) as $r) { ?>
-  <div class="fb-box">
-    <?php $m = $r % 6 ?: 6; ?>
-    <?php if ($r % 4 == 1) { ?><big><?php } ?>
-    <?php foreach(range(1,$m) as $i) { 
+<?php 
+function makeManyBoxes($range=1, $break=false, $multi=true) { 
+  foreach(range(1,$range) as $r) { 
+    echo'<div class="fb-box">';
+    if ($multi) {
+      $m = $r % 6 ?: 6;
+      if ($r % 4 == 1) { 
+        echo'<big>';
+      }
+      foreach(range(1,$m) as $i) { 
+        echo $r; 
+        echo $break ? "<br>" : " ";
+      } 
+      if ($r % 4 == 1) { 
+        echo '</big>';
+      } 
+    } else {
       echo $r; 
-      echo $break ? "<br>" : " ";
-    } 
-    ?>
-    <?php if ($r % 4 == 1) { ?></big><?php } ?>
-  </div>
-  <?php } ?>
-<?php } ?>
+    }
+    echo '</div>';
+  } 
+} 
+?>
 <?php include("includes/_head.php") ?>
 <section class="layout-row">
   <div class="layout-inner-wrapper">
@@ -27,7 +36,7 @@
   <div class="layout-inner-wrapper">
     <h4>flex-direction: row <em>(default)</em></h4>
     <div class="fb-1">
-      <?php makeManyBoxes(6, false) ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -35,7 +44,7 @@
   <div class="layout-inner-wrapper">
     <h4>flex-direction: row-reverse</h4>
     <div class="fb-2">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
     </div>
   </div>
@@ -44,7 +53,7 @@
   <div class="layout-inner-wrapper">
     <h4>flex-direction: column</h4>
     <div class="fb-3">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -52,7 +61,7 @@
   <div class="layout-inner-wrapper">
     <h4>flex-direction: column-reverse</h4>
     <div class="fb-4">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -65,7 +74,7 @@
   <div class="layout-inner-wrapper">
     <h4>justify-content: flex-start <em>(Default)</em></h4>
     <div class="fb-5">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -73,7 +82,7 @@
   <div class="layout-inner-wrapper">
     <h4>justify-content: flex-end</h4>
     <div class="fb-6">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -81,7 +90,7 @@
   <div class="layout-inner-wrapper">
     <h4>justify-content: center</h4>
     <div class="fb-7">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -89,7 +98,7 @@
   <div class="layout-inner-wrapper">
     <h4>justify-content: space-between</h4>
     <div class="fb-8">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -97,7 +106,7 @@
   <div class="layout-inner-wrapper">
     <h4>justify-content: space-around</h4>
     <div class="fb-9">
-      <?php include("includes/6boxes.php"); ?>
+      <?php makeManyBoxes(6, false, false) ?>
     </div>
   </div>
 </section>
@@ -106,15 +115,6 @@
     <h3>align-items: <em>how to align elements along minor axis?</em></h3>
   </div>
 </section>
-<?php function makeBoxes($range=1, $big=false) { ?>
-  <div class="fb-box">
-    <?php if($big) { ?><big><?php } ?>
-    <?php foreach(range(1,$range) as $i) { ?>
-    <?php echo $range ?><br>
-    <?php } ?>
-    <?php if($big) { ?></big><?php } ?>
-  </div>
-<?php } ?>
 <section class="layout-row">
   <div class="layout-inner-wrapper">
     <h4>align-items: flex-start </h4>
