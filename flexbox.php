@@ -237,4 +237,31 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
     </div>
   </div>
 </section>
+
+<section class="layout-row">
+  <div class="layout-inner-wrapper">
+    <h2>Flex <em>child</em> properties</h2>
+  </div>
+</section>
+<section class="layout-row">
+  <div class="layout-inner-wrapper">
+    <h3>order: <em>arbitrarily order elements</em></h3>
+  </div>
+</section>
+<section class="layout-row">
+  <div class="layout-inner-wrapper">
+    <h4>(any integer)</h4>
+    <p>unordered children appear in DOM order as value <b>0</b></p> 
+      <div class="fb">
+        <div class="fb-box">1</div>
+        <div class="fb-box">2</div>
+        <div class="fb-box fbb-1">3</div>
+        <div class="fb-box">4</div>
+        <div class="fb-box">5</div>
+        <div class="fb-box">6</div>    
+      </div>
+    </div>
+  </div>u
+</section>
+
 <?php include("includes/_foot.php") ?>

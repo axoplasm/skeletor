@@ -9,6 +9,10 @@
   }
 }
 
+// generic container
+.fb {
+  @include fb-container;
+}
 // flex-direction
 .fb-1 {
   @include fb-container;
@@ -118,4 +122,6 @@
   background: $gray-8;
   border: 1px solid $gray-6;
 }
-
+.fbb-1 {
+  order: -1;
+}
