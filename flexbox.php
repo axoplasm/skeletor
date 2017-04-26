@@ -1,7 +1,7 @@
 <?php 
 function makeManyBoxes($range=1, $break=false, $multi=true) { 
   foreach(range(1,$range) as $r) { 
-    echo'<div class="fb-box">';
+    echo'<div class="fb-box fbb-' . $r . '">';
     if ($multi) {
       $m = $r % 6 ?: 6;
       if ($r % 4 == 1) { 
@@ -253,15 +253,35 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
     <h4>(any integer)</h4>
     <p>unordered children appear in DOM order as value <b>0</b></p> 
       <div class="fb">
-        <div class="fb-box">1</div>
-        <div class="fb-box">2</div>
-        <div class="fb-box fbb-1">3</div>
-        <div class="fb-box">4</div>
-        <div class="fb-box">5</div>
-        <div class="fb-box">6</div>    
+        <div class="fb-box fbb-1a">1</div>
+        <div class="fb-box fbb-1b">2</div>
+        <div class="fb-box fbb-1c">3</div>
+        <div class="fb-box fbb-1d">4</div>
+        <div class="fb-box fbb-1e">5</div>
+        <div class="fb-box fbb-1f">6</div>    
       </div>
     </div>
-  </div>u
+  </div>
+</section>
+<section class="layout-row">
+  <div class="layout-inner-wrapper">
+    <h3>flex-grow: <em>unitless growth as proportion of total number of elements</em></h3>
+  </div>
+</section>
+<section class="layout-row">
+  <div class="layout-inner-wrapper">
+    <h4>(any integer)</h4>
+    <p>unordered children appear in DOM order as value <b>0</b></p> 
+      <div class="fb">
+        <div class="fb-box fbb-2a">1</div>
+        <div class="fb-box fbb-2b">2</div>
+        <div class="fb-box fbb-2c">3</div>
+        <div class="fb-box fbb-2d">4</div>
+        <div class="fb-box fbb-2e">5</div>
+        <div class="fb-box fbb-2f">6</div>    
+      </div>
+    </div>
+  </div>
 </section>
 
 <?php include("includes/_foot.php") ?>
