@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang=en dir=ltr>
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<style type=text/css>
-@import url("css/screen.css");
-</style>
-
-<title>Page Title</title>
-</head>
-<body>
+<?php include "includes/_head.php" ?>
 <section class="layout-row">
 	<div class="layout-inner-wrapper">
 
 		<hgroup>
 			<h1>Heading Level 1</h1>
 			<h2>Heading Level 2</h2>
-			<h3>Heading Level 3</h3>  
+			<h3>Heading Level 3</h3>
 			<h4>Heading Level 4</h4>
-			<h5>Heading Level 5</h5> 
+			<h5>Heading Level 5</h5>
 			<h6>Heading Level 6</h6>
+
 		</hgroup>
 
 		<p>A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
@@ -242,66 +232,35 @@
 <section class="layout-row">
 	<div class="layout-inner-wrapper">
 		<h3>Color primitives</h3>
-		<div class="styleguide-color bg-red">
-			red
+    <?php $primitives = [
+      "red",
+      "orange",
+      "yellow",
+      "sage",
+      "green",
+      "teal",
+      "sky",
+      "blue",
+      "purple",
+      "pink",
+      "brown",
+    ]; ?>
+    <?php foreach ($primitives as $p) { ?>
+		<div class="styleguide-color bg-<?php echo $p ?>">
+      <?php echo $p ?>
 		</div>
-		<div class="styleguide-color bg-orange">
-			orange
-		</div>
-		<div class="styleguide-color bg-yellow">
-			yellow
-		</div>
-		<div class="styleguide-color bg-green">
-			green
-		</div>
-		<div class="styleguide-color bg-teal">
-			teal
-		</div>
-		<div class="styleguide-color bg-blue">
-			blue
-		</div>
-		<div class="styleguide-color bg-purple">
-			purple
-		</div>
-		<div class="styleguide-color bg-pink">
-			pink
-		</div>	
-		<div class="styleguide-color bg-brown">
-			brown
-		</div>	
+    <?php } ?>
 	</div>
 	<div class="layout-inner-wrapper">
 		<h3>Gray primitives</h3>
 		<div class="styleguide-color bg-black">
 			black
 		</div>
-		<div class="styleguide-color bg-gray-1">
-			gray-1
+    <?php foreach (range(1,9) as $g) { ?>
+    <div class="styleguide-color bg-gray-<?php echo $g ?>">
+      gray-<?php echo $g ?>
 		</div>
-		<div class="styleguide-color bg-gray-2">
-			gray-2
-		</div>
-		<div class="styleguide-color bg-gray-3">
-			gray-3
-		</div>
-		<div class="styleguide-color bg-gray-4">
-			gray-4
-		</div>
-		<div class="styleguide-color bg-gray-5">
-			gray-5
-		</div>
-		<div class="styleguide-color bg-gray-6">
-			gray-6
-		</div>
-		<div class="styleguide-color bg-gray-7">
-			gray-7
-		</div>
-		<div class="styleguide-color bg-gray-8">
-			gray-8
-		</div>
-		<div class="styleguide-color bg-gray-9">
-			gray-9
-		</div>
+    <?php } ?>
 		<div class="styleguide-color bg-gray-95">
 			gray-95
 		</div>
@@ -311,45 +270,26 @@
 	</div>
 	<div class="layout-inner-wrapper">
 		<h3>Color abstractions</h3>
-		<div class="styleguide-color bg-body-color">
-			body-color
+    <?php $abstractions = [
+      "body-color",
+      "sottovoce",
+      "hushed",
+      "whisper",
+      "silent",
+      "emphasis",
+      "highlight",
+      "danger",
+      "warning",
+      "success",
+      "info",
+      "hero",
+    ]; ?>
+    <?php foreach ($abstractions as $a) { ?>
+		<div class="styleguide-color bg-<?php echo $a ?>">
+      <?php echo $a ?>
 		</div>
-		<div class="styleguide-color bg-sottovoce">
-			sottovoce
-		</div>
-		<div class="styleguide-color bg-hushed">
-			hushed
-		</div>
-		<div class="styleguide-color bg-whisper">
-			whisper
-		</div>
-		<div class="styleguide-color bg-silent">
-			silent
-		</div>
-		<div class="styleguide-color bg-emphasis">
-			emphasis
-		</div>
-		<div class="styleguide-color bg-danger">
-			danger
-		</div>
-		<div class="styleguide-color bg-warning">
-			warning
-		</div>
-		<div class="styleguide-color bg-success">
-			success
-		</div>
-		<div class="styleguide-color bg-info">
-			info
-		</div>
-		<div class="styleguide-color bg-highlight fg-body-color">
-			highlight
-		</div>
-		<div class="styleguide-color bg-hero">
-			hero
-		</div>
+    <?php } ?>
 	</div>
 </section>
 
-<script src="//localhost:35729/livereload.js"></script>
-</body>
-</html>
+<?php include "includes/_foot.php" ?>
