@@ -4,28 +4,28 @@
 .layout-row {
 }
 .layout-inner-wrapper {
-  padding: 0 $hgutter;
-  @include breakpoint($desktop) {
-    @include container($desktop);
-    padding: 0 0;
-  }
+    padding: 0 $hgutter;
+    @include breakpoint($desktop) {
+        @include container($desktop);
+        padding: 0 0;
+    }
 }
 .clearfix {
-  @include clearfix();
+    @include clearfix();
 }
 
 .styleguide-color {
-	background: $black;
-	color: white;
-	@include vpadding(0.25);
-	@include hpadding(0.25);
-	margin-bottom: 2px;
-	width: 50%;
-//	@include span(1 of 8);
-//	&:nth-of-type(8) {
-//		@include span(1 of 8 last);
-//	}
-//	margin-bottom: 2.5%;
+    background-color: $black;
+    color: white;
+    margin-bottom: 2px;
+    width: 50%;
+    @include hpadding(0.25);
+    @include vpadding(0.25);
+//    @include span(1 of 8);
+//    &:nth-of-type(8) {
+//        @include span(1 of 8 last);
+//    }
+//    margin-bottom: 2.5%;
 // display: inline-block;
 }
 

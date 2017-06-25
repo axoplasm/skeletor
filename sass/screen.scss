@@ -7,17 +7,16 @@
 @import "breakpoint";
 @import "susy";
 
-
 // Import shared library after declaring abstracted variables
 
-// ## Local libraries ## //
+// # Local libraries # //
 @import "variables";      // local variables for this project
 @import "lib";            // functions, mixins & pseudoclasses
 
-// ## Base HTML ## //
+// # Base HTML # //
 @import "base"; 
 
-// ## Layout, page regions, modules, custom selectors ## //
+// # Layout, page regions, modules, custom selectors # //
 @import "local";
 @import "flexbox";
 
