@@ -8,6 +8,6 @@
 @import url("css/screen.css");
 </style>
 
-<title>Page Title</title>
+<title><?php echo ($title) ? $title : 'Page Title' ?></title>
 </head>
 <body>

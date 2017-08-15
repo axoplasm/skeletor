@@ -21,6 +21,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
     } 
 } 
 ?>
+<?php $title = 'flexbox cheatsheet' ?>
 <?php include("includes/_head.php") ?>
 <section class="layout-row">
     <div class="layout-inner-wrapper">
