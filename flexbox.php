@@ -309,8 +309,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
 <section class="layout-row">
     <div class="layout-inner-wrapper">
         <h4>flex-shrink: 1 <em>(Default: 0)</em></h4>
-        <p></p> 
-        <h4>(all items below have flex-basis: 20%, item 3 has flex-shrink: 3)</h4>
+        <p>(all items below have flex-basis: 20%, item 3 has flex-shrink: 3)</p>
         <div class="fb fb-shrink">
             <div class="fb-box fbb-3g">1</div>
             <div class="fb-box fbb-3h">2</div>
@@ -320,5 +319,22 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
         </div>
     </div>
 </section>
-
+<section class="layout-row">
+    <div class="layout-inner-wrapper">
+        <h3>flex-basis: <em>default size before applying flex-grow or flex-shrink</em></h3>
+        <p>TODO: need more practice with <b>auto</b> and <b>content</b>.
+    </div>
+</section>
+<section class="layout-row">
+    <div class="layout-inner-wrapper">
+        <h4>flex-basis: 10% <em>(what is default?)</em></h4>
+        <div class="fb fb-basis">
+            <div class="fb-box fbb-4a">1</div>
+            <div class="fb-box fbb-4b">2</div>
+            <div class="fb-box fbb-4c">3</div>
+            <div class="fb-box fbb-4d">4</div>
+            <div class="fb-box fbb-4e">5</div>
+        </div>
+    </div>
+</section>
 <?php include("includes/_foot.php") ?>
