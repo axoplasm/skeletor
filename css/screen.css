@@ -1182,4 +1182,16 @@ label.valid {
   flex-grow: 3 !important;
 }
 
+.fbb-3i {
+  flex-shrink: 3 !important;
+}
+
+.fb-shrink .fb-box {
+  flex-basis: 20%;
+}
+
+.fbb-3o {
+  flex-shrink: 3 !important;
+}
+
 /*# sourceMappingURL=screen.css.map */

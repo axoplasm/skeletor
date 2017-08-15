@@ -281,7 +281,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
             <div class="fb-box fbb-2e">5</div>
             <div class="fb-box fbb-2f">6</div>        
         </div>
-        <p>(all items below have flex-grow: 1)</p>
+        <h4>(all items below have flex-grow: 1)</h4>
         <div class="fb fb-grow">
             <div class="fb-box fbb-2g">1</div>
             <div class="fb-box fbb-2h">2</div>
@@ -290,7 +290,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
             <div class="fb-box fbb-2k">5</div>
             <div class="fb-box fbb-2l">6</div>        
         </div>
-        <p>(item 3 has flex-grow: 3)</p>
+        <h4>(item 3 has flex-grow: 3)</h4>
         <div class="fb fb-grow">
             <div class="fb-box fbb-2m">1</div>
             <div class="fb-box fbb-2n">2</div>
@@ -298,6 +298,25 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
             <div class="fb-box fbb-2p">4</div>
             <div class="fb-box fbb-2q">5</div>
             <div class="fb-box fbb-2r">6</div>        
+        </div>
+    </div>
+</section>
+<section class="layout-row">
+    <div class="layout-inner-wrapper">
+        <h3>flex-shrink: <em>flex item shrinks proportionally</em></h3>
+    </div>
+</section>
+<section class="layout-row">
+    <div class="layout-inner-wrapper">
+        <h4>flex-shrink: 1 <em>(Default: 0)</em></h4>
+        <p></p> 
+        <h4>(all items below have flex-basis: 20%, item 3 has flex-shrink: 3)</h4>
+        <div class="fb fb-shrink">
+            <div class="fb-box fbb-3g">1</div>
+            <div class="fb-box fbb-3h">2</div>
+            <div class="fb-box fbb-3i">3</div>
+            <div class="fb-box fbb-3j">4</div>
+            <div class="fb-box fbb-3k">5</div>
         </div>
     </div>
 </section>
