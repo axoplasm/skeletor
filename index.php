@@ -1,3 +1,4 @@
+<?php $title = 'stylesheet' ?>
 <?php include "includes/_head.php" ?>
 <section class="layout-row">
     <div class="layout-inner-wrapper">

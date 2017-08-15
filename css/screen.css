@@ -1170,4 +1170,16 @@ label.valid {
   order: -1;
 }
 
+.fbb-2c {
+  flex-grow: 1;
+}
+
+.fb-grow .fb-box {
+  flex-grow: 1;
+}
+
+.fbb-2o {
+  flex-grow: 3 !important;
+}
+
 /*# sourceMappingURL=screen.css.map */

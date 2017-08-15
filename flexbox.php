@@ -21,7 +21,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
     } 
 } 
 ?>
-<?php $title = 'flexbox cheatsheet' ?>
+<?php $title = 'flexbox' ?>
 <?php include("includes/_head.php") ?>
 <section class="layout-row">
     <div class="layout-inner-wrapper">
@@ -251,7 +251,7 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
 </section>
 <section class="layout-row">
     <div class="layout-inner-wrapper">
-        <h4>(any integer)</h4>
+        <h4>order: -1 <em>(what is default?)</em></h4>
         <p>unordered children appear in DOM order as value <b>0</b></p> 
             <div class="fb">
                 <div class="fb-box fbb-1a">1</div>
@@ -266,21 +266,38 @@ function makeManyBoxes($range=1, $break=false, $multi=true) {
 </section>
 <section class="layout-row">
     <div class="layout-inner-wrapper">
-        <h3>flex-grow: <em>unitless growth as proportion of total number of elements</em></h3>
+        <h3>flex-grow: <em>flex item grows proportionally</em></h3>
     </div>
 </section>
 <section class="layout-row">
     <div class="layout-inner-wrapper">
-        <h4>(any integer)</h4>
-        <p>unordered children appear in DOM order as value <b>0</b></p> 
-            <div class="fb">
-                <div class="fb-box fbb-2a">1</div>
-                <div class="fb-box fbb-2b">2</div>
-                <div class="fb-box fbb-2c">3</div>
-                <div class="fb-box fbb-2d">4</div>
-                <div class="fb-box fbb-2e">5</div>
-                <div class="fb-box fbb-2f">6</div>        
-            </div>
+        <h4>flex-grow: 1 <em>(Default: 0)</em></h4>
+        <p>Any item with flex-grow will fill remaining space. Default items or flex-grow: 0 will try to be as small as possible.</p> 
+        <div class="fb">
+            <div class="fb-box fbb-2a">1</div>
+            <div class="fb-box fbb-2b">2</div>
+            <div class="fb-box fbb-2c">3</div>
+            <div class="fb-box fbb-2d">4</div>
+            <div class="fb-box fbb-2e">5</div>
+            <div class="fb-box fbb-2f">6</div>        
+        </div>
+        <p>(all items below have flex-grow: 1)</p>
+        <div class="fb fb-grow">
+            <div class="fb-box fbb-2g">1</div>
+            <div class="fb-box fbb-2h">2</div>
+            <div class="fb-box fbb-2i">3</div>
+            <div class="fb-box fbb-2j">4</div>
+            <div class="fb-box fbb-2k">5</div>
+            <div class="fb-box fbb-2l">6</div>        
+        </div>
+        <p>(item 3 has flex-grow: 3)</p>
+        <div class="fb fb-grow">
+            <div class="fb-box fbb-2m">1</div>
+            <div class="fb-box fbb-2n">2</div>
+            <div class="fb-box fbb-2o">3</div>
+            <div class="fb-box fbb-2p">4</div>
+            <div class="fb-box fbb-2q">5</div>
+            <div class="fb-box fbb-2r">6</div>        
         </div>
     </div>
 </section>
