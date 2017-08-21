@@ -210,6 +210,12 @@ label {
 .field-container {
     @include vspace(.5);
 }
+input {
+    // reset appearance on iphones
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 input, textarea, select, option {
     font-family: $default-font;
     font-size: 1rem;
