@@ -212,13 +212,21 @@ label {
 }
 input {
     // reset appearance on iphones
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //appearance: none;
+    border: 1px solid $whisper;
+    background: $white;
 }
 input, textarea, select, option {
     font-family: $default-font;
-    font-size: 1rem;
+    @include font-size(1);
+    padding: $vgutter $hgutter;
+    color: $body-color;
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0;
+    box-sizing: border-box;
 }
 input[type=text],
 input[type=password],

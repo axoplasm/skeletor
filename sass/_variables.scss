@@ -47,12 +47,16 @@ $highlight: lighten($yellow, 30%);
 $hero: $teal;
 
 
-
 $link-unvisited: $blue;
 $link-visited: $purple;
 $link-hover: $red;
 $link-active: $yellow;
 $white: white;
+
+
+// ## Misc. Appearance ## //
+$border-radius: 0;
+
 
 // ## Fonts ## //
 $default-font: 'Merriweather Sans', sans-serif;
