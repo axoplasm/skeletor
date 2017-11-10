@@ -1,8 +1,8 @@
 {
     "name": "skeletor",
     "version": "0.0.0",
-    "description": "bare-bones frontend boilerplate",
-    "author": "Paul Souders <pj@axoplasm.com> (http://www.axoplasm.com)",
+    "description": "bare-bones frontend boilerplate (github.com/axoplasm/skeletor)",
+    "author": "Paul Souders <paul@scrubjay.works>",
     "license": "WTFPL",
     "devDependencies": {
         "grunt": "^1.0",
