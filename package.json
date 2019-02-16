@@ -1,15 +1,19 @@
 {
-    "name": "skeletor",
-    "version": "0.0.0",
-    "description": "bare-bones frontend boilerplate (github.com/axoplasm/skeletor)",
-    "author": "Paul Souders <paul@scrubjay.works>",
-    "license": "WTFPL",
-    "devDependencies": {
-        "grunt": "^1.0",
-        "grunt-contrib-watch": "^1.0",
-        "grunt-sass": "^1.2",
-        "susy": "^2.2",
-        "breakpoint-sass": "^2.7",
-        "compass-mixins": "^0.12"
-    }
+  "name": "skeletor",
+  "version": "0.0.0",
+  "description": "bare-bones frontend boilerplate (github.com/axoplasm/skeletor)",
+  "author": "Paul Souders <paul@scrubjay.works>",
+  "license": "WTFPL",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/screen.scss css/screen.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.3",
+    "susy": "^2.2",
+    "breakpoint-sass": "^2.7",
+    "compass-mixins": "^0.12"
+  }
 }
