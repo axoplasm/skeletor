@@ -3,6 +3,7 @@
 <section class="layout-row">
     <div class="layout-inner-wrapper">
 
+
         <hgroup>
             <h1>Heading Level 1</h1>
             <h2>Heading Level 2</h2>
@@ -84,7 +85,7 @@
             <li>This is the last list item</li>
         </ol>
 
-        <table>
+        <table border=1>
             <thead>
                 <tr>
                     <th>Table Heading 1</th>
@@ -104,39 +105,42 @@
                 </tr>
             </tfoot>
             <tbody>
-            <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-            </tr>
-            <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-            </tr>
-            <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-            </tr>
-            <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-            </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                    <td>Table Cell 4</td>
+                    <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 345123412341234123423</td>
+                    <td>Table Cell 4</td>
+                    <td>Table Cell 5</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                    <td>Table Cell 4</td>
+                    <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Table Cell 1</td>
+                    <td>Table Cell 2</td>
+                    <td>Table Cell 3</td>
+                    <td>Table Cell 4</td>
+                    <td>Table Cell 5</td>
+                </tr>
             </tbody>
         </table>
 
         <form>
         <fieldset>
+            <legend>Fieldset with legend</legend>
             <div class="field-container">
                 <label for="text">Text Input <abbr class="required" title="required">*</abbr></label>
                 <input id="text" type="text" placeholder="Text Input">
@@ -233,19 +237,19 @@
 <section class="layout-row">
     <div class="layout-inner-wrapper">
         <h3>Color primitives</h3>
-    <?php $primitives = [
-      "red",
-      "orange",
-      "yellow",
-      "sage",
-      "green",
-      "teal",
-      "sky",
-      "blue",
-      "purple",
-      "pink",
-      "brown",
-    ]; ?>
+<?php $primitives = [
+    "red",
+    "orange",
+    "yellow",
+    "sage",
+    "green",
+    "teal",
+    "sky",
+    "blue",
+    "purple",
+    "pink",
+    "brown",
+]; ?>
     <?php foreach ($primitives as $p) { ?>
         <div class="styleguide-color bg-<?php echo $p ?>">
       <?php echo $p ?>
@@ -271,20 +275,20 @@
     </div>
     <div class="layout-inner-wrapper">
         <h3>Color abstractions</h3>
-    <?php $abstractions = [
-      "body-color",
-      "sottovoce",
-      "hushed",
-      "whisper",
-      "silent",
-      "emphasis",
-      "highlight",
-      "danger",
-      "warning",
-      "success",
-      "info",
-      "hero",
-    ]; ?>
+<?php $abstractions = [
+    "body-color",
+    "sottovoce",
+    "hushed",
+    "whisper",
+    "silent",
+    "emphasis",
+    "highlight",
+    "danger",
+    "warning",
+    "success",
+    "info",
+    "hero",
+]; ?>
     <?php foreach ($abstractions as $a) { ?>
         <div class="styleguide-color bg-<?php echo $a ?>">
       <?php echo $a ?>
