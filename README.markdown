@@ -1,7 +1,9 @@
 Skeletor
 ========
 
-Truly barebones grunt + HTML boilerplate for front-end dev
+Truly barebones grunt + HTML boilerplate for front-end dev.
+
+[skeletor.axoplasm.com](https://skeletor.axoplasm.com)
 
 ```bash
 $ virtualenv .Env
