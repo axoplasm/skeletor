@@ -21,6 +21,7 @@ screen.css.map
 # editor tmp files #
 ####################
 *.swp
+*.swo
 *.sublime-project
 *.sublime-workspace
 .idea/*
@@ -52,4 +53,6 @@ bower_components
 ########################
 db.sqlite3
 
-
+# Virtual environments #
+########################
+.Env
