@@ -180,9 +180,6 @@ a:visited {
 
 a:hover {
   color: #cc0011;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out; }
 
 a:active {
@@ -201,9 +198,6 @@ a.button {
   text-decoration: none; }
   a.button:hover {
     opacity: 0.8;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer; }
 
@@ -216,9 +210,6 @@ a.button-hot {
   text-decoration: none; }
   a.button-hot:hover {
     opacity: 0.8;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer; }
 
@@ -231,9 +222,6 @@ a.button-cool {
   text-decoration: none; }
   a.button-cool:hover {
     opacity: 0.8;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer; }
 
@@ -456,9 +444,6 @@ input[type=submit], input[type=button], input[type=reset], button {
       font-size: 11.6px; } }
   input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover, button:hover {
     opacity: 0.8;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     cursor: pointer; }
 
@@ -515,11 +500,10 @@ label.valid {
       max-width: 960px;
       margin-left: auto;
       margin-right: auto;
-      padding: 0 0; }
-      .layout-inner-wrapper:after {
-        content: " ";
-        display: block;
-        clear: both; } }
+      content: " ";
+      display: block;
+      clear: both;
+      padding: 0 0; } }
 
 .clearfix:before, .clearfix:after {
   content: " ";
