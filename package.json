@@ -6,13 +6,12 @@
   "license": "WTFPL",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss sass/screen.scss public/css/screen.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "start": "sass --watch --update --style=expanded sass/screen.scss:public/css/screen.css"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.43.4",
+    "breakpoint-sass": "^2.7.1"
+  },
   "dependencies": {
-    "breakpoint-sass": "^2.7.1",
-    "node-sass": "^4.14.1",
-    "nodemon": "^2.0.5"
   }
 }
