@@ -10,12 +10,8 @@ Thumbs.db
 ######################
 *.un~
 
-# SASS #
-##########
-.sass-cache
-
-# LibSass #
-###########
+# Sass Map #
+############
 screen.css.map
 
 # editor tmp files #
@@ -41,18 +37,7 @@ php54.cgi
 ##############
 node_modules
 
-# Bower components #
-####################
-bower_components
-
-# Static Cache #
-################
-/static/CACHE/
-
-# development database #
-########################
-db.sqlite3
-
 # Virtual environments #
 ########################
 .Env
+venv

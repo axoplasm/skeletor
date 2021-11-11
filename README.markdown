@@ -5,11 +5,28 @@ Truly barebones grunt + HTML boilerplate for front-end dev.
 
 [skeletor.axoplasm.com](https://skeletor.axoplasm.com)
 
+
+### Installation 
+
 ```bash
-$ virtualenv .Env
-$ source .Env/bin/activate
+$ python3 -m venv venv
+$ source venv/bin/activate
 $ pip install -r requirements.txt
-$ pelican content
 $ npm install
-$ npm run build-css
 ```
+
+### Local development
+
+In one terminal:
+
+```bash
+$ pelican content --autoreload --listen
+```
+
+In another terminal:
+
+```bash
+$ npm start
+```
+
+Local site served at [127.0.0.8:8000](http://127.0.0.1:8000)
