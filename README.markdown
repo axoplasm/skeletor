@@ -1,9 +1,9 @@
 Skeletor
 ========
 
-Truly barebones grunt + HTML boilerplate for front-end dev.
+Truly barebones HTML + [sass](//sass-lang.com) + [Pelican](//blog.getpelican.com) boilerplate for front-end dev.
 
-[skeletor.axoplasm.com](https://skeletor.axoplasm.com)
+[skeletor.axoplasm.com](//skeletor.axoplasm.com)
 
 
 ### Installation 
