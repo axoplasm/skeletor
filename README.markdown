@@ -1,9 +1,9 @@
 Skeletor
 ========
 
-Truly barebones grunt + HTML boilerplate for front-end dev.
+Truly barebones HTML + [sass](//sass-lang.com) + [Pelican](//blog.getpelican.com) boilerplate for front-end dev.
 
-[skeletor.axoplasm.com](https://skeletor.axoplasm.com)
+[skeletor.axoplasm.com](//skeletor.axoplasm.com)
 
 
 ### Installation 
@@ -29,4 +29,4 @@ In another terminal:
 $ npm start
 ```
 
-Local site served at [127.0.0.8:8000](http://127.0.0.1:8000)
+Local site served at [127.0.0.1:8000](http://127.0.0.1:8000)
