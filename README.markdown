@@ -29,4 +29,4 @@ In another terminal:
 $ npm start
 ```
 
-Local site served at [127.0.0.8:8000](http://127.0.0.1:8000)
+Local site served at [127.0.0.1:8000](http://127.0.0.1:8000)
