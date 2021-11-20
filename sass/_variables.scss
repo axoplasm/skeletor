@@ -7,10 +7,12 @@ $red:     hsl(355,100%,40%); // #cc0011
 $orange:  hsl(24,100%,45%);  // #e65c00
 $yellow:  hsl(50,93%,53%);   // #f7d118
 $sage:    hsl(70,80%,70%);   // #dbf075;
-$green:   hsl(74,100%,32%);  // #7da300
+$green:   hsl(90,100%,32%);  // #7da300
+$forest:  hsl(120,95%,17%);  // #025502
 $teal:    hsl(169,97%,36%);  // #03b594
-$sky:     hsl(185,85%,70%);     // #71e9f4
+$sky:     hsl(185,85%,70%);  // #71e9f4
 $blue:    hsl(204,82%,45%);  // #1586d1
+$navy:    hsl(210,90%,25%);  // #064079
 $purple:  hsl(256,52%,56%);  // #7454c9
 $pink:    hsl(315,72%,56%);  // #e03eb7
 $brown:   hsl(28, 54%,35%);  // #8b572a
@@ -33,10 +35,11 @@ $white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 
 
 // ### Color Abstraction ### //
-$body-color: $gray-3;
-$sottovoce: $gray-5;
-$hushed: $gray-7;
+$body-color: $gray-2;
+$sottovoce: $gray-4;
+$hushed: $gray-6;
 $whisper: $gray-8;
+$quiet: $gray-9;
 $silent: $gray-95;
 $emphasis: $pink;
 $danger: $red;
@@ -59,7 +62,7 @@ $border-radius: 0;
 
 
 // ## Fonts ## //
-$default-font: 'Merriweather Sans', sans-serif;
+$default-font: 'Fira Sans', sans-serif;
 $monospace-font: 'Cousine', monospace;
 $bold-weight: 700;
 $normal-weight: 400;
@@ -81,15 +84,17 @@ $hgutter: $vgutter;
 $color-primitives: (
     'red': $red,
     'orange': $orange,
+    'brown': $brown,
     'yellow': $yellow,
     'sage': $sage,
     'green': $green,
+    'forest': $forest,
     'teal': $teal,
     'sky': $sky,
     'blue': $blue,
+    'navy': $navy,
     'purple': $purple,
     'pink': $pink,
-    'brown': $brown
 );
 
 // #### a useful map of grays #### //
@@ -114,6 +119,7 @@ $abstract-colors: (
     'sottovoce': $sottovoce,
     'hushed': $hushed,
     'whisper': $whisper,
+    'quiet': $quiet,
     'silent': $silent,
     'emphasis': $emphasis,
     'danger': $danger,

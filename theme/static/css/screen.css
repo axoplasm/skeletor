@@ -70,8 +70,8 @@ section, aside, div, article, footer, header, nav, address {
 }
 
 body {
-  color: #4d4d4d;
-  font-family: "Merriweather Sans", sans-serif;
+  color: #333333;
+  font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
   font-size: 14.5px;
 }
@@ -271,7 +271,7 @@ a.button-hot:hover {
 }
 
 a.button-cool {
-  background-color: #b3b3b3;
+  background-color: #999999;
   border: none;
   color: white;
   display: inline-block;
@@ -361,7 +361,7 @@ ol {
 }
 
 table {
-  border: 1px solid #b3b3b3;
+  border: 1px solid #999999;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -426,10 +426,10 @@ input {
 }
 
 input, textarea, select, option {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 14.5px;
   padding: 1rem 1rem;
-  color: #4d4d4d;
+  color: #333333;
   background-color: white;
   border-radius: 0;
   box-shadow: 0 0 0;
@@ -458,7 +458,7 @@ input[type=month],
 input[type=week],
 input[type=datetime],
 input[type=datetime-local] {
-  color: #4d4d4d;
+  color: #333333;
   padding: 0.3333333333rem;
   width: 90%;
 }
@@ -490,7 +490,7 @@ input[type=month]::-webkit-input-placeholder,
 input[type=week]::-webkit-input-placeholder,
 input[type=datetime]::-webkit-input-placeholder,
 input[type=datetime-local]::-webkit-input-placeholder {
-  color: #b3b3b3;
+  color: #999999;
 }
 input[type=text]:-moz-placeholder,
 input[type=password]:-moz-placeholder,
@@ -505,7 +505,7 @@ input[type=week]:-moz-placeholder,
 input[type=datetime]:-moz-placeholder,
 input[type=datetime-local]:-moz-placeholder {
   opacity: 1;
-  color: #b3b3b3;
+  color: #999999;
 }
 input[type=text]::-moz-placeholder,
 input[type=password]::-moz-placeholder,
@@ -520,7 +520,7 @@ input[type=week]::-moz-placeholder,
 input[type=datetime]::-moz-placeholder,
 input[type=datetime-local]::-moz-placeholder {
   opacity: 1;
-  color: #b3b3b3;
+  color: #999999;
 }
 input[type=text]:-ms-input-placeholder,
 input[type=password]:-ms-input-placeholder,
@@ -534,11 +534,11 @@ input[type=month]:-ms-input-placeholder,
 input[type=week]:-ms-input-placeholder,
 input[type=datetime]:-ms-input-placeholder,
 input[type=datetime-local]:-ms-input-placeholder {
-  color: #b3b3b3;
+  color: #999999;
 }
 
 input[type=submit], input[type=button], input[type=reset], button {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   margin: 0;
   font-size: 14.5px;
   background-color: #b3b3b3;
@@ -600,26 +600,26 @@ label.error {
 }
 
 .is-valid {
-  background-color: rgba(125, 163, 0, 0.05);
-  border: 2px solid #7da300;
+  background-color: rgba(82, 163, 0, 0.05);
+  border: 2px solid #52a300;
 }
 .is-valid::-webkit-input-placeholder {
-  color: #7da300;
+  color: #52a300;
 }
 .is-valid:-moz-placeholder {
   opacity: 1;
-  color: #7da300;
+  color: #52a300;
 }
 .is-valid::-moz-placeholder {
   opacity: 1;
-  color: #7da300;
+  color: #52a300;
 }
 .is-valid:-ms-input-placeholder {
-  color: #7da300;
+  color: #52a300;
 }
 
 label.valid {
-  color: #7da300;
+  color: #52a300;
 }
 
 .options label {
@@ -676,6 +676,14 @@ label.valid {
   color: #e65c00;
 }
 
+.bg-brown {
+  background: #895629;
+}
+
+.fg-brown {
+  color: #895629;
+}
+
 .bg-yellow {
   background: #f7d118;
 }
@@ -693,11 +701,19 @@ label.valid {
 }
 
 .bg-green {
-  background: #7da300;
+  background: #52a300;
 }
 
 .fg-green {
-  color: #7da300;
+  color: #52a300;
+}
+
+.bg-forest {
+  background: #025502;
+}
+
+.fg-forest {
+  color: #025502;
 }
 
 .bg-teal {
@@ -724,6 +740,14 @@ label.valid {
   color: #1586d1;
 }
 
+.bg-navy {
+  background: #064079;
+}
+
+.fg-navy {
+  color: #064079;
+}
+
 .bg-purple {
   background: #7454c9;
 }
@@ -738,14 +762,6 @@ label.valid {
 
 .fg-pink {
   color: #e03eb7;
-}
-
-.bg-brown {
-  background: #895629;
-}
-
-.fg-brown {
-  color: #895629;
 }
 
 .bg-black {
@@ -845,27 +861,27 @@ label.valid {
 }
 
 .bg-body-color {
-  background: #4d4d4d;
+  background: #333333;
 }
 
 .fg-body-color {
-  color: #4d4d4d;
+  color: #333333;
 }
 
 .bg-sottovoce {
-  background: gray;
+  background: #666666;
 }
 
 .fg-sottovoce {
-  color: gray;
+  color: #666666;
 }
 
 .bg-hushed {
-  background: #b3b3b3;
+  background: #999999;
 }
 
 .fg-hushed {
-  color: #b3b3b3;
+  color: #999999;
 }
 
 .bg-whisper {
@@ -874,6 +890,14 @@ label.valid {
 
 .fg-whisper {
   color: #cccccc;
+}
+
+.bg-quiet {
+  background: #e6e6e6;
+}
+
+.fg-quiet {
+  color: #e6e6e6;
 }
 
 .bg-silent {
@@ -909,11 +933,11 @@ label.valid {
 }
 
 .bg-success {
-  background: #7da300;
+  background: #52a300;
 }
 
 .fg-success {
-  color: #7da300;
+  color: #52a300;
 }
 
 .bg-info {
