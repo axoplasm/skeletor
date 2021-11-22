@@ -58,9 +58,9 @@ blockquote {
     }
 }
 hr {
-    border-color: $whisper;
+    border-color: $border-color;
     border-style: solid;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 $border-width 0;
     padding: 0;
     width: 50%;
     @include vspace(1.5, top);
@@ -252,6 +252,9 @@ input[type=datetime],
 input[type=datetime-local],
 {
     //background-color: $white;
+    border-color: $border-color;
+    border-radius: $border-radius;
+    border-width: $border-width;
     color: $body-color;
     padding: $hgutter/3;
     width: 90%;
