@@ -1,4 +1,6 @@
 // # Variables # //
+// this file contains only SASS variables
+// CSS variables are declared at the top of _base.scss
 
 // ## Colors ## //
 
@@ -35,32 +37,29 @@ $white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 
 
 // ### Color Abstraction ### //
-$body-color: $gray-2;
-$sottovoce: $gray-4;
-$hushed: $gray-6;
-$whisper: $gray-8;
-$quiet: $gray-9;
-$silent: $gray-95;
-$emphasis: $pink;
-$danger: $red;
-$warning: $orange;
-$success: $green;
-$info: $blue;
-$highlight: lighten($yellow, 30%);
-$hero: $teal;
-
-
-$link-unvisited: $blue;
-$link-visited: $purple;
-$link-hover: $red;
-$link-active: $yellow;
-$white: white;
+// $body-color: $gray-2;
+// $sottovoce: $gray-4;
+// $hushed: $gray-6;
+// $whisper: $gray-8;
+// $quiet: $gray-9;
+// $silent: $gray-95;
+// $emphasis: $pink;
+// $danger: $red;
+// $warning: $orange;
+// $success: $green;
+// $info: $blue;
+// $highlight: lighten($yellow, 30%);
+// $hero: $teal;
+// $link-unvisited: $blue;
+// $link-visited: $purple;
+// $link-hover: $red;
+// $link-active: $yellow;
 
 
 // ## Misc. Appearance ## //
 $border-radius: 0;
 $border-width: 1;
-$border-color: $whisper;
+// $border-color: $whisper;
 
 
 // ## Fonts ## //
@@ -83,51 +82,51 @@ $hgutter: $vgutter;
 // # Useful maps # //
 
 // #### a useful map of color names #### //
-$color-primitives: (
-    'red': $red,
-    'orange': $orange,
-    'brown': $brown,
-    'yellow': $yellow,
-    'sage': $sage,
-    'green': $green,
-    'forest': $forest,
-    'teal': $teal,
-    'sky': $sky,
-    'blue': $blue,
-    'navy': $navy,
-    'purple': $purple,
-    'pink': $pink,
-);
-
-// #### a useful map of grays #### //
-$gray-primitives: (
-    'black': $black,
-    'gray-1': $gray-1,
-    'gray-2': $gray-2,
-    'gray-3': $gray-3,
-    'gray-4': $gray-4,
-    'gray-5': $gray-5,
-    'gray-6': $gray-6,
-    'gray-7': $gray-7,
-    'gray-8': $gray-8,
-    'gray-9': $gray-9,
-    'gray-95': $gray-95,
-    'white': $white,
-);
-
-// #### a useful map of abstract colors #### //
-$abstract-colors: (
-    'body-color': $body-color,
-    'sottovoce': $sottovoce,
-    'hushed': $hushed,
-    'whisper': $whisper,
-    'quiet': $quiet,
-    'silent': $silent,
-    'emphasis': $emphasis,
-    'danger': $danger,
-    'warning': $warning,
-    'success': $success,
-    'info': $info,
-    'highlight': $highlight,
-    'hero': $hero
-);
+// $color-primitives: (
+//     'red': $red,
+//     'orange': $orange,
+//     'brown': $brown,
+//     'yellow': $yellow,
+//     'sage': $sage,
+//     'green': $green,
+//     'forest': $forest,
+//     'teal': $teal,
+//     'sky': $sky,
+//     'blue': $blue,
+//     'navy': $navy,
+//     'purple': $purple,
+//     'pink': $pink,
+// );
+// 
+// // #### a useful map of grays #### //
+// $gray-primitives: (
+//     'black': $black,
+//     'gray-1': $gray-1,
+//     'gray-2': $gray-2,
+//     'gray-3': $gray-3,
+//     'gray-4': $gray-4,
+//     'gray-5': $gray-5,
+//     'gray-6': $gray-6,
+//     'gray-7': $gray-7,
+//     'gray-8': $gray-8,
+//     'gray-9': $gray-9,
+//     'gray-95': $gray-95,
+//     'white': $white,
+// );
+// 
+// // #### a useful map of abstract colors #### //
+// $abstract-colors: (
+//     'body-color': $body-color,
+//     'sottovoce': $sottovoce,
+//     'hushed': $hushed,
+//     'whisper': $whisper,
+//     'quiet': $quiet,
+//     'silent': $silent,
+//     'emphasis': $emphasis,
+//     'danger': $danger,
+//     'warning': $warning,
+//     'success': $success,
+//     'info': $info,
+//     'highlight': $highlight,
+//     'hero': $hero
+// );

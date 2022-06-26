@@ -53,6 +53,24 @@ a img {
 html {
   font-size: 14.5px;
   -webkit-text-size-adjust: 100%;
+  --background-color: hsl(0deg, 0%, 100%);
+  --body-color: hsl(0deg, 0%, 20%);
+  --sottovoce: hsl(0deg, 0%, 40%);
+  --hushed: hsl(0deg, 0%, 60%);
+  --whisper: hsl(0deg, 0%, 80%);
+  --quiet: hsl(0deg, 0%, 90%);
+  --silent: hsl(0deg, 0%, 95%);
+  --emphasis: hsl(315deg, 72%, 56%);
+  --danger: hsl(355deg, 100%, 40%);
+  --warning: hsl(24deg, 100%, 45%);
+  --success: hsl(90deg, 100%, 32%);
+  --info: hsl(204deg, 82%, 45%);
+  --highlight: #fcefab;
+  --hero: hsl(169deg, 97%, 36%);
+  --link-unvisited: hsl(204deg, 82%, 45%);
+  --link-visited: hsl(256deg, 52%, 56%);
+  --link-hover: hsl(355deg, 100%, 40%);
+  --link-active: hsl(50deg, 93%, 53%);
 }
 
 section, aside, div, article, footer, header, nav, address {
@@ -60,7 +78,7 @@ section, aside, div, article, footer, header, nav, address {
 }
 
 body {
-  color: hsl(0deg, 0%, 20%);
+  color: var(--body-color);
   font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
   font-size: 1rem;
@@ -118,7 +136,7 @@ p {
 }
 
 blockquote {
-  border-color: hsl(0deg, 0%, 80%);
+  border-color: var(--whisper);
   border-style: solid;
   border-width: 1px 0;
   font-style: italic;
@@ -133,7 +151,7 @@ blockquote p:last-child {
 }
 
 hr {
-  border-color: hsl(0deg, 0%, 80%);
+  border-color: var(--whisper);
   border-style: solid;
   border-width: 0 0 1 0;
   margin-bottom: 1.5rem;
@@ -143,18 +161,18 @@ hr {
 }
 
 a:link {
-  color: hsl(204deg, 82%, 45%);
+  color: var(--link-unvisited);
   text-decoration: underline;
 }
 a:visited {
-  color: hsl(256deg, 52%, 56%);
+  color: var(--link-visited);
 }
 a:hover {
-  color: hsl(355deg, 100%, 40%);
+  color: var(--link-hover);
   transition: all 0.2s ease-out;
 }
 a:active {
-  color: hsl(50deg, 93%, 53%);
+  color: var(--link-active);
 }
 
 h1 a, h1 a:link, h1 a:visited, h2 a, h2 a:link, h2 a:visited, h3 a, h3 a:link, h3 a:visited, h4 a, h4 a:link, h4 a:visited, h5 a, h5 a:link, h5 a:visited, h6 a, h6 a:link, h6 a:visited {
@@ -163,9 +181,9 @@ h1 a, h1 a:link, h1 a:visited, h2 a, h2 a:link, h2 a:visited, h3 a, h3 a:link, h
 }
 
 a.button {
-  background-color: hsl(204deg, 82%, 45%);
+  background-color: var(--link-unvisited);
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -177,9 +195,9 @@ a.button:hover {
 }
 
 a.button-hot {
-  background-color: hsl(315deg, 72%, 56%);
+  background-color: var(--emphasis);
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -191,9 +209,9 @@ a.button-hot:hover {
 }
 
 a.button-cool {
-  background-color: hsl(0deg, 0%, 60%);
+  background-color: var(--hushed);
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -241,7 +259,7 @@ kbd, code, samp {
 }
 
 mark {
-  background: #fcefab;
+  background: var(--highlight);
 }
 
 ul, ol {
@@ -261,13 +279,13 @@ ol {
 }
 
 table {
-  border: 1px solid hsl(0deg, 0%, 60%);
+  border: 1px solid var(--hushed);
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
 tr {
-  border-bottom: 1px solid hsl(0deg, 0%, 80%);
+  border-bottom: 1px solid var(--whisper);
 }
 
 td, th {
@@ -281,7 +299,7 @@ th {
 }
 
 thead, tfoot {
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: var(--silent);
 }
 
 .responsive-image {
@@ -297,8 +315,8 @@ form ul {
 }
 
 fieldset {
-  background-color: hsl(0deg, 0%, 95%);
-  border: 1px solid hsl(0deg, 0%, 80%);
+  background-color: var(--silent);
+  border: 1px solid var(--whisper);
   display: block;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -321,16 +339,16 @@ label {
 }
 
 input {
-  border: 1px solid hsl(0deg, 0%, 80%);
-  background: white;
+  border: 1px solid var(--whisper);
+  background: hsl(0deg, 0%, 100%);
 }
 
 input, textarea, select, option {
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
   padding: 1rem 1rem;
-  color: hsl(0deg, 0%, 20%);
-  background-color: white;
+  color: var(--body-color);
+  background-color: var(--background-color);
   border-radius: 0;
   box-shadow: 0 0 0;
   box-sizing: border-box;
@@ -348,10 +366,10 @@ input[type=month],
 input[type=week],
 input[type=datetime],
 input[type=datetime-local] {
-  border-color: hsl(0deg, 0%, 80%);
+  border-color: var(--whisper);
   border-radius: 0;
   border-width: 1;
-  color: hsl(0deg, 0%, 20%);
+  color: var(--body-color);
   padding: 0.3333333333rem;
   width: 90%;
 }
@@ -383,7 +401,7 @@ input[type=month]::-webkit-input-placeholder,
 input[type=week]::-webkit-input-placeholder,
 input[type=datetime]::-webkit-input-placeholder,
 input[type=datetime-local]::-webkit-input-placeholder {
-  color: hsl(0deg, 0%, 60%);
+  color: var(--hushed);
 }
 input[type=text]:-moz-placeholder,
 input[type=password]:-moz-placeholder,
@@ -398,7 +416,7 @@ input[type=week]:-moz-placeholder,
 input[type=datetime]:-moz-placeholder,
 input[type=datetime-local]:-moz-placeholder {
   opacity: 1;
-  color: hsl(0deg, 0%, 60%);
+  color: var(--hushed);
 }
 input[type=text]::-moz-placeholder,
 input[type=password]::-moz-placeholder,
@@ -413,7 +431,7 @@ input[type=week]::-moz-placeholder,
 input[type=datetime]::-moz-placeholder,
 input[type=datetime-local]::-moz-placeholder {
   opacity: 1;
-  color: hsl(0deg, 0%, 60%);
+  color: var(--hushed);
 }
 input[type=text]:-ms-input-placeholder,
 input[type=password]:-ms-input-placeholder,
@@ -427,7 +445,7 @@ input[type=month]:-ms-input-placeholder,
 input[type=week]:-ms-input-placeholder,
 input[type=datetime]:-ms-input-placeholder,
 input[type=datetime-local]:-ms-input-placeholder {
-  color: hsl(0deg, 0%, 60%);
+  color: var(--hushed);
 }
 
 input[type=submit], input[type=button], input[type=reset], button {
@@ -436,7 +454,7 @@ input[type=submit], input[type=button], input[type=reset], button {
   font-size: 1rem;
   background-color: hsl(0deg, 0%, 70%);
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -448,61 +466,59 @@ input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover, but
 }
 
 input[type=submit] {
-  background-color: hsl(204deg, 82%, 45%);
+  background-color: var(--link-unvisited);
 }
 
 input[type=reset] {
-  background-color: hsl(0deg, 0%, 80%);
+  background-color: var(--whisper);
 }
 
 *[title=Required], .required {
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 
 .is-error {
-  background-color: rgba(204, 0, 17, 0.05);
-  border: 2px solid hsl(355deg, 100%, 40%);
+  border: 2px solid var(--danger);
 }
 .is-error::-webkit-input-placeholder {
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 .is-error:-moz-placeholder {
   opacity: 1;
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 .is-error::-moz-placeholder {
   opacity: 1;
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 .is-error:-ms-input-placeholder {
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 
 label.error {
-  color: hsl(355deg, 100%, 40%);
+  color: var(--danger);
 }
 
 .is-valid {
-  background-color: rgba(82, 163, 0, 0.05);
-  border: 2px solid hsl(90deg, 100%, 32%);
+  border: 2px solid var(--success);
 }
 .is-valid::-webkit-input-placeholder {
-  color: hsl(90deg, 100%, 32%);
+  color: var(--success);
 }
 .is-valid:-moz-placeholder {
   opacity: 1;
-  color: hsl(90deg, 100%, 32%);
+  color: var(--success);
 }
 .is-valid::-moz-placeholder {
   opacity: 1;
-  color: hsl(90deg, 100%, 32%);
+  color: var(--success);
 }
 .is-valid:-ms-input-placeholder {
-  color: hsl(90deg, 100%, 32%);
+  color: var(--success);
 }
 
 label.valid {
-  color: hsl(90deg, 100%, 32%);
+  color: var(--success);
 }
 
 .options label {
@@ -541,310 +557,6 @@ label.valid {
   padding-right: 0.25rem;
   padding-top: 0.25rem;
   width: 50%;
-}
-
-.bg-red {
-  background: hsl(355deg, 100%, 40%);
-}
-
-.fg-red {
-  color: hsl(355deg, 100%, 40%);
-}
-
-.bg-orange {
-  background: hsl(24deg, 100%, 45%);
-}
-
-.fg-orange {
-  color: hsl(24deg, 100%, 45%);
-}
-
-.bg-brown {
-  background: hsl(28deg, 54%, 35%);
-}
-
-.fg-brown {
-  color: hsl(28deg, 54%, 35%);
-}
-
-.bg-yellow {
-  background: hsl(50deg, 93%, 53%);
-}
-
-.fg-yellow {
-  color: hsl(50deg, 93%, 53%);
-}
-
-.bg-sage {
-  background: hsl(70deg, 80%, 70%);
-}
-
-.fg-sage {
-  color: hsl(70deg, 80%, 70%);
-}
-
-.bg-green {
-  background: hsl(90deg, 100%, 32%);
-}
-
-.fg-green {
-  color: hsl(90deg, 100%, 32%);
-}
-
-.bg-forest {
-  background: hsl(120deg, 95%, 17%);
-}
-
-.fg-forest {
-  color: hsl(120deg, 95%, 17%);
-}
-
-.bg-teal {
-  background: hsl(169deg, 97%, 36%);
-}
-
-.fg-teal {
-  color: hsl(169deg, 97%, 36%);
-}
-
-.bg-sky {
-  background: hsl(185deg, 85%, 70%);
-}
-
-.fg-sky {
-  color: hsl(185deg, 85%, 70%);
-}
-
-.bg-blue {
-  background: hsl(204deg, 82%, 45%);
-}
-
-.fg-blue {
-  color: hsl(204deg, 82%, 45%);
-}
-
-.bg-navy {
-  background: hsl(210deg, 90%, 25%);
-}
-
-.fg-navy {
-  color: hsl(210deg, 90%, 25%);
-}
-
-.bg-purple {
-  background: hsl(256deg, 52%, 56%);
-}
-
-.fg-purple {
-  color: hsl(256deg, 52%, 56%);
-}
-
-.bg-pink {
-  background: hsl(315deg, 72%, 56%);
-}
-
-.fg-pink {
-  color: hsl(315deg, 72%, 56%);
-}
-
-.bg-black {
-  background: hsl(0deg, 0%, 0%);
-}
-
-.fg-black {
-  color: hsl(0deg, 0%, 0%);
-}
-
-.bg-gray-1 {
-  background: hsl(0deg, 0%, 10%);
-}
-
-.fg-gray-1 {
-  color: hsl(0deg, 0%, 10%);
-}
-
-.bg-gray-2 {
-  background: hsl(0deg, 0%, 20%);
-}
-
-.fg-gray-2 {
-  color: hsl(0deg, 0%, 20%);
-}
-
-.bg-gray-3 {
-  background: hsl(0deg, 0%, 30%);
-}
-
-.fg-gray-3 {
-  color: hsl(0deg, 0%, 30%);
-}
-
-.bg-gray-4 {
-  background: hsl(0deg, 0%, 40%);
-}
-
-.fg-gray-4 {
-  color: hsl(0deg, 0%, 40%);
-}
-
-.bg-gray-5 {
-  background: hsl(0deg, 0%, 50%);
-}
-
-.fg-gray-5 {
-  color: hsl(0deg, 0%, 50%);
-}
-
-.bg-gray-6 {
-  background: hsl(0deg, 0%, 60%);
-}
-
-.fg-gray-6 {
-  color: hsl(0deg, 0%, 60%);
-}
-
-.bg-gray-7 {
-  background: hsl(0deg, 0%, 70%);
-}
-
-.fg-gray-7 {
-  color: hsl(0deg, 0%, 70%);
-}
-
-.bg-gray-8 {
-  background: hsl(0deg, 0%, 80%);
-}
-
-.fg-gray-8 {
-  color: hsl(0deg, 0%, 80%);
-}
-
-.bg-gray-9 {
-  background: hsl(0deg, 0%, 90%);
-}
-
-.fg-gray-9 {
-  color: hsl(0deg, 0%, 90%);
-}
-
-.bg-gray-95 {
-  background: hsl(0deg, 0%, 95%);
-}
-
-.fg-gray-95 {
-  color: hsl(0deg, 0%, 95%);
-}
-
-.bg-white {
-  background: white;
-}
-
-.fg-white {
-  color: white;
-}
-
-.bg-body-color {
-  background: hsl(0deg, 0%, 20%);
-}
-
-.fg-body-color {
-  color: hsl(0deg, 0%, 20%);
-}
-
-.bg-sottovoce {
-  background: hsl(0deg, 0%, 40%);
-}
-
-.fg-sottovoce {
-  color: hsl(0deg, 0%, 40%);
-}
-
-.bg-hushed {
-  background: hsl(0deg, 0%, 60%);
-}
-
-.fg-hushed {
-  color: hsl(0deg, 0%, 60%);
-}
-
-.bg-whisper {
-  background: hsl(0deg, 0%, 80%);
-}
-
-.fg-whisper {
-  color: hsl(0deg, 0%, 80%);
-}
-
-.bg-quiet {
-  background: hsl(0deg, 0%, 90%);
-}
-
-.fg-quiet {
-  color: hsl(0deg, 0%, 90%);
-}
-
-.bg-silent {
-  background: hsl(0deg, 0%, 95%);
-}
-
-.fg-silent {
-  color: hsl(0deg, 0%, 95%);
-}
-
-.bg-emphasis {
-  background: hsl(315deg, 72%, 56%);
-}
-
-.fg-emphasis {
-  color: hsl(315deg, 72%, 56%);
-}
-
-.bg-danger {
-  background: hsl(355deg, 100%, 40%);
-}
-
-.fg-danger {
-  color: hsl(355deg, 100%, 40%);
-}
-
-.bg-warning {
-  background: hsl(24deg, 100%, 45%);
-}
-
-.fg-warning {
-  color: hsl(24deg, 100%, 45%);
-}
-
-.bg-success {
-  background: hsl(90deg, 100%, 32%);
-}
-
-.fg-success {
-  color: hsl(90deg, 100%, 32%);
-}
-
-.bg-info {
-  background: hsl(204deg, 82%, 45%);
-}
-
-.fg-info {
-  color: hsl(204deg, 82%, 45%);
-}
-
-.bg-highlight {
-  background: #fcefab;
-}
-
-.fg-highlight {
-  color: #fcefab;
-}
-
-.bg-hero {
-  background: hsl(169deg, 97%, 36%);
-}
-
-.fg-hero {
-  color: hsl(169deg, 97%, 36%);
 }
 
 /*# sourceMappingURL=screen.css.map */

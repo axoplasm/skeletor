@@ -4,12 +4,31 @@
 html {
     font-size: $base-font-size;
     -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
+    // light css variables
+    --background-color: #{$white};
+    --body-color: #{$gray-2};
+    --sottovoce: #{$gray-4};
+    --hushed: #{$gray-6};
+    --whisper: #{$gray-8};
+    --quiet: #{$gray-9};
+    --silent: #{$gray-95};
+    --emphasis: #{$pink};
+    --danger: #{$red};
+    --warning: #{$orange};
+    --success: #{$green};
+    --info: #{$blue};
+    --highlight: #{lighten($yellow, 30%)};
+    --hero: #{$teal};
+    --link-unvisited: #{$blue};
+    --link-visited: #{$purple};
+    --link-hover: #{$red};
+    --link-active: #{$yellow};
 }
 section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
     display: block;
 } 
 body {
-    color: $body-color;
+    color: var(--body-color);
     font-family: $default-font;
     line-height: $base-line-height;
     font-size: 1rem;
@@ -46,7 +65,7 @@ p {
     margin-bottom: $vgutter * 1;
 }
 blockquote {
-    border-color: $whisper;
+    border-color: var(--whisper);
     border-style: solid;
     border-width: 1px 0;
     font-style: italic;
@@ -60,7 +79,7 @@ blockquote {
     }
 }
 hr {
-    border-color: $border-color;
+    border-color: var(--whisper);
     border-style: solid;
     border-width: 0 0 $border-width 0;
     margin-bottom: $vgutter * 1.5;
@@ -75,18 +94,18 @@ hr {
 // ### Links ### //
 a {
     &:link {
-        color: $link-unvisited;
+        color: var(--link-unvisited);
         text-decoration: underline;
     }
     &:visited {
-        color: $link-visited;
+        color: var(--link-visited);
     }
     &:hover {
-        color: $link-hover;
+        color: var(--link-hover);
         @include transition(all 0.2s ease-out);
     }
     &:active {
-        color: $link-active;
+        color: var(--link-active);
     }
 }
 
@@ -99,13 +118,13 @@ h1, h2, h3, h4, h5, h6 {
 
 // #### Buttons #### //
 a.button {
-    @include make-button($link-unvisited);
+    @include make-button(var(--link-unvisited));
 }
 a.button-hot {
-    @include make-button($emphasis);
+    @include make-button(var(--emphasis));
 }
 a.button-cool {
-    @include make-button($hushed);
+    @include make-button(var(--hushed));
 }
 
 // ### bold things ### //
@@ -147,7 +166,7 @@ kbd, code, samp {
 abbr {}
 dfn {}
 mark {
-    background: $highlight;
+    background: var(--highlight);
 }
 var {}
 
@@ -170,12 +189,12 @@ ol {
 // ## Tables ## //
 // Data tables only!
 table {
-    border: 1px solid $hushed;
+    border: 1px solid var(--hushed);
     margin-bottom: $vgutter * 2;
     margin-top: $vgutter * 2;
 }
 tr {
-    border-bottom: 1px solid $whisper;
+    border-bottom: 1px solid var(--whisper);
 }
 td, th {
     padding: $vgutter * 0.5;
@@ -186,7 +205,7 @@ th {
     font-weight: $bold-weight;
 }
 thead, tfoot {
-    background-color: $silent;
+    background-color: var(--silent);
 }
 
 // ## Images ## //
@@ -206,8 +225,8 @@ form ul {
     margin: 0;
 }
 fieldset {
-    background-color: $silent;
-    border: 1px solid $whisper;
+    background-color: var(--silent);
+    border: 1px solid var(--whisper);
     display: block;
     margin-bottom: $vgutter * 2;
     margin-top: $vgutter * 2;
@@ -230,15 +249,15 @@ input {
     //-webkit-appearance: none;
     //-moz-appearance: none;
     //appearance: none;
-    border: 1px solid $whisper;
+    border: 1px solid var(--whisper);
     background: $white;
 }
 input, textarea, select, option {
     font-family: $default-font;
     font-size: 1rem;
     padding: $vgutter $hgutter;
-    color: $body-color;
-    background-color: $white;
+    color: var(--body-color);
+    background-color: var(--background-color);
     border-radius: $border-radius;
     box-shadow: 0 0 0;
     box-sizing: border-box;
@@ -257,17 +276,17 @@ input[type=datetime],
 input[type=datetime-local],
 {
     //background-color: $white;
-    border-color: $border-color;
+    border-color: var(--whisper);
     border-radius: $border-radius;
     border-width: $border-width;
-    color: $body-color;
+    color: var(--body-color);
     padding: math.div($hgutter, 3);
     width: 90%;
     @include breakpoint($desktop) {
         max-width: 50%;
     }
     @include input-placeholder {
-        color: $hushed;
+        color: var(--hushed);
     }
 }
 input[type=submit], input[type=button], input[type=reset], button {
@@ -277,33 +296,33 @@ input[type=submit], input[type=button], input[type=reset], button {
     @include make-button;
 }
 input[type=submit] {
-    background-color: $link-unvisited;
+    background-color: var(--link-unvisited);
 }
 input[type=reset] {
-    background-color: $whisper;
+    background-color: var(--whisper);
 }
 *[title='Required'], .required {
-    color: $danger;
+    color: var(--danger);
 }
 .is-error {
-    background-color: transparentize($danger, 0.95);
-    border: 2px solid $danger;
+    // background-color: transparentize($danger, 0.95); // TODO
+    border: 2px solid var(--danger);
     @include input-placeholder {
-        color: $danger;
+        color: var(--danger);
     }
 }
 label.error {
-    color: $danger;
+    color: var(--danger);
 }
 .is-valid {
-    background-color: transparentize($success, 0.95);
-    border: 2px solid $success;
+    // background-color: transparentize($success, 0.95); // TODO
+    border: 2px solid var(--success);
     @include input-placeholder {
-        color: $success;
+        color: var(--success);
     }
 }
 label.valid {
-    color: $success;
+    color: var(--success);
 }
 .options { // fieldsets containing checkboxes & radio boxes
     label {
