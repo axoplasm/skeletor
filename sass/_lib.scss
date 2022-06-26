@@ -43,10 +43,10 @@
 @mixin color-selectors($map) {
     @each $name, $color in $map {
         .bg-#{$name} {
-            background: $color;
+            background: var(--#{$name});
         }
         .fg-#{$name} {
-            color: $color;
+            color: var(--#{$name});
         }
     }
 }

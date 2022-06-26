@@ -4,25 +4,33 @@
 html {
     font-size: $base-font-size;
     -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
-    // light css variables
+    // primitive color css variables
+    @each $name, $color in $color-primitives {
+        --#{$name}: #{$color};
+    }
+    // primitive gray css variables
+    @each $name, $color in $gray-primitives {
+        --#{$name}: #{$color};
+    }
+    // light abstract css variables
     --background-color: #{$white};
-    --body-color: #{$gray-2};
-    --sottovoce: #{$gray-4};
-    --hushed: #{$gray-6};
-    --whisper: #{$gray-8};
-    --quiet: #{$gray-9};
-    --silent: #{$gray-95};
-    --emphasis: #{$pink};
-    --danger: #{$red};
-    --warning: #{$orange};
-    --success: #{$green};
-    --info: #{$blue};
-    --highlight: #{lighten($yellow, 30%)};
-    --hero: #{$teal};
-    --link-unvisited: #{$blue};
-    --link-visited: #{$purple};
-    --link-hover: #{$red};
-    --link-active: #{$yellow};
+    --body-color:       #{$gray-2};
+    --sottovoce:        #{$gray-4};
+    --hushed:           #{$gray-6};
+    --whisper:          #{$gray-8};
+    --quiet:            #{$gray-9};
+    --silent:           #{$gray-95};
+    --emphasis:         #{$pink};
+    --danger:           #{$red};
+    --warning:          #{$orange};
+    --success:          #{$green};
+    --info:             #{$blue};
+    --highlight:        #{lighten($yellow, 30%)};
+    --hero:             #{$teal};
+    --link-unvisited:   #{$blue};
+    --link-visited:     #{$purple};
+    --link-hover:       #{$red};
+    --link-active:      #{$yellow};
 }
 section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
     display: block;

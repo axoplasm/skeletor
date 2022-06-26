@@ -31,10 +31,10 @@
 // # State # //
 
 // ## Colors ## //
-// @include color-selectors($color-primitives);
-// @include color-selectors($gray-primitives);
-// @include color-selectors($abstract-colors);
-// 
+@include color-selectors($color-primitives);
+@include color-selectors($gray-primitives);
+@include color-selectors($abstract-colors);
+//  
 // # Custom # //
 
 // # Unsorted # //

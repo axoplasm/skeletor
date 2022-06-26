@@ -53,6 +53,31 @@ a img {
 html {
   font-size: 14.5px;
   -webkit-text-size-adjust: 100%;
+  --red: hsl(355deg, 100%, 40%);
+  --orange: hsl(24deg, 100%, 45%);
+  --brown: hsl(28deg, 54%, 35%);
+  --yellow: hsl(50deg, 93%, 53%);
+  --sage: hsl(70deg, 80%, 70%);
+  --green: hsl(90deg, 100%, 32%);
+  --forest: hsl(120deg, 95%, 17%);
+  --teal: hsl(169deg, 97%, 36%);
+  --sky: hsl(185deg, 85%, 70%);
+  --blue: hsl(204deg, 82%, 45%);
+  --navy: hsl(210deg, 90%, 25%);
+  --purple: hsl(256deg, 52%, 56%);
+  --pink: hsl(315deg, 72%, 56%);
+  --black: hsl(0deg, 0%, 0%);
+  --gray-1: hsl(0deg, 0%, 10%);
+  --gray-2: hsl(0deg, 0%, 20%);
+  --gray-3: hsl(0deg, 0%, 30%);
+  --gray-4: hsl(0deg, 0%, 40%);
+  --gray-5: hsl(0deg, 0%, 50%);
+  --gray-6: hsl(0deg, 0%, 60%);
+  --gray-7: hsl(0deg, 0%, 70%);
+  --gray-8: hsl(0deg, 0%, 80%);
+  --gray-9: hsl(0deg, 0%, 90%);
+  --gray-95: hsl(0deg, 0%, 95%);
+  --white: hsl(0deg, 0%, 100%);
   --background-color: hsl(0deg, 0%, 100%);
   --body-color: hsl(0deg, 0%, 20%);
   --sottovoce: hsl(0deg, 0%, 40%);
@@ -557,6 +582,310 @@ label.valid {
   padding-right: 0.25rem;
   padding-top: 0.25rem;
   width: 50%;
+}
+
+.bg-red {
+  background: var(--red);
+}
+
+.fg-red {
+  color: var(--red);
+}
+
+.bg-orange {
+  background: var(--orange);
+}
+
+.fg-orange {
+  color: var(--orange);
+}
+
+.bg-brown {
+  background: var(--brown);
+}
+
+.fg-brown {
+  color: var(--brown);
+}
+
+.bg-yellow {
+  background: var(--yellow);
+}
+
+.fg-yellow {
+  color: var(--yellow);
+}
+
+.bg-sage {
+  background: var(--sage);
+}
+
+.fg-sage {
+  color: var(--sage);
+}
+
+.bg-green {
+  background: var(--green);
+}
+
+.fg-green {
+  color: var(--green);
+}
+
+.bg-forest {
+  background: var(--forest);
+}
+
+.fg-forest {
+  color: var(--forest);
+}
+
+.bg-teal {
+  background: var(--teal);
+}
+
+.fg-teal {
+  color: var(--teal);
+}
+
+.bg-sky {
+  background: var(--sky);
+}
+
+.fg-sky {
+  color: var(--sky);
+}
+
+.bg-blue {
+  background: var(--blue);
+}
+
+.fg-blue {
+  color: var(--blue);
+}
+
+.bg-navy {
+  background: var(--navy);
+}
+
+.fg-navy {
+  color: var(--navy);
+}
+
+.bg-purple {
+  background: var(--purple);
+}
+
+.fg-purple {
+  color: var(--purple);
+}
+
+.bg-pink {
+  background: var(--pink);
+}
+
+.fg-pink {
+  color: var(--pink);
+}
+
+.bg-black {
+  background: var(--black);
+}
+
+.fg-black {
+  color: var(--black);
+}
+
+.bg-gray-1 {
+  background: var(--gray-1);
+}
+
+.fg-gray-1 {
+  color: var(--gray-1);
+}
+
+.bg-gray-2 {
+  background: var(--gray-2);
+}
+
+.fg-gray-2 {
+  color: var(--gray-2);
+}
+
+.bg-gray-3 {
+  background: var(--gray-3);
+}
+
+.fg-gray-3 {
+  color: var(--gray-3);
+}
+
+.bg-gray-4 {
+  background: var(--gray-4);
+}
+
+.fg-gray-4 {
+  color: var(--gray-4);
+}
+
+.bg-gray-5 {
+  background: var(--gray-5);
+}
+
+.fg-gray-5 {
+  color: var(--gray-5);
+}
+
+.bg-gray-6 {
+  background: var(--gray-6);
+}
+
+.fg-gray-6 {
+  color: var(--gray-6);
+}
+
+.bg-gray-7 {
+  background: var(--gray-7);
+}
+
+.fg-gray-7 {
+  color: var(--gray-7);
+}
+
+.bg-gray-8 {
+  background: var(--gray-8);
+}
+
+.fg-gray-8 {
+  color: var(--gray-8);
+}
+
+.bg-gray-9 {
+  background: var(--gray-9);
+}
+
+.fg-gray-9 {
+  color: var(--gray-9);
+}
+
+.bg-gray-95 {
+  background: var(--gray-95);
+}
+
+.fg-gray-95 {
+  color: var(--gray-95);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.fg-white {
+  color: var(--white);
+}
+
+.bg-body-color {
+  background: var(--body-color);
+}
+
+.fg-body-color {
+  color: var(--body-color);
+}
+
+.bg-sottovoce {
+  background: var(--sottovoce);
+}
+
+.fg-sottovoce {
+  color: var(--sottovoce);
+}
+
+.bg-hushed {
+  background: var(--hushed);
+}
+
+.fg-hushed {
+  color: var(--hushed);
+}
+
+.bg-whisper {
+  background: var(--whisper);
+}
+
+.fg-whisper {
+  color: var(--whisper);
+}
+
+.bg-quiet {
+  background: var(--quiet);
+}
+
+.fg-quiet {
+  color: var(--quiet);
+}
+
+.bg-silent {
+  background: var(--silent);
+}
+
+.fg-silent {
+  color: var(--silent);
+}
+
+.bg-emphasis {
+  background: var(--emphasis);
+}
+
+.fg-emphasis {
+  color: var(--emphasis);
+}
+
+.bg-danger {
+  background: var(--danger);
+}
+
+.fg-danger {
+  color: var(--danger);
+}
+
+.bg-warning {
+  background: var(--warning);
+}
+
+.fg-warning {
+  color: var(--warning);
+}
+
+.bg-success {
+  background: var(--success);
+}
+
+.fg-success {
+  color: var(--success);
+}
+
+.bg-info {
+  background: var(--info);
+}
+
+.fg-info {
+  color: var(--info);
+}
+
+.bg-highlight {
+  background: var(--highlight);
+}
+
+.fg-highlight {
+  color: var(--highlight);
+}
+
+.bg-hero {
+  background: var(--hero);
+}
+
+.fg-hero {
+  color: var(--hero);
 }
 
 /*# sourceMappingURL=screen.css.map */
