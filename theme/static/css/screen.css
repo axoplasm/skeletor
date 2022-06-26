@@ -98,11 +98,34 @@ html {
   --link-active: hsl(50deg, 93%, 53%);
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --background-color: hsl(0deg, 0%, 10%);
+    --body-color: hsl(0deg, 0%, 90%);
+    --sottovoce: hsl(0deg, 0%, 60%);
+    --hushed: hsl(0deg, 0%, 50%);
+    --whisper: hsl(0deg, 0%, 40%);
+    --quiet: hsl(0deg, 0%, 30%);
+    --silent: hsl(0deg, 0%, 20%);
+    --emphasis: hsl(315deg, 72%, 56%);
+    --danger: hsl(355deg, 100%, 40%);
+    --warning: hsl(24deg, 100%, 45%);
+    --success: hsl(90deg, 100%, 32%);
+    --info: hsl(204deg, 82%, 45%);
+    --highlight: #fcefab;
+    --hero: hsl(169deg, 97%, 36%);
+    --link-unvisited: hsl(204deg, 82%, 45%);
+    --link-visited: hsl(256deg, 52%, 56%);
+    --link-hover: hsl(355deg, 100%, 40%);
+    --link-active: hsl(50deg, 93%, 53%);
+  }
+}
 section, aside, div, article, footer, header, nav, address {
   display: block;
 }
 
 body {
+  background-color: var(--background-color);
   color: var(--body-color);
   font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
@@ -782,6 +805,14 @@ label.valid {
 
 .fg-white {
   color: var(--white);
+}
+
+.bg-background-color {
+  background: var(--background-color);
+}
+
+.fg-background-color {
+  color: var(--background-color);
 }
 
 .bg-body-color {

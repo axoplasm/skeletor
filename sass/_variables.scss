@@ -97,7 +97,9 @@ $gray-primitives: (
 );
 
 // #### a useful list of abstract colors #### //
+// color abstractions are repeated & mapped to values in the html elements of _base.scss
 $abstract-colors: (
+    'background-color',
     'body-color',
     'sottovoce',
     'hushed',

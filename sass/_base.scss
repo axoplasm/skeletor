@@ -32,10 +32,33 @@ html {
     --link-hover:       #{$red};
     --link-active:      #{$yellow};
 }
+@media (prefers-color-scheme: dark) {
+    html {
+        --background-color: #{$gray-1};
+        --body-color:       #{$gray-9};
+        --sottovoce:        #{$gray-6};
+        --hushed:           #{$gray-5};
+        --whisper:          #{$gray-4};
+        --quiet:            #{$gray-3};
+        --silent:           #{$gray-2};
+        --emphasis:         #{$pink};
+        --danger:           #{$red};
+        --warning:          #{$orange};
+        --success:          #{$green};
+        --info:             #{$blue};
+        --highlight:        #{lighten($yellow, 30%)};
+        --hero:             #{$teal};
+        --link-unvisited:   #{$blue};
+        --link-visited:     #{$purple};
+        --link-hover:       #{$red};
+        --link-active:      #{$yellow};
+    }
+}
 section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
     display: block;
 } 
 body {
+    background-color: var(--background-color);
     color: var(--body-color);
     font-family: $default-font;
     line-height: $base-line-height;
