@@ -2,14 +2,6 @@
 
 // # Mixins # //
 
-@mixin hpadding($delta: 1) {
-    padding-left: $vgutter * $delta;
-    padding-right: $vgutter * $delta;
-}
-@mixin hspace($delta: 1) {
-    margin-left: $hgutter * $delta;
-    margin-right: $hgutter * $delta;
-}
 @mixin make-button($link: $gray-7) {
     background-color: $link;
     border: none;

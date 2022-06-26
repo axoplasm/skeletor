@@ -123,10 +123,10 @@ blockquote {
   border-width: 1px 0;
   font-style: italic;
   margin-bottom: 2rem;
-  margin-top: 2rem;
-  padding: 1rem 0;
   margin-left: 3rem;
+  margin-top: 2rem;
   margin-right: 3rem;
+  padding: 1rem 0;
 }
 blockquote p:last-child {
   margin-bottom: 0;

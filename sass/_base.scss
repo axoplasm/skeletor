@@ -51,9 +51,10 @@ blockquote {
     border-width: 1px 0;
     font-style: italic;
     margin-bottom: $vgutter * 2;
+    margin-left: $vgutter * 3;
     margin-top: $vgutter * 2;
+    margin-right: $vgutter * 3;
     padding: $vgutter 0;
-    @include hspace(3);
     & p:last-child {
         margin-bottom: 0;
     }
