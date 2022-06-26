@@ -2,12 +2,6 @@
 
 // # Mixins # //
 
-@mixin vspace($delta: 1, $top: false) {
-    margin-bottom: $vgutter * $delta;
-    @if ($top) {
-        margin-top: $vgutter * $delta;
-    }
-}
 @mixin vpadding($delta: 1) {
     padding-bottom: $vgutter * $delta;
     padding-top: $vgutter * $delta;
@@ -36,7 +30,8 @@
 @mixin bigheader() {
     font-weight: $light-weight;
     line-height: 1;
-    @include vspace(2, top);
+    margin-bottom: $vgutter * 2;
+    margin-top: $vgutter * 2;
 }
 @mixin mediumheader() {
     font-weight: $bold-weight;

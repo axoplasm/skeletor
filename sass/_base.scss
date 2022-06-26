@@ -40,30 +40,32 @@ h6 {
     @include weeheader;
 }
 hgroup {
-    @include vspace(2);
+    margin-bottom: $vgutter * 2;
 }
 p {
-    @include vspace(1);
+    margin-bottom: $vgutter * 1;
 }
 blockquote {
     border-color: $whisper;
     border-style: solid;
     border-width: 1px 0;
     font-style: italic;
+    margin-bottom: $vgutter * 2;
+    margin-top: $vgutter * 2;
     padding: $vgutter 0;
     @include hspace(3);
-    @include vspace(2, true);
     & p:last-child {
-        @include vspace(0);
+        margin-bottom: 0;
     }
 }
 hr {
     border-color: $border-color;
     border-style: solid;
     border-width: 0 0 $border-width 0;
+    margin-bottom: $vgutter * 1.5;
+    margin-top: $vgutter * 1.5;
     padding: 0;
     width: 50%;
-    @include vspace(1.5, top);
 }
 
 
@@ -151,10 +153,10 @@ var {}
 
 // ## Lists ## //
 ul, ol {
+    margin-bottom: $vgutter;
     margin-left: $hgutter*3;
-    @include vspace(1);
     & ul, & ol {
-        @include vspace(0);
+        margin-bottom: 0;
     }
 }
 ul {
@@ -168,7 +170,8 @@ ol {
 // Data tables only!
 table {
     border: 1px solid $hushed;
-    @include vspace(2, true);
+    margin-bottom: $vgutter * 2;
+    margin-top: $vgutter * 2;
 }
 tr {
     border-bottom: 1px solid $whisper;
@@ -205,8 +208,9 @@ fieldset {
     background-color: $silent;
     border: 1px solid $whisper;
     display: block;
+    margin-bottom: $vgutter * 2;
+    margin-top: $vgutter * 2;
     padding: $vgutter/2;
-    @include vspace(2, true);
 }
 legend {
     font-weight: $bold-weight;
@@ -218,7 +222,7 @@ label {
     font-weight: $bold-weight;
 }
 .field-container {
-    @include vspace(.5);
+    margin-bottom: $vgutter * 0.5;
 }
 input {
     // reset appearance on iphones
