@@ -9,8 +9,7 @@
     "start": "sass --watch --update --style=expanded sass/screen.scss:theme/static/css/screen.css"
   },
   "devDependencies": {
-    "sass": "^1.43.4",
-    "breakpoint-sass": "^2.7.1"
+    "sass": "^1.53"
   },
   "dependencies": {
   }

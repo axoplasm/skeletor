@@ -88,5 +88,13 @@
     clear: both;
 }
 
+
+// ## Mixins previously provided by breakpoint-sass
+@mixin breakpoint($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
 // # Pseudoclasses # //
 // Don’t use pseudoclasses, use @mixins
