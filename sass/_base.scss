@@ -3,6 +3,9 @@
 // ## Block-level HTML elements ## //
 html {
     font-size: $base-font-size;
+    @include breakpoint($mobile) {
+        font-size: $desktop-font-size;
+    }
     -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
     // primitive color css variables
     @each $name, $color in $color-primitives {
