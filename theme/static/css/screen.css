@@ -509,11 +509,11 @@ label.valid {
   font-weight: 400;
 }
 
-.layout-inner-wrapper {
+.row__inner {
   padding: 0 1rem;
 }
 @media (min-width: 960px) {
-  .layout-inner-wrapper {
+  .row__inner {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;

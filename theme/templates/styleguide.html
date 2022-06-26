@@ -17,15 +17,15 @@
     {{ translations.translations_for(page) }}
 
 {% if page.content %}
-<section class="layout-row">
-    <div class="layout-inner-wrapper">
+<section class="row">
+    <div class="row__inner">
     {{ page.content }}
     </div>
 </section>
 {% endif %}
 
-<section class="layout-row">
-    <div class="layout-inner-wrapper">
+<section class="row">
+    <div class="row__inner">
 
 
         <hgroup>
@@ -273,8 +273,8 @@
     "purple",
     "pink",
 %}
-<section class="layout-row">
-    <div class="layout-inner-wrapper">
+<section class="row">
+    <div class="row__inner">
         <h3>Color primitives</h3>
         {% for p in primitives %}
         <div class="styleguide-color bg-{{ p }}">
@@ -283,7 +283,7 @@
         {% endfor %}
     </div>
     
-    <div class="layout-inner-wrapper">
+    <div class="row__inner">
         <h3>Gray primitives</h3>
         <div class="styleguide-color bg-black">
             black
@@ -301,7 +301,7 @@
         </div>
     </div>
 
-    <div class="layout-inner-wrapper">
+    <div class="row__inner">
         <h3>Color abstractions</h3>
 {% set abstractions = 
     "body-color",

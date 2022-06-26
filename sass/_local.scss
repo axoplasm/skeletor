@@ -1,13 +1,13 @@
 // # Regions # //
 
 // # Layout # //
-.layout-row {
-}
-.layout-inner-wrapper {
-    padding: 0 $hgutter;
-    @include breakpoint($desktop) {
-        @include container($desktop);
-        padding: 0 0;
+.row {
+    &__inner {
+        padding: 0 $hgutter;
+        @include breakpoint($desktop) {
+            @include container($desktop);
+            padding: 0 0;
+        }
     }
 }
 .clearfix {
