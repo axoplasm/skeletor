@@ -2,17 +2,17 @@
 
 // # Mixins # //
 
-@mixin make-button($link: $gray-7) {
+@mixin make-button($link: var(--hushed)) {
     background-color: $link;
     border: none;
-    color: $white;
+    color: var(--background-color);
     display: inline-block;
     padding: ($vgutter * 0.5) $hgutter;
     text-decoration: none;
     &:hover {
         opacity: 0.8;
-        @include transition(all 0.2s ease-out);
         cursor: pointer;
+        transition: $transition;
     }
 }
 @mixin bigheader() {
@@ -74,10 +74,6 @@
 
 
 // ## Mixins previously provided by Susy
-
-@mixin transition($transition) {
-    transition: $transition; 
-}
 
 @mixin container($width) {
     max-width: $width;

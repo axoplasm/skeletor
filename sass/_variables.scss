@@ -59,8 +59,7 @@ $white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 // ## Misc. Appearance ## //
 $border-radius: 0;
 $border-width: 1;
-// $border-color: $whisper;
-
+$transition: all 0.2s ease-out;
 
 // ## Fonts ## //
 $default-font: 'Fira Sans', sans-serif;

@@ -102,7 +102,7 @@ a {
     }
     &:hover {
         color: var(--link-hover);
-        @include transition(all 0.2s ease-out);
+        transition: $transition;
     }
     &:active {
         color: var(--link-active);
