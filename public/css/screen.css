@@ -54,16 +54,6 @@ html {
   font-size: 14.5px;
   -webkit-text-size-adjust: 100%;
 }
-@media (max-width: 960px) {
-  html {
-    font-size: 13.05px;
-  }
-}
-@media (max-width: 600px) {
-  html {
-    font-size: 11.6px;
-  }
-}
 
 section, aside, div, article, footer, header, nav, address {
   display: block;
@@ -73,17 +63,7 @@ body {
   color: #333333;
   font-family: "Fira Sans", sans-serif;
   line-height: 1.5;
-  font-size: 14.5px;
-}
-@media (max-width: 960px) {
-  body {
-    font-size: 13.05px;
-  }
-}
-@media (max-width: 600px) {
-  body {
-    font-size: 11.6px;
-  }
+  font-size: 1rem;
 }
 
 h1 {
@@ -91,17 +71,7 @@ h1 {
   line-height: 1;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  font-size: 58px;
-}
-@media (max-width: 960px) {
-  h1 {
-    font-size: 52.2px;
-  }
-}
-@media (max-width: 600px) {
-  h1 {
-    font-size: 46.4px;
-  }
+  font-size: 4rem;
 }
 
 h2 {
@@ -109,17 +79,7 @@ h2 {
   line-height: 1;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  font-size: 43.5px;
-}
-@media (max-width: 960px) {
-  h2 {
-    font-size: 39.15px;
-  }
-}
-@media (max-width: 600px) {
-  h2 {
-    font-size: 34.8px;
-  }
+  font-size: 3rem;
 }
 
 h3 {
@@ -127,66 +87,26 @@ h3 {
   line-height: 1;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  font-size: 29px;
-}
-@media (max-width: 960px) {
-  h3 {
-    font-size: 26.1px;
-  }
-}
-@media (max-width: 600px) {
-  h3 {
-    font-size: 23.2px;
-  }
+  font-size: 2rem;
 }
 
 h4 {
   font-weight: 700;
   font-weight: 700;
   margin-bottom: 0;
-  font-size: 14.5px;
-}
-@media (max-width: 960px) {
-  h4 {
-    font-size: 13.05px;
-  }
-}
-@media (max-width: 600px) {
-  h4 {
-    font-size: 11.6px;
-  }
+  font-size: 1rem;
 }
 
 h5 {
-  font-size: 13.05px;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0;
-}
-@media (max-width: 960px) {
-  h5 {
-    font-size: 11.745px;
-  }
-}
-@media (max-width: 600px) {
-  h5 {
-    font-size: 10.44px;
-  }
 }
 
 h6 {
-  font-size: 11.6px;
+  font-size: 0.8rem;
   font-weight: 400;
   margin-bottom: 0;
-}
-@media (max-width: 960px) {
-  h6 {
-    font-size: 10.44px;
-  }
-}
-@media (max-width: 600px) {
-  h6 {
-    font-size: 9.28px;
-  }
 }
 
 hgroup {
@@ -301,31 +221,11 @@ del, s {
 }
 
 small, sup, sub {
-  font-size: 10.15px;
-}
-@media (max-width: 960px) {
-  small, sup, sub {
-    font-size: 9.135px;
-  }
-}
-@media (max-width: 600px) {
-  small, sup, sub {
-    font-size: 8.12px;
-  }
+  font-size: 0.7rem;
 }
 
 big {
-  font-size: 20.3px;
-}
-@media (max-width: 960px) {
-  big {
-    font-size: 18.27px;
-  }
-}
-@media (max-width: 600px) {
-  big {
-    font-size: 16.24px;
-  }
+  font-size: 1.4rem;
 }
 
 sup {
@@ -427,23 +327,13 @@ input {
 
 input, textarea, select, option {
   font-family: "Fira Sans", sans-serif;
-  font-size: 14.5px;
+  font-size: 1rem;
   padding: 1rem 1rem;
   color: #333333;
   background-color: white;
   border-radius: 0;
   box-shadow: 0 0 0;
   box-sizing: border-box;
-}
-@media (max-width: 960px) {
-  input, textarea, select, option {
-    font-size: 13.05px;
-  }
-}
-@media (max-width: 600px) {
-  input, textarea, select, option {
-    font-size: 11.6px;
-  }
 }
 
 input[type=text],
@@ -543,23 +433,13 @@ input[type=datetime-local]:-ms-input-placeholder {
 input[type=submit], input[type=button], input[type=reset], button {
   font-family: "Fira Sans", sans-serif;
   margin: 0;
-  font-size: 14.5px;
+  font-size: 1rem;
   background-color: #b3b3b3;
   border: none;
   color: white;
   display: inline-block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-}
-@media (max-width: 960px) {
-  input[type=submit], input[type=button], input[type=reset], button {
-    font-size: 13.05px;
-  }
-}
-@media (max-width: 600px) {
-  input[type=submit], input[type=button], input[type=reset], button {
-    font-size: 11.6px;
-  }
 }
 input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover, button:hover {
   opacity: 0.8;

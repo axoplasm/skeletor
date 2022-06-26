@@ -69,8 +69,8 @@ $monospace-font: 'Cousine', monospace;
 $bold-weight: 700;
 $normal-weight: 400;
 $light-weight: 300;
-$base-font-size: 14.5px;
-$base-line-height: 1.5;
+$base-font-size: 14.5px; // for mobile, in px
+$base-line-height: 1.5; // unitless
 
 // ## Breakpoints ## //
 $desktop: 960px;

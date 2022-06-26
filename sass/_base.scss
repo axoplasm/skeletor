@@ -2,7 +2,7 @@
 
 // ## Block-level HTML elements ## //
 html {
-    @include font-size(1);
+    font-size: $base-font-size;
     -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
 }
 section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
@@ -12,31 +12,31 @@ body {
     color: $body-color;
     font-family: $default-font;
     line-height: $base-line-height;
-    @include font-size(1);
+    font-size: 1rem;
 }
 h1 {
     @include bigheader;
-    @include font-size(4);
+    font-size: 4rem;
 }
 h2 {
     @include bigheader;
-    @include font-size(3);
+    font-size: 3rem;
 }
 h3 {
     @include bigheader;
-    @include font-size(2);
+    font-size: 2rem;
 }
 h4 {
     font-weight: $bold-weight;
     @include mediumheader;
-    @include font-size(1);
+    font-size: 1rem;
 }
 h5 {
-    @include font-size(0.9);
+    font-size: 0.9rem;
     @include weeheader;
 }
 h6 {
-    @include font-size(0.8);
+    font-size: 0.8rem;
     @include weeheader;
 }
 hgroup {
@@ -123,11 +123,11 @@ del, s {
 }
 // ### small things ### //
 small, sup, sub {
-    @include font-size(0.7);
+    font-size: 0.7rem;
 }
 // ### big things ### //
 big {
-    @include font-size(1.4);
+    font-size: 1.4rem;
 }
 // ### baseline-adjusted things ### //
 sup {
@@ -230,7 +230,7 @@ input {
 }
 input, textarea, select, option {
     font-family: $default-font;
-    @include font-size(1);
+    font-size: 1rem;
     padding: $vgutter $hgutter;
     color: $body-color;
     background-color: $white;
@@ -268,7 +268,7 @@ input[type=datetime-local],
 input[type=submit], input[type=button], input[type=reset], button {
     font-family: $default-font;
     margin: 0;
-    @include font-size(1);
+    font-size: 1rem;
     @include make-button;
 }
 input[type=submit] {
