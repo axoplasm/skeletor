@@ -531,7 +531,7 @@ input[type=reset] {
 }
 
 .is-error {
-  border: 2px solid var(--danger);
+  border: 2px solid var(--danger) !important;
 }
 .is-error::-webkit-input-placeholder {
   color: var(--danger);
@@ -553,7 +553,7 @@ label.error {
 }
 
 .is-valid {
-  border: 2px solid var(--success);
+  border: 2px solid var(--success) !important;
 }
 .is-valid::-webkit-input-placeholder {
   color: var(--success);
@@ -602,8 +602,8 @@ label.valid {
 }
 
 .styleguide-color {
-  background-color: hsl(0deg, 0%, 0%);
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   margin-bottom: 2px;
   padding-bottom: 0.25rem;
   padding-left: 0.25rem;

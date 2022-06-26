@@ -309,7 +309,6 @@ input[type=week],
 input[type=datetime],
 input[type=datetime-local],
 {
-    //background-color: $white;
     border-color: var(--whisper);
     border-radius: $border-radius;
     border-width: $border-width;
@@ -339,8 +338,7 @@ input[type=reset] {
     color: var(--danger);
 }
 .is-error {
-    // background-color: transparentize($danger, 0.95); // TODO
-    border: 2px solid var(--danger);
+    border: 2px solid var(--danger) !important;
     @include input-placeholder {
         color: var(--danger);
     }
@@ -349,8 +347,7 @@ label.error {
     color: var(--danger);
 }
 .is-valid {
-    // background-color: transparentize($success, 0.95); // TODO
-    border: 2px solid var(--success);
+    border: 2px solid var(--success) !important;
     @include input-placeholder {
         color: var(--success);
     }
