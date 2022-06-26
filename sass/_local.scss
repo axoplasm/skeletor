@@ -18,15 +18,11 @@
     background-color: $black;
     color: white;
     margin-bottom: 2px;
+    padding-bottom: $vgutter * 0.25;
+    padding-left: $vgutter * 0.25;
+    padding-right: $vgutter * 0.25;
+    padding-top: $vgutter * 0.25;
     width: 50%;
-    @include hpadding(0.25);
-    @include vpadding(0.25);
-//    @include span(1 of 8);
-//    &:nth-of-type(8) {
-//        @include span(1 of 8 last);
-//    }
-//    margin-bottom: 2.5%;
-// display: inline-block;
 }
 
 

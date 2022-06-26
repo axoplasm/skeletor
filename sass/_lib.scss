@@ -2,10 +2,6 @@
 
 // # Mixins # //
 
-@mixin vpadding($delta: 1) {
-    padding-bottom: $vgutter * $delta;
-    padding-top: $vgutter * $delta;
-}
 @mixin hpadding($delta: 1) {
     padding-left: $vgutter * $delta;
     padding-right: $vgutter * $delta;
