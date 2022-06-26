@@ -19,7 +19,7 @@
     border: none;
     color: $white;
     display: inline-block;
-    padding: ($vgutter/2) $hgutter;
+    padding: ($vgutter * 0.5) $hgutter;
     text-decoration: none;
     &:hover {
         opacity: 0.8;

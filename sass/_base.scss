@@ -177,7 +177,7 @@ tr {
     border-bottom: 1px solid $whisper;
 }
 td, th {
-    padding: $vgutter/2;
+    padding: $vgutter * 0.5;
     text-align: left;
     vertical-align: top;
 }
@@ -210,11 +210,11 @@ fieldset {
     display: block;
     margin-bottom: $vgutter * 2;
     margin-top: $vgutter * 2;
-    padding: $vgutter/2;
+    padding: $vgutter * 0.5;
 }
 legend {
     font-weight: $bold-weight;
-    padding: 0 $hgutter/2;
+    padding: 0 ($hgutter * 0.5);
     margin-left: $hgutter;
 }
 label {
@@ -260,7 +260,7 @@ input[type=datetime-local],
     border-radius: $border-radius;
     border-width: $border-width;
     color: $body-color;
-    padding: $hgutter/3;
+    padding: math.div($hgutter, 3);
     width: 90%;
     @include breakpoint($desktop) {
         max-width: 50%;
