@@ -8,7 +8,7 @@
 @import "lib";            // functions, mixins & pseudoclasses
 
 // # Reset
-@import "reset";
+@import "../node_modules/the-new-css-reset/css/reset";
 
 // # Base HTML # //
 @import "base"; 

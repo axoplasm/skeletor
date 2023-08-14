@@ -1,101 +1,150 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.9 (last updated 19.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
 }
 
-html {
-  line-height: 1;
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-ol, ul {
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
   list-style: none;
 }
 
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
 }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
 }
 
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
 }
 
-a img {
-  border: none;
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
 }
 
 html {
   font-size: 14px;
   -webkit-text-size-adjust: 100%;
-  --red: hsl(355deg, 100%, 40%);
-  --orange: hsl(24deg, 100%, 45%);
-  --brown: hsl(28deg, 54%, 35%);
-  --yellow: hsl(50deg, 93%, 53%);
-  --sage: hsl(70deg, 80%, 70%);
-  --green: hsl(90deg, 100%, 32%);
-  --forest: hsl(120deg, 95%, 17%);
-  --teal: hsl(169deg, 97%, 36%);
-  --sky: hsl(185deg, 85%, 70%);
-  --blue: hsl(204deg, 82%, 45%);
-  --navy: hsl(210deg, 90%, 25%);
-  --purple: hsl(256deg, 52%, 56%);
-  --pink: hsl(315deg, 72%, 56%);
-  --black: hsl(0deg, 0%, 0%);
-  --gray-1: hsl(0deg, 0%, 10%);
-  --gray-2: hsl(0deg, 0%, 20%);
-  --gray-3: hsl(0deg, 0%, 30%);
-  --gray-4: hsl(0deg, 0%, 40%);
-  --gray-5: hsl(0deg, 0%, 50%);
-  --gray-6: hsl(0deg, 0%, 60%);
-  --gray-7: hsl(0deg, 0%, 70%);
-  --gray-8: hsl(0deg, 0%, 80%);
-  --gray-9: hsl(0deg, 0%, 90%);
-  --gray-95: hsl(0deg, 0%, 95%);
-  --white: hsl(0deg, 0%, 100%);
-  --background-color: hsl(0deg, 0%, 100%);
-  --body-color: hsl(0deg, 0%, 20%);
-  --sottovoce: hsl(0deg, 0%, 40%);
-  --hushed: hsl(0deg, 0%, 60%);
-  --whisper: hsl(0deg, 0%, 80%);
-  --quiet: hsl(0deg, 0%, 90%);
-  --silent: hsl(0deg, 0%, 95%);
-  --emphasis: hsl(315deg, 72%, 56%);
-  --danger: hsl(355deg, 100%, 40%);
-  --warning: hsl(24deg, 100%, 45%);
-  --success: hsl(90deg, 100%, 32%);
-  --info: hsl(204deg, 82%, 45%);
+  --red: hsl(355, 100%, 40%);
+  --orange: hsl(24, 100%, 45%);
+  --brown: hsl(28, 54%, 35%);
+  --yellow: hsl(50, 93%, 53%);
+  --sage: hsl(70, 80%, 70%);
+  --green: hsl(90, 100%, 32%);
+  --forest: hsl(120, 95%, 17%);
+  --teal: hsl(169, 97%, 36%);
+  --sky: hsl(185, 85%, 70%);
+  --blue: hsl(204, 82%, 45%);
+  --navy: hsl(210, 90%, 25%);
+  --purple: hsl(256, 52%, 56%);
+  --pink: hsl(315, 72%, 56%);
+  --black: hsl(0, 0%, 0%);
+  --gray-1: hsl(0, 0%, 10%);
+  --gray-2: hsl(0, 0%, 20%);
+  --gray-3: hsl(0, 0%, 30%);
+  --gray-4: hsl(0, 0%, 40%);
+  --gray-5: hsl(0, 0%, 50%);
+  --gray-6: hsl(0, 0%, 60%);
+  --gray-7: hsl(0, 0%, 70%);
+  --gray-8: hsl(0, 0%, 80%);
+  --gray-9: hsl(0, 0%, 90%);
+  --gray-95: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --background-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 20%);
+  --sottovoce: hsl(0, 0%, 40%);
+  --hushed: hsl(0, 0%, 60%);
+  --whisper: hsl(0, 0%, 80%);
+  --quiet: hsl(0, 0%, 90%);
+  --silent: hsl(0, 0%, 95%);
+  --emphasis: hsl(315, 72%, 56%);
+  --danger: hsl(355, 100%, 40%);
+  --warning: hsl(24, 100%, 45%);
+  --success: hsl(90, 100%, 32%);
+  --info: hsl(204, 82%, 45%);
   --highlight: #fcefab;
-  --hero: hsl(169deg, 97%, 36%);
-  --link-unvisited: hsl(204deg, 82%, 45%);
-  --link-visited: hsl(256deg, 52%, 56%);
-  --link-hover: hsl(355deg, 100%, 40%);
-  --link-active: hsl(50deg, 93%, 53%);
+  --hero: hsl(169, 97%, 36%);
+  --link-unvisited: hsl(204, 82%, 45%);
+  --link-visited: hsl(256, 52%, 56%);
+  --link-hover: hsl(355, 100%, 40%);
+  --link-active: hsl(50, 93%, 53%);
 }
 @media (min-width: 600px) {
   html {
@@ -105,24 +154,24 @@ html {
 
 @media (prefers-color-scheme: dark) {
   html {
-    --background-color: hsl(0deg, 0%, 10%);
-    --body-color: hsl(0deg, 0%, 90%);
-    --sottovoce: hsl(0deg, 0%, 60%);
-    --hushed: hsl(0deg, 0%, 50%);
-    --whisper: hsl(0deg, 0%, 40%);
-    --quiet: hsl(0deg, 0%, 30%);
-    --silent: hsl(0deg, 0%, 20%);
-    --emphasis: hsl(315deg, 72%, 56%);
-    --danger: hsl(355deg, 100%, 40%);
-    --warning: hsl(24deg, 100%, 45%);
-    --success: hsl(90deg, 100%, 32%);
-    --info: hsl(204deg, 82%, 45%);
+    --background-color: hsl(0, 0%, 10%);
+    --body-color: hsl(0, 0%, 90%);
+    --sottovoce: hsl(0, 0%, 60%);
+    --hushed: hsl(0, 0%, 50%);
+    --whisper: hsl(0, 0%, 40%);
+    --quiet: hsl(0, 0%, 30%);
+    --silent: hsl(0, 0%, 20%);
+    --emphasis: hsl(315, 72%, 56%);
+    --danger: hsl(355, 100%, 40%);
+    --warning: hsl(24, 100%, 45%);
+    --success: hsl(90, 100%, 32%);
+    --info: hsl(204, 82%, 45%);
     --highlight: #fcefab;
-    --hero: hsl(169deg, 97%, 36%);
-    --link-unvisited: hsl(204deg, 82%, 45%);
-    --link-visited: hsl(256deg, 52%, 56%);
-    --link-hover: hsl(355deg, 100%, 40%);
-    --link-active: hsl(50deg, 93%, 53%);
+    --hero: hsl(169, 97%, 36%);
+    --link-unvisited: hsl(204, 82%, 45%);
+    --link-visited: hsl(256, 52%, 56%);
+    --link-hover: hsl(355, 100%, 40%);
+    --link-active: hsl(50, 93%, 53%);
   }
 }
 section, aside, div, article, footer, header, nav, address {
@@ -393,7 +442,7 @@ label {
 
 input {
   border: 1px solid var(--whisper);
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(0, 0%, 100%);
 }
 
 input, textarea, select, option {
@@ -428,17 +477,17 @@ input[type=datetime-local] {
 }
 @media (min-width: 960px) {
   input[type=text],
-input[type=password],
-input[type=url],
-input[type=email],
-input[type=search],
-input[type=number],
-input[type=color],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=datetime],
-input[type=datetime-local] {
+  input[type=password],
+  input[type=url],
+  input[type=email],
+  input[type=search],
+  input[type=number],
+  input[type=color],
+  input[type=date],
+  input[type=month],
+  input[type=week],
+  input[type=datetime],
+  input[type=datetime-local] {
     max-width: 50%;
   }
 }
