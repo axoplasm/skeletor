@@ -1,13 +1,16 @@
-// # Functions # //
+@mixin breakpoint($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
 
-// # Mixins # //
-
-@mixin make-button($link: var(--hushed)) {
-    background-color: $link;
+@mixin make-button($background-color: var(--hushed), $link-color: var(--white)) {
+    background-color: $background-color;
     border: none;
-    color: var(--background-color);
+    color: $link-color;
     display: inline-block;
-    padding: ($vgutter * 0.5) $hgutter;
+    font-weight: $bold-weight;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     &:hover {
         opacity: 0.8;
@@ -15,31 +18,16 @@
         transition: $transition;
     }
 }
-@mixin bigheader() {
-    font-weight: $light-weight;
-    line-height: 1;
-    margin-bottom: $vgutter * 2;
-    margin-top: $vgutter * 2;
-}
-@mixin mediumheader() {
-    font-weight: $bold-weight;
-    margin-bottom: 0;
-}
-@mixin weeheader() {
-    font-weight: $normal-weight;
-    margin-bottom: 0;
+
+@mixin container($width) {
+    clear: both;
+    content: " ";
+    display: block;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+    max-width: $width;
 }
 
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: " "; // 1
-        display: table; // 2
-    }
-    &:after {
-        clear: both;
-    }
-}
 @mixin color-selectors($map) {
     @each $name, $color in $map {
         .bg-#{$name} {
@@ -50,47 +38,3 @@
         }
     }
 }
-
-// ## Mixins previously provided by compass-mixins ## //
-
-@mixin input-placeholder {
-    // used in _base.scss
-    // replaces compass/css/user-interface/input-placeholder()
-    &::-webkit-input-placeholder    {
-        @content;
-    }
-    &:-moz-placeholder {
-        opacity: 1;
-        @content;
-    }
-    &::-moz-placeholder {
-        opacity: 1;
-        @content;
-    }
-    &:-ms-input-placeholder {
-        @content;
-    }
-}
-
-
-// ## Mixins previously provided by Susy
-
-@mixin container($width) {
-    max-width: $width;
-    margin-left: auto;
-    margin-right: auto;
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-
-// ## Mixins previously provided by breakpoint-sass
-@mixin breakpoint($breakpoint) {
-    @media (min-width: $breakpoint) {
-        @content;
-    }
-}
-
-// # Pseudoclasses # //
-// Don’t use pseudoclasses, use @mixins

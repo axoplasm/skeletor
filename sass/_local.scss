@@ -3,25 +3,19 @@
 // # Layout # //
 .row {
     &__inner {
-        padding: 0 $hgutter;
+        padding: 0 1rem;
         @include breakpoint($desktop) {
             @include container($desktop);
             padding: 0 0;
         }
     }
 }
-.clearfix {
-    @include clearfix();
-}
 
 .styleguide-color {
     background-color: var(--black);
     color: var(--white);
-    margin-bottom: 2px;
-    padding-bottom: $vgutter * 0.25;
-    padding-left: $vgutter * 0.25;
-    padding-right: $vgutter * 0.25;
-    padding-top: $vgutter * 0.25;
+    margin-block-end: 0.125rem;
+    padding: 0.25rem;
     width: 50%;
 }
 
@@ -33,7 +27,7 @@
 // ## Colors ## //
 @include color-selectors($color-primitives);
 @include color-selectors($gray-primitives);
-@include color-selectors($abstract-colors);
+@include color-selectors($abstract-colors-light);
 //  
 // # Custom # //
 

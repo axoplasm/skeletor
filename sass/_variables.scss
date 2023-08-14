@@ -1,10 +1,7 @@
-// # Variables # //
 // this file contains only SASS variables
-// CSS variables are declared at the top of _base.scss
+// CSS variables incl. color abstractions are declared at the top of _base.scss
 
-// ## Colors ## //
-
-// ### Color primitives ### //
+// Color primitives
 $red:     hsl(355,100%,40%); // #cc0011
 $orange:  hsl(24,100%,45%);  // #e65c00
 $yellow:  hsl(50,93%,53%);   // #f7d118
@@ -19,7 +16,7 @@ $purple:  hsl(256,52%,56%);  // #7454c9
 $pink:    hsl(315,72%,56%);  // #e03eb7
 $brown:   hsl(28, 54%,35%);  // #8b572a
 
-// ### Grays ### //
+// Grays
 $gray-hue: 0;
 $gray-saturation: 0%;
 $black:     hsl($gray-hue, $gray-saturation, 0%);   // #000000
@@ -36,82 +33,96 @@ $gray-95:   hsl($gray-hue, $gray-saturation, 95%);  // #f2f2f2
 $white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 
 
-// ### Color Abstraction ### //
-// to facilitate dark mode, color abstractions are created in _base.scss
+// color maps
+$color-primitives: (
+    'red':      $red,
+    'orange':   $orange,
+    'brown':    $brown,
+    'yellow':   $yellow,
+    'sage':     $sage,
+    'green':    $green,
+    'forest':   $forest,
+    'teal':     $teal,
+    'sky':      $sky,
+    'blue':     $blue,
+    'navy':     $navy,
+    'purple':   $purple,
+    'pink':     $pink,
+);
 
-// ## Misc. Appearance ## //
+$gray-primitives: (
+    'black':    $black,
+    'gray-1':   $gray-1,
+    'gray-2':   $gray-2,
+    'gray-3':   $gray-3,
+    'gray-4':   $gray-4,
+    'gray-5':   $gray-5,
+    'gray-6':   $gray-6,
+    'gray-7':   $gray-7,
+    'gray-8':   $gray-8,
+    'gray-9':   $gray-9,
+    'gray-95':  $gray-95,
+    'white':    $white,
+);
+
+// color abstractions are repeated & mapped to values in the html elements of _base.scss
+$abstract-colors-light: (
+    'loud':             $black,
+    'sottovoce':        $gray-4,
+    'hushed':           $gray-6,
+    'whisper':          $gray-8,
+    'quiet':            $gray-9,
+    'silent':           $white,
+    'emphasis':         $pink,
+    'danger':           $red,
+    'warning':          $orange,
+    'success':          $green,
+    'info':             $blue,
+    'highlight':        $yellow,
+    'hero':             $teal,
+    'link-unvisited':   $blue,
+    'link-visited':     $purple,
+    'link-hover':       $red,
+    'link-active':      $green,
+);
+
+$abstract-colors-dark: (
+    'loud':             $white,
+    'sottovoce':        $gray-6,
+    'hushed':           $gray-5,
+    'whisper':          $gray-4,
+    'quiet':            $gray-3,
+    'silent':           $black,
+    'emphasis':         $pink,
+    'danger':           $red,
+    'warning':          $orange,
+    'success':          $green,
+    'info':             $blue,
+    'highlight':        $yellow,
+    'hero':             $teal,
+    'link-unvisited':   $blue,
+    'link-visited':     $purple,
+    'link-hover':       $red,
+    'link-active':      $green,
+);
+
+// Misc. Appearance 
 $border-radius: 0;
-$border-width: 1;
+$border-width: 1px;
 $transition: all 0.2s ease-out;
 
-// ## Fonts ## //
-$default-font: 'Fira Sans', sans-serif;
-$monospace-font: 'Cousine', monospace;
+// Fonts
+$default-font: sans-serif;
+$monospace-font: monospace;
 $bold-weight: 700;
 $normal-weight: 400;
 $light-weight: 300;
-$base-font-size: 14px; // for mobile, in px
-$desktop-font-size: 15px; // for desktop, in px
+$base-font-size: 15px; // for mobile, in px
+$desktop-font-size: 16px; // for desktop, in px
 $base-line-height: 1.5; // unitless
 
-// ## Breakpoints ## //
-$desktop: 960px;
-$mobile:  600px;
+// Breakpoints
+$desktop:   960px;
+$tablet:    800px;
+$mobile:    600px;
 
-// ## Layout ## //
-$vgutter: 1rem; // easiest to calculate in rems
-$hgutter: $vgutter;
-
-// # Useful maps # //
-
-// #### a useful map of color names #### //
-$color-primitives: (
-    'red': $red,
-    'orange': $orange,
-    'brown': $brown,
-    'yellow': $yellow,
-    'sage': $sage,
-    'green': $green,
-    'forest': $forest,
-    'teal': $teal,
-    'sky': $sky,
-    'blue': $blue,
-    'navy': $navy,
-    'purple': $purple,
-    'pink': $pink,
-);
-
-// #### a useful map of grays #### //
-$gray-primitives: (
-    'black': $black,
-    'gray-1': $gray-1,
-    'gray-2': $gray-2,
-    'gray-3': $gray-3,
-    'gray-4': $gray-4,
-    'gray-5': $gray-5,
-    'gray-6': $gray-6,
-    'gray-7': $gray-7,
-    'gray-8': $gray-8,
-    'gray-9': $gray-9,
-    'gray-95': $gray-95,
-    'white': $white,
-);
-
-// #### a useful list of abstract colors #### //
-// color abstractions are repeated & mapped to values in the html elements of _base.scss
-$abstract-colors: (
-    'background-color',
-    'body-color',
-    'sottovoce',
-    'hushed',
-    'whisper',
-    'quiet',
-    'silent',
-    'emphasis',
-    'danger',
-    'warning',
-    'success',
-    'info',
-    'highlight',
-    'hero',
-);

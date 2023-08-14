@@ -1,12 +1,14 @@
-// # Base # //
-
-// ## Block-level HTML elements ## //
+// Block-level HTML elements
+*:focus, *:focus-visible {
+    outline-color: var(--whisper);
+    outline-style: solid;
+    outline-width: 2px;
+}
 html {
     font-size: $base-font-size;
     @include breakpoint($mobile) {
         font-size: $desktop-font-size;
     }
-    -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
     // primitive color css variables
     @each $name, $color in $color-primitives {
         --#{$name}: #{$color};
@@ -16,116 +18,88 @@ html {
         --#{$name}: #{$color};
     }
     // light abstract css variables
-    --background-color: #{$white};
-    --body-color:       #{$gray-2};
-    --sottovoce:        #{$gray-4};
-    --hushed:           #{$gray-6};
-    --whisper:          #{$gray-8};
-    --quiet:            #{$gray-9};
-    --silent:           #{$gray-95};
-    --emphasis:         #{$pink};
-    --danger:           #{$red};
-    --warning:          #{$orange};
-    --success:          #{$green};
-    --info:             #{$blue};
-    --highlight:        #{lighten($yellow, 30%)};
-    --hero:             #{$teal};
-    --link-unvisited:   #{$blue};
-    --link-visited:     #{$purple};
-    --link-hover:       #{$red};
-    --link-active:      #{$yellow};
+    @each $name, $color in $abstract-colors-light {
+        --#{$name}: #{$color};
+    }
 }
 @media (prefers-color-scheme: dark) {
     html {
-        --background-color: #{$gray-1};
-        --body-color:       #{$gray-9};
-        --sottovoce:        #{$gray-6};
-        --hushed:           #{$gray-5};
-        --whisper:          #{$gray-4};
-        --quiet:            #{$gray-3};
-        --silent:           #{$gray-2};
-        --emphasis:         #{$pink};
-        --danger:           #{$red};
-        --warning:          #{$orange};
-        --success:          #{$green};
-        --info:             #{$blue};
-        --highlight:        #{lighten($yellow, 30%)};
-        --hero:             #{$teal};
-        --link-unvisited:   #{$blue};
-        --link-visited:     #{$purple};
-        --link-hover:       #{$red};
-        --link-active:      #{$yellow};
+        // dark abstract css variables
+        @each $name, $color in $abstract-colors-dark {
+            --#{$name}: #{$color};
+        }
     }
 }
-section, aside, div, article, footer, header, nav, address { // IMPORTANT: do not add layout or styling to these base elements
+section, aside, div, article, footer, header, nav, address { 
+    // IMPORTANT: do not add layout or styling to these base elements
     display: block;
 } 
 body {
-    background-color: var(--background-color);
-    color: var(--body-color);
+    background-color: var(--silent);
+    color: var(--loud);
     font-family: $default-font;
     line-height: $base-line-height;
     font-size: 1rem;
 }
-h1 {
-    @include bigheader;
-    font-size: 4rem;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $bold-weight;
+    margin-block-end: 1rem;
+    margin-block-start: 1rem;
+    small {
+        font-weight: $light-weight;
+    }
 }
-h2 {
-    @include bigheader;
+h1 {
     font-size: 3rem;
 }
-h3 {
-    @include bigheader;
+h2 {
     font-size: 2rem;
 }
+h3 {
+    font-size: 1.5rem;
+}
 h4 {
-    font-weight: $bold-weight;
-    @include mediumheader;
     font-size: 1rem;
 }
 h5 {
     font-size: 0.9rem;
-    @include weeheader;
 }
 h6 {
     font-size: 0.8rem;
-    @include weeheader;
 }
 hgroup {
-    margin-bottom: $vgutter * 2;
+    margin-block-end: 2rem;
 }
 p {
-    margin-bottom: $vgutter * 1;
+    margin-block-end: 1rem;
 }
 blockquote {
     border-color: var(--whisper);
     border-style: solid;
     border-width: 1px 0;
     font-style: italic;
-    margin-bottom: $vgutter * 2;
-    margin-left: $vgutter * 3;
-    margin-top: $vgutter * 2;
-    margin-right: $vgutter * 3;
-    padding: $vgutter 0;
+    margin-block-end: 2rem;
+    margin-block-start: 2rem;
+    margin-inline-end: 3rem;
+    margin-inline-start: 3rem;
+    padding: 1rem 0;
     & p:last-child {
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
 }
 hr {
     border-color: var(--whisper);
     border-style: solid;
     border-width: 0 0 $border-width 0;
-    margin-bottom: $vgutter * 1.5;
-    margin-top: $vgutter * 1.5;
+    margin-block-end: 1.5rem;
+    margin-block-start: 1.5rem;
     padding: 0;
-    width: 50%;
 }
 
 
-// ## Inline HTML elements ## //
+// Inline HTML elements
 
-// ### Links ### //
+// Links
 a {
     &:link {
         color: var(--link-unvisited);
@@ -146,11 +120,10 @@ a {
 h1, h2, h3, h4, h5, h6 {
     a, a:link, a:visited {
         color: inherit;
-        text-decoration: none;
     }
 }
 
-// #### Buttons #### //
+// Buttons
 a.button {
     @include make-button(var(--link-unvisited));
 }
@@ -179,7 +152,7 @@ del, s {
 }
 // ### small things ### //
 small, sup, sub {
-    font-size: 0.7rem;
+    font-size: 80%;
 }
 // ### big things ### //
 big {
@@ -207,10 +180,10 @@ var {}
 
 // ## Lists ## //
 ul, ol {
-    margin-bottom: $vgutter;
-    margin-left: $hgutter*3;
+    margin-block-end: 1rem;
+    margin-inline-start: 3rem;
     & ul, & ol {
-        margin-bottom: 0;
+        margin-block-end: 0;
     }
 }
 ul {
@@ -224,14 +197,14 @@ ol {
 // Data tables only!
 table {
     border: 1px solid var(--hushed);
-    margin-bottom: $vgutter * 2;
-    margin-top: $vgutter * 2;
+    margin-block-end: 2rem;
+    margin-block-start: 2rem;
 }
 tr {
-    border-bottom: 1px solid var(--whisper);
+    border-block-end: 1px solid var(--whisper);
 }
 td, th {
-    padding: $vgutter * 0.5;
+    padding: 0.5rem;
     text-align: left;
     vertical-align: top;
 }
@@ -246,8 +219,8 @@ thead, tfoot {
 img {}
 .responsive-image {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
     max-width: 100%;
 }
 
@@ -262,39 +235,47 @@ fieldset {
     background-color: var(--silent);
     border: 1px solid var(--whisper);
     display: block;
-    margin-bottom: $vgutter * 2;
-    margin-top: $vgutter * 2;
-    padding: $vgutter * 0.5;
+    margin-block-end: 2rem;
+    margin-block-start: 2rem;
+    padding: 0.5rem;
 }
 legend {
     font-weight: $bold-weight;
-    padding: 0 ($hgutter * 0.5);
-    margin-left: $hgutter;
+    margin-inline-start: 1rem;
+    padding: 0 0.5rem;
 }
 label {
     display: block;
     font-weight: $bold-weight;
 }
 .field-container {
-    margin-bottom: $vgutter * 0.5;
+    margin-block-end: 0.5rem;
 }
-input {
-    // reset appearance on iphones
-    //-webkit-appearance: none;
-    //-moz-appearance: none;
-    //appearance: none;
-    border: 1px solid var(--whisper);
+input, textarea, select {
     background: $white;
+    border: 1px solid var(--whisper);
 }
 input, textarea, select, option {
-    font-family: $default-font;
-    font-size: 1rem;
-    padding: $vgutter $hgutter;
-    color: var(--body-color);
-    background-color: var(--background-color);
+    background-color: var(--silent);
     border-radius: $border-radius;
     box-shadow: 0 0 0;
     box-sizing: border-box;
+    color: var(--loud);
+    font-family: $default-font;
+    font-size: 1rem;
+    padding: 1rem;
+}
+select, option {
+    padding: 0.5rem;
+}
+select {
+    appearance: none;
+    background-color: var(--silent);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>"); // note color must be hand-filled
+    background-origin: content-box;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 0.75rem 0.5rem;
 }
 input[type=text],
 input[type=password],
@@ -309,23 +290,19 @@ input[type=week],
 input[type=datetime],
 input[type=datetime-local],
 {
-    border-color: var(--whisper);
+    border-color: var(--hushed);
     border-radius: $border-radius;
     border-width: $border-width;
-    color: var(--body-color);
-    padding: math.div($hgutter, 3);
-    width: 90%;
-    @include breakpoint($desktop) {
-        max-width: 50%;
-    }
-    @include input-placeholder {
+    color: var(--loud);
+    padding: 0.3333rem;
+    &::placeholder {
         color: var(--hushed);
     }
 }
 input[type=submit], input[type=button], input[type=reset], button {
     font-family: $default-font;
-    margin: 0;
     font-size: 1rem;
+    margin: 0;
     @include make-button;
 }
 input[type=submit] {
@@ -334,12 +311,22 @@ input[type=submit] {
 input[type=reset] {
     background-color: var(--whisper);
 }
+input[type=checkbox],
+input[type=radio] {
+    padding: 0.5rem;
+    &:checked {
+        background: var(--hushed);
+    }
+}
+input[type=radio] {
+    border-radius: 100%;
+}
 *[title='Required'], .required {
     color: var(--danger);
 }
 .is-error {
     border: 2px solid var(--danger) !important;
-    @include input-placeholder {
+    &::placeholder {
         color: var(--danger);
     }
 }
@@ -348,7 +335,7 @@ label.error {
 }
 .is-valid {
     border: 2px solid var(--success) !important;
-    @include input-placeholder {
+    &::placeholder {
         color: var(--success);
     }
 }
