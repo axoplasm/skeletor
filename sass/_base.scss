@@ -194,6 +194,19 @@ ul {
 ol {
     list-style-type: decimal;
 }
+dl {
+    margin-block-end: 1rem;
+}
+dt {
+    font-weight: $bold-weight;
+    margin-block-start: 2rem;
+    margin-block-end: 0.5rem;
+}
+dd {
+    margin-block-end: 1rem;
+    margin-inline-start: 1rem;
+}
+
 
 // ## Tables ## //
 // Data tables only!
