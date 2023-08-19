@@ -13,7 +13,7 @@ TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = 'en'
 
 THEME = 'theme'
-THEME_STATIC_DIR = ''
+THEME_STATIC_DIR = 'static'
 
 ARTICLE_PATHS = ['articles']
 ARTICLE_SAVE_AS = 'articles/{slug}.html'
