@@ -477,9 +477,10 @@ select {
   background-color: var(--silent);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
   background-origin: content-box;
-  background-position: right center;
+  background-position: center right -1.5rem;
   background-repeat: no-repeat;
   background-size: 0.75rem 0.5rem;
+  padding-inline-end: 2rem;
 }
 
 input[type=text],
@@ -489,6 +490,7 @@ input[type=email],
 input[type=search],
 input[type=number],
 input[type=color],
+input[type=range],
 input[type=date],
 input[type=month],
 input[type=week],
@@ -507,12 +509,41 @@ input[type=email]::placeholder,
 input[type=search]::placeholder,
 input[type=number]::placeholder,
 input[type=color]::placeholder,
+input[type=range]::placeholder,
 input[type=date]::placeholder,
 input[type=month]::placeholder,
 input[type=week]::placeholder,
 input[type=datetime]::placeholder,
 input[type=datetime-local]::placeholder {
   color: var(--hushed);
+}
+
+input[type=color] {
+  padding: 1px;
+  height: 2rem;
+  width: 2rem;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: var(--silent);
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--hushed);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background: var(--whisper);
+  margin-top: 0;
+}
+input[type=range]::-ms-thumb {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
 
 input[type=submit], input[type=button], input[type=reset], button {
