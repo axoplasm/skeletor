@@ -397,6 +397,9 @@ table {
   margin-block-end: 2rem;
   margin-block-start: 2rem;
 }
+table.borderless, table.borderless tr {
+  border: none;
+}
 
 tr {
   border-block-end: 1px solid var(--whisper);
@@ -972,6 +975,14 @@ label.valid {
 
 .fg-link-active {
   color: var(--link-active);
+}
+
+.text-align-end {
+  text-align: end;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=screen.css.map */

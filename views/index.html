@@ -15,8 +15,38 @@ color-primitives:
     - navy
     - purple
     - pink
+gray-primitives:
+    - black
+    - gray-1
+    - gray-2
+    - gray-3
+    - gray-4
+    - gray-5
+    - gray-6
+    - gray-7
+    - gray-8
+    - gray-9
+    - gray-95
+    - white
+abstract-colors:
+    - loud
+    - sottovoce
+    - hushed
+    - whisper
+    - quiet
+    - silent
+    - emphasis
+    - danger
+    - warning
+    - success
+    - info
+    - highlight
+    - hero
+    - link-unvisited
+    - link-visited
+    - link-hover
+    - link-active
 ---
-
 <section class="row">
     <div class="row__inner">
 
@@ -257,19 +287,20 @@ color-primitives:
 <section class="row">
     <div class="row__inner">
         <h3>Color primitives</h3>
-        <table class="borderless" style="width:100%">
-            <tbody>
-                {%- for color in color-primitives -%}
-                <tr>
-                    <td class="fg-{{ color }}">
-                        fg-{{ color }}
-                    </td>
-                    <td class="bg-{{ color }}">
-                        bg-{{ color }}
-                    </td>
-                </tr>
-                {%- endfor -%}
-            </tbody>
-        </table>
+        {% include 'color-table.html', colors: color-primitives %}
+    </div>
+</section>
+
+<section class="row">
+    <div class="row__inner">
+        <h3>Gray primitives</h3>
+        {% include 'color-table.html', colors: gray-primitives %}
+    </div>
+</section>
+
+<section class="row">
+    <div class="row__inner">
+        <h3>Color abstractions</h3>
+        {% include 'color-table.html', colors: abstract-colors %}
     </div>
 </section>

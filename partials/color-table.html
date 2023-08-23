@@ -1,0 +1,14 @@
+<table class="borderless">
+    <tbody>
+        {%- for color in colors -%}
+        <tr>
+            <td class="fg-{{ color }} nowrap">
+                fg-{{ color }}
+            </td>
+            <td class="bg-{{ color }}" style="width:100%">
+                bg-{{ color }}
+            </td>
+        </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
