@@ -1,32 +1,36 @@
 Skeletor
 ========
 
-Truly barebones HTML + [sass](//sass-lang.com) + [Pelican](//blog.getpelican.com) boilerplate for front-end dev.
+Truly barebones HTML + [sass](//sass-lang.com) + [Pelican](//blog.getpelican.com) boilerplate for static site and front-end development.
 
 [skeletor.axoplasm.com](//skeletor.axoplasm.com)
 
 
-### Installation 
+Dependencies
+------------
+- [The New CSS Reset](https://elad2412.github.io/the-new-css-reset/)
+- [11ty](https://www.11ty.dev)
+
+
+Installation 
+------------
 
 ```bash
-$ python3 -m venv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
 $ npm install
 ```
 
-### Local development
-
-In one terminal:
-
-```bash
-$ pelican content --autoreload --listen
-```
-
-In another terminal:
+Local development
+-----------------
 
 ```bash
 $ npm start
 ```
 
-Local site served at [127.0.0.1:8000](http://127.0.0.1:8000)
+Local site served at [127.0.0.1:8000](http://127.0.0.1:8000), with live reload.
+
+Pages are rendered from `/views/` into `/public/`.
+
+Pages are served from `/public/` with absolute paths.
+
+CSS is rendered from `/sass/stg.scss` to `/public/css/stg.css`.
+

@@ -1,28 +1,21 @@
-{% extends "base.html" %}
-{% block html_lang %}{{ page.lang }}{% endblock %}
-
-{% block title %}{{ SITENAME }} - {{ page.title }}{%endblock%}
-
-{% block head %}
-  {{ super() }}
-
-  {% import 'translations.html' as translations with context %}
-  {% if translations.entry_hreflang(page) %}
-    {{ translations.entry_hreflang(page) }}
-  {% endif %}
-{% endblock %}
-
-{% block content %}
-    {% import 'translations.html' as translations with context %}
-    {{ translations.translations_for(page) }}
-
-{% if page.content %}
-<section class="row">
-    <div class="row__inner">
-    {{ page.content }}
-    </div>
-</section>
-{% endif %}
+---
+layout: base.html
+title: Skeletor
+color-primitives:
+    - red
+    - orange
+    - brown
+    - yellow
+    - sage
+    - green
+    - forest
+    - teal
+    - sky
+    - blue
+    - navy
+    - purple
+    - pink
+---
 
 <section class="row">
     <div class="row__inner">
@@ -261,72 +254,22 @@
     </div>
 </section>
 
-{% set primitives =  
-    "red",
-    "orange",
-    "brown",
-    "yellow",
-    "sage",
-    "green",
-    "forest",
-    "teal",
-    "sky",
-    "blue",
-    "navy",
-    "purple",
-    "pink",
-%}
 <section class="row">
     <div class="row__inner">
         <h3>Color primitives</h3>
-        {% for p in primitives %}
-        <div class="styleguide-color bg-{{ p }}">
-            {{ p }}
-        </div>
-        {% endfor %}
-    </div>
-    
-    <div class="row__inner">
-        <h3>Gray primitives</h3>
-        <div class="styleguide-color bg-black">
-            black
-        </div>
-        {% for i in range(1,10) %}
-        <div class="styleguide-color bg-gray-{{ i }}">
-            gray-{{ i }}
-        </div>
-        {% endfor %}
-        <div class="styleguide-color bg-gray-95">
-            gray-95
-        </div>
-        <div class="styleguide-color bg-white fg-body-color">
-            white
-        </div>
-    </div>
-
-    <div class="row__inner">
-        <h3>Color abstractions</h3>
-{% set abstractions = 
-    "background-color",
-    "body-color",
-    "sottovoce",
-    "hushed",
-    "whisper",
-    "quiet",
-    "silent",
-    "emphasis",
-    "highlight",
-    "danger",
-    "warning",
-    "success",
-    "info",
-    "hero",
-%}
-    {% for a in abstractions %}
-    <div class="styleguide-color bg-{{ a }}">
-        {{ a }}
-    </div>
-    {% endfor %}
+        <table class="borderless" style="width:100%">
+            <tbody>
+                {%- for color in color-primitives -%}
+                <tr>
+                    <td class="fg-{{ color }}">
+                        fg-{{ color }}
+                    </td>
+                    <td class="bg-{{ color }}">
+                        bg-{{ color }}
+                    </td>
+                </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
     </div>
 </section>
-{% endblock %}
