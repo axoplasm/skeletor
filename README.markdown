@@ -1,7 +1,7 @@
 Skeletor
 ========
 
-Truly barebones HTML + [sass](//sass-lang.com) + [Pelican](//blog.getpelican.com) boilerplate for static site and front-end development.
+Truly barebones boilerplate for static site and front-end development.
 
 [skeletor.axoplasm.com](//skeletor.axoplasm.com)
 
