@@ -119,7 +119,9 @@ input[type=checkbox],
 input[type=radio] {
     padding: 0.5rem;
     &:checked {
-        background: var(--hushed);
+        background: var(--loud);
+        border-color: var(--loud);
+        box-shadow: inset 0 0 0 2px var(--silent);
     }
 }
 input[type=radio] {

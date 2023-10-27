@@ -581,7 +581,9 @@ input[type=radio] {
 }
 input[type=checkbox]:checked,
 input[type=radio]:checked {
-  background: var(--hushed);
+  background: var(--loud);
+  border-color: var(--loud);
+  box-shadow: inset 0 0 0 2px var(--silent);
 }
 
 input[type=radio] {
