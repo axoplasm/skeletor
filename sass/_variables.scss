@@ -116,4 +116,18 @@ $abstract-colors: (
     'strange',
 );
 
+// Breakpoints
+$x-large-width:   1440px;
+$large-width:     960px;
+$medium-width:    800px;
+$small-width:     600px;
+$x-small-width:   480px;
+
+$device-widths: (
+    'x-large-width':    $x-large-width,
+    'large-width':      $large-width,
+    'medium-width':     $medium-width,
+    'small-width':      $small-width,
+    'x-small-width':    $x-small-width,
+)
 

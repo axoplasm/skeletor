@@ -123,15 +123,17 @@ html {
   --oblique-style: italic;
   --default-line-height: 1.5;
   --compact-line-height: 1.25;
-  --desktop-width: 960px;
-  --tablet-width: 800px;
-  --mobile-width: 600px;
+  --x-large-width: 1440px;
+  --large-width: 960px;
+  --medium-width: 800px;
+  --small-width: 600px;
+  --x-small-width: 480px;
   --default-transition: 0.2s all ease-in-out;
   --default-border-radius: 0;
   --default-border-width: 1px;
   font-size: var(--default-font-size);
 }
-@media (min-width: var(--mobile-width)) {
+@media (min-width: 600px) {
   html {
     font-size: calc(var(--default-font-size) * 1.1);
   }
@@ -591,8 +593,14 @@ label.valid {
 }
 
 div[role=document] {
-  max-width: var(--desktop-width);
+  max-width: var(--large-width);
   margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: calc(960px + 2rem)) {
+  div[role=document] {
+    padding-inline: 0;
+  }
 }
 
 .bg-loud {

@@ -19,9 +19,9 @@ html {
     --compact-line-height: 1.25;
 
     // layout
-    --desktop-width: 960px;
-    --tablet-width: 800px;
-    --mobile-width: 600px;
+    @each $name, $width in $device-widths {
+        --#{$name}: #{$width};
+    }
 
     // transitions
     --default-transition: 0.2s all ease-in-out;
@@ -32,7 +32,7 @@ html {
 
     // global defaults
     font-size: var(--default-font-size);
-    @include breakpoint(var(--mobile-width)) {
+    @include breakpoint($small-width) {
         font-size: calc(var(--default-font-size) * 1.1);
     }
 }
