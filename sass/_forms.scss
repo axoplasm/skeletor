@@ -1,4 +1,3 @@
-// ## Forms ## //
 form {} // IMPORTANT: do not add layout or styling to <form>!
 form ul {
     list-style-type: none;
@@ -6,23 +5,19 @@ form ul {
 }
 fieldset {
     background-color: var(--quiet);
-    border: 1px solid var(--whisper);
     display: block;
     margin-block-end: 2rem;
     margin-block-start: 2rem;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 legend {
-    font-weight: $bold-weight;
+    font-weight: var(--bold-weight);
     margin-inline-start: 1rem;
     padding: 0 0.5rem;
 }
 label {
     display: block;
-    font-weight: $bold-weight;
-}
-.field-container {
-    margin-block-end: 0.5rem;
+    font-weight: var(--bold-weight);
 }
 input, textarea, select {
     background: $white;
@@ -30,11 +25,11 @@ input, textarea, select {
 }
 input, textarea, select, option {
     background-color: var(--silent);
-    border-radius: $border-radius;
+    border-radius: var(--default-border-radius);
     box-shadow: 0 0 0;
     box-sizing: border-box;
     color: var(--loud);
-    font-family: $default-font;
+    font-family: var(--sans-font);
     font-size: 1rem;
     padding: 1rem;
 }
@@ -46,7 +41,7 @@ select {
     background-color: var(--silent);
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>"); // note color must be hand-filled
     background-origin: content-box;
-    background-position: center right -1.5rem;
+    background-position: center right -1.5rem; // TODO: RTL
     background-repeat: no-repeat;
     background-size: 0.75rem 0.5rem;
     padding-inline-end: 2rem;
@@ -67,8 +62,8 @@ input[type=datetime],
 input[type=datetime-local],
 {
     border-color: var(--hushed);
-    border-radius: $border-radius;
-    border-width: $border-width;
+    border-radius: var(--default-border-radius);
+    border-width: var(--default-border-width);
     color: var(--loud);
     padding: 0.3333rem;
     &::placeholder {
@@ -103,17 +98,14 @@ input[type=range] {
         color: transparent;
     }
 }
-input[type=submit], input[type=button], input[type=reset], button {
-    font-family: $default-font;
-    font-size: 1rem;
-    margin: 0;
-    @include make-button;
-}
 input[type=submit] {
-    background-color: var(--link-unvisited);
+    @include make-button(var(--info), white);
+}
+input[type=button] {
+    @include make-button(var(--hushed), white);
 }
 input[type=reset] {
-    background-color: var(--whisper);
+    @include make-button(var(--danger), white);
 }
 input[type=checkbox],
 input[type=radio] {
@@ -129,6 +121,11 @@ input[type=radio] {
 }
 *[title='Required'], .required {
     color: var(--danger);
+}
+
+// form helper classes
+.field-container:not(:last-child) {
+    margin-block-end: 1rem;
 }
 .is-error {
     border: 2px solid var(--danger) !important;
@@ -150,7 +147,7 @@ label.valid {
 }
 .options { // fieldsets containing checkboxes & radio boxes
     label {
-        font-weight: $normal-weight;
+        font-weight: var(--normal-weight);
     }
 }
 

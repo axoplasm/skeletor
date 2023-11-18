@@ -9,13 +9,13 @@
     border: none;
     color: $link-color;
     display: inline-block;
-    font-weight: $bold-weight;
+    font-weight: var(--bold-weight);
     padding: 0.5rem 1rem;
     text-decoration: none;
     &:hover {
         opacity: 0.8;
         cursor: pointer;
-        transition: $transition;
+        transition: var(--default-transition);
     }
 }
 

@@ -35,6 +35,7 @@ $white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
 
 // color maps
 $color-primitives: (
+// unused?
     'red':      $red,
     'orange':   $orange,
     'brown':    $brown,
@@ -49,8 +50,8 @@ $color-primitives: (
     'purple':   $purple,
     'pink':     $pink,
 );
-
 $gray-primitives: (
+// unused?
     'black':    $black,
     'gray-1':   $gray-1,
     'gray-2':   $gray-2,
@@ -76,16 +77,12 @@ $abstract-colors-light: (
     'emphasis':         $pink,
     'danger':           $red,
     'warning':          $orange,
+    'strange':          $purple,
     'success':          $green,
     'info':             $blue,
     'highlight':        $yellow,
-    'hero':             $teal,
-    'link-unvisited':   $blue,
-    'link-visited':     $purple,
-    'link-hover':       $red,
-    'link-active':      $green,
+    'hero':             $pink,
 );
-
 $abstract-colors-dark: (
     'loud':             $white,
     'sottovoce':        $gray-6,
@@ -96,33 +93,27 @@ $abstract-colors-dark: (
     'emphasis':         $pink,
     'danger':           $red,
     'warning':          $orange,
+    'strange':          $purple,
     'success':          $green,
     'info':             $blue,
     'highlight':        $yellow,
-    'hero':             $teal,
-    'link-unvisited':   $blue,
-    'link-visited':     $purple,
-    'link-hover':       $red,
-    'link-active':      $green,
+    'hero':             $pink,
+);
+$abstract-colors: (
+    'loud',
+    'sottovoce',
+    'hushed',
+    'whisper',
+    'quiet',
+    'silent',
+    'emphasis',
+    'danger',
+    'warning',
+    'success',
+    'info',
+    'highlight',
+    'hero',
+    'strange',
 );
 
-// Misc. Appearance 
-$border-radius: 0;
-$border-width: 1px;
-$transition: all 0.2s ease-out;
-
-// Fonts
-$default-font: sans-serif;
-$monospace-font: monospace;
-$bold-weight: 700;
-$normal-weight: 400;
-$light-weight: 300;
-$base-font-size: 15px; // for mobile, in px
-$desktop-font-size: 16px; // for desktop, in px
-$base-line-height: 1.5; // unitless
-
-// Breakpoints
-$desktop:   960px;
-$tablet:    800px;
-$mobile:    600px;
 

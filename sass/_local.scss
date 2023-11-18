@@ -1,16 +1,18 @@
-// # Regions # //
-
-// # Layout # //
-.row {
-    &__inner {
-        padding: 0 1rem;
-        @include breakpoint($desktop) {
-            @include container($desktop);
-            padding: 0 0;
-        }
-    }
+//  layout
+div[role='document'] {
+    max-width: var(--desktop-width);
+    margin-inline: auto;
 }
 
+// colors
+@each $name in $abstract-colors {
+    .bg-#{$name} {
+        background: var(--#{$name});
+    }
+    .fg-#{$name} {
+        color: var(--#{$name});
+    }
+}
 .styleguide-color {
     background-color: var(--black);
     color: var(--white);
@@ -19,22 +21,29 @@
     width: 50%;
 }
 
+// Buttons
+a.button {
+    @include make-button(var(--info), white);
+}
+a.button-hot {
+    @include make-button(var(--emphasis), white);
+}
+a.button-cool {
+    @include make-button(var(--hushed), white);
+}
 
-// # Modules/Components # //
+// images
+.responsive-image {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+}
 
-// # State # //
-
-// ## Colors ## //
-@include color-selectors($color-primitives);
-@include color-selectors($gray-primitives);
-@include color-selectors($abstract-colors-light);
-//  
-// # Custom # //
-
-// # Unsorted # //
+// unsorted
 .text-align-end {
     text-align: end;
 }
 .nowrap {
     white-space: nowrap;
 }
+

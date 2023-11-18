@@ -1,25 +1,39 @@
 // Block-level HTML elements
-*:focus, *:focus-visible {
-    outline-color: var(--whisper);
-    outline-style: solid;
-    outline-width: 2px;
-}
 html {
-    font-size: $base-font-size;
-    @include breakpoint($mobile) {
-        font-size: $desktop-font-size;
-    }
+    // variables
     // primitive color css variables
-    @each $name, $color in $color-primitives {
-        --#{$name}: #{$color};
-    }
-    // primitive gray css variables
-    @each $name, $color in $gray-primitives {
-        --#{$name}: #{$color};
-    }
     // light abstract css variables
     @each $name, $color in $abstract-colors-light {
         --#{$name}: #{$color};
+    }
+
+    // typography 
+    --sans-font: sans-serif;
+    --monospace-font: monospace;
+    --default-font-size: 16px;
+    --bold-weight: 700;
+    --regular-weight: 400;
+    --light-weight: 300;
+    --oblique-style: italic;
+    --default-line-height: 1.5;
+    --compact-line-height: 1.25;
+
+    // layout
+    --desktop-width: 960px;
+    --tablet-width: 800px;
+    --mobile-width: 600px;
+
+    // transitions
+    --default-transition: 0.2s all ease-in-out;
+
+    // misc appearance
+    --default-border-radius: 0;
+    --default-border-width: 1px;
+
+    // global defaults
+    font-size: var(--default-font-size);
+    @include breakpoint(var(--mobile-width)) {
+        font-size: calc(var(--default-font-size) * 1.1);
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -30,24 +44,37 @@ html {
         }
     }
 }
-section, aside, div, article, footer, header, nav, address { 
-    // IMPORTANT: do not add layout or styling to these base elements
-    display: block;
-} 
+*:focus, *:focus-visible {
+    outline-color: var(--whisper);
+    outline-style: solid;
+    outline-width: 2px;
+}
 body {
     background-color: var(--silent);
     color: var(--loud);
-    font-family: $default-font;
-    line-height: $base-line-height;
+    font-family: var(--sans-font);
+    line-height: var(--default-line-height);
     font-size: 1rem;
 }
+// non-text semantic elements
+address, article, aside, div, footer, header, main, nav, search, section {
+    display: block;
+}
+
+// button is a useful element to leave unstyled for accessible/tabable elements like cards
+button {}
+
+// headers
+hgroup { }
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $bold-weight;
-    margin-block-end: 1rem;
-    margin-block-start: 1rem;
+    font-weight: var(--bold-weight);
+    margin-block: 1rem;
     small {
         font-size: inherit;
-        font-weight: $light-weight;
+        font-weight: var(--light-weight);
+    }
+    a, a:link, a:visited {
+        color: inherit;
     }
 }
 h1 {
@@ -55,6 +82,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+    margin-block-start: 1rem;
 }
 h3 {
     font-size: 1.5rem;
@@ -68,123 +96,88 @@ h5 {
 h6 {
     font-size: 0.8rem;
 }
-hgroup {
-    margin-block-end: 2rem;
-}
-p {
+
+// other text blocks
+p:not(:last-child) {
     margin-block-end: 1rem;
 }
 blockquote {
-    border-color: var(--whisper);
-    border-style: solid;
-    border-width: 1px;
-    color: var(--hushed);
-    font-style: italic;
-    margin-block-end: 2rem;
-    margin-block-start: 2rem;
-    margin-inline-end: 1rem;
-    margin-inline-start: 1rem;
+    background-color: var(--quiet);
+    font-style: var(--oblique-style);
+    margin-block: 1rem;
     padding: 1rem;
-    & p:last-child {
-        margin-block-end: 0;
-    }
+}
+pre {
+    display: block;
+    font-family: var(--monospace-font);
 }
 hr {
-    border-color: var(--whisper);
-    border-style: solid;
-    border-width: 0 0 $border-width 0;
-    margin-block-end: 1.5rem;
-    margin-block-start: 1.5rem;
-    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--hushed);
+    margin-block: 1rem;
 }
-
-
-// Inline HTML elements
 
 // Links
 a {
     &:link {
-        color: var(--link-unvisited);
+        color: var(--info);
         text-decoration: underline;
     }
     &:visited {
-        color: var(--link-visited);
+        color: var(--strange);
     }
     &:hover {
-        color: var(--link-hover);
-        transition: $transition;
+        color: var(--hero);
+        transition: var(--default-transition);
     }
     &:active {
-        color: var(--link-active);
+        color: var(--success);
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    a, a:link, a:visited {
-        color: inherit;
-    }
+// Inline HTML elements
+strong, b, dfn {
+    font-weight: var(--bold-weight);
 }
-
-// Buttons
-a.button {
-    @include make-button(var(--link-unvisited));
+em, i, cite, q, var {
+    font-style: var(--oblique-style);
 }
-a.button-hot {
-    @include make-button(var(--emphasis));
-}
-a.button-cool {
-    @include make-button(var(--hushed));
-}
-
-// ### bold things ### //
-strong, b, dfn, var {
-    font-weight: $bold-weight;
-}
-// ### italic things ### //
-em, i, cite, q {
-    font-style: italic;
-}
-// ### underlined things ### //
-u, ins {
+u {
     text-decoration: underline;
 }
-// ### line-through things ### //
-del, s {
+s {
     text-decoration: line-through;
 }
-// ### small things ### //
+ins {
+    color: var(--success);
+    text-decoration: underline;
+}
+del {
+    color: var(--danger);
+    text-decoration: line-through;
+}
 small, sup, sub {
     font-size: 80%;
 }
-// ### big things ### //
-big {
-    font-size: 1.4rem;
-}
-// ### baseline-adjusted things ### //
 sup {
     vertical-align: super;
 }
 sub {
     vertical-align: sub;
 }
-// ### monospace things ### //
 kbd, code, samp {
-    font-family: $monospace-font;
+    font-family: var(--monospace-font);
 }
-// ### crazy misc inline elements ### //
 abbr {}
-dfn {}
 mark {
     background: var(--highlight);
 }
-var {}
 
-
-// ## Lists ## //
-ul, ol {
+// lists
+ul, ol, menu {
     margin-block-end: 1rem;
     margin-inline-start: 3rem;
-    & ul, & ol {
+    & ul, & ol, & menu {
         margin-block-end: 0;
     }
 }
@@ -201,7 +194,7 @@ dl {
     margin-block-end: 1rem;
 }
 dt {
-    font-weight: $bold-weight;
+    font-weight: var(--bold-weight);
     margin-block-start: 2rem;
     margin-block-end: 0.5rem;
 }
@@ -211,40 +204,30 @@ dd {
 }
 
 
-// ## Tables ## //
-// Data tables only!
+// tables
 table {
     border: 1px solid var(--hushed);
-    margin-block-end: 2rem;
-    margin-block-start: 2rem;
-    &.borderless {
-        &, tr {
-            border: none;
-        }
-    }
+    margin-block: 2rem;
 }
 tr {
     border-block-end: 1px solid var(--whisper);
 }
 td, th {
     padding: 0.5rem;
-    text-align: left;
-    vertical-align: top;
+    text-align: start;
+    vertical-align: start;
 }
 th {
-    font-weight: $bold-weight;
+    font-weight: var(--bold-weight);
 }
 thead, tfoot {
     background-color: var(--quiet);
 }
 
-// ## Images ## //
+// images
+// TODO
 img {}
-.responsive-image {
-    display: block;
-    margin-inline-end: auto;
-    margin-inline-start: auto;
-    max-width: 100%;
-}
+figure {}
+picture {}
 
 

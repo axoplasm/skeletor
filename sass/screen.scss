@@ -1,20 +1,19 @@
 // # Dependencies # //
 @use "sass:math";
 
-// Import shared library after declaring abstracted variables
 
-// # Local libraries # //
-@import "variables";      // local variables for this project
-@import "lib";            // functions, mixins & pseudoclasses
+// Local libraries, these produce no css
+@import "variables"; // local sass variables for this project
+@import "lib"; // functions, mixins & pseudoclasses, import after variables
 
-// # Reset
+// Reset
 @import "../node_modules/the-new-css-reset/css/reset";
 
-// # Base HTML # //
+// Base HTML
 @import "base"; 
 @import "forms"; 
 
-// # Layout, page regions, modules, custom selectors # //
+// Layout, page regions, modules, custom selectors
 @import "local";
 
-// # Unsorted # //
+// Unsorted
