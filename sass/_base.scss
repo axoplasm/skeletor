@@ -107,6 +107,9 @@ h1, h2, h3, h4, h5, h6 {
         color: inherit;
     }
 }
+h1, h2, h3, {
+    line-height: var(--compact-line-height);
+}
 h1 {
     font-size: 3rem;
 }
