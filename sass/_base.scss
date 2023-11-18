@@ -61,6 +61,36 @@ address, article, aside, div, footer, header, main, nav, search, section {
     display: block;
 }
 
+// details/summary
+details {
+    border: 1px solid var(--whisper);
+    margin-block: 2rem;
+    padding: 1rem;
+}
+summary {
+    font-weight: var(--bold-weight);
+    transition: margin 150ms ease-in-out;
+    &:before {
+        color: var(--hushed);
+        content: "▸";
+        display: inline-block;
+        font-size: 125%;
+        line-height: 1;
+        margin-inline-end: 0.5rem;
+        width: 1rem;
+    }
+    details[open] > & {
+        margin-block-end: 1rem;
+        &:before {
+            content: "▾";
+        }
+    }
+    &::-webkit-details-marker, &::marker {
+        content: none;
+        display: none;
+    }
+}
+
 // button is a useful element to leave unstyled for accessible/tabable elements like cards
 button {}
 

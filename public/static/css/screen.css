@@ -173,6 +173,36 @@ address, article, aside, div, footer, header, main, nav, search, section {
   display: block;
 }
 
+details {
+  border: 1px solid var(--whisper);
+  margin-block: 2rem;
+  padding: 1rem;
+}
+
+summary {
+  font-weight: var(--bold-weight);
+  transition: margin 150ms ease-in-out;
+}
+summary:before {
+  color: var(--hushed);
+  content: "▸";
+  display: inline-block;
+  font-size: 125%;
+  line-height: 1;
+  margin-inline-end: 0.5rem;
+  width: 1rem;
+}
+details[open] > summary {
+  margin-block-end: 1rem;
+}
+details[open] > summary:before {
+  content: "▾";
+}
+summary::-webkit-details-marker, summary::marker {
+  content: none;
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--bold-weight);
   margin-block: 1rem;
