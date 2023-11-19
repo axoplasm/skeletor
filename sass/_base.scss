@@ -71,18 +71,18 @@ summary {
     font-weight: var(--bold-weight);
     transition: margin 150ms ease-in-out;
     &:before {
-        color: var(--hushed);
-        content: "▸";
+        content: "";
         display: inline-block;
-        font-size: 125%;
+        height: 0.75rem;
         line-height: 1;
         margin-inline-end: 0.5rem;
-        width: 1rem;
+        width: 0.75rem;
+        @include caret($direction:right, $inline-offset: 0.125rem, $block-offset: 0);
     }
     details[open] > & {
         margin-block-end: 1rem;
         &:before {
-            content: "▾";
+            @include caret($direction:down, $inline-offset: 0, $block-offset: 0.25rem);
         }
     }
     &::-webkit-details-marker, &::marker {

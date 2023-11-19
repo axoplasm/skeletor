@@ -27,13 +27,13 @@ div[role='document'] {
 
 // Buttons
 a.button {
-    @include make-button(var(--info), white);
+    @include buttonish(var(--info), white);
 }
 a.button-hot {
-    @include make-button(var(--emphasis), white);
+    @include buttonish(var(--emphasis), white);
 }
 a.button-cool {
-    @include make-button(var(--hushed), white);
+    @include buttonish(var(--hushed), white);
 }
 
 // images

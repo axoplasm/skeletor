@@ -4,7 +4,7 @@
     }
 }
 
-@mixin make-button($background-color: var(--hushed), $link-color: var(--white)) {
+@mixin buttonish($background-color: var(--hushed), $link-color: var(--white)) {
     background-color: $background-color;
     border: none;
     color: $link-color;
@@ -36,5 +36,53 @@
         .fg-#{$name} {
             color: var(--#{$name});
         }
+    }
+}
+
+@mixin caret(
+    // generates a pair of background images that can be used as a caret e.g. in select or summary elements
+    $direction: right,          // which way the caret points: right, down, left, up
+    $color: var(--loud),        // caret color
+    $size: 0.75rem,             // width of the caret in its long dimension
+    $inline-offset: 0.75rem,    // distance from the inline edge of the element
+    $block-offset: 1rem,        // distance from the block edge of the element
+    $side: right,               // which inline side the element is positioned to
+) {
+    $bgsize: $size * 0.5;        // the size of each bg img
+
+    background-repeat: no-repeat;
+    background-size: $bgsize $bgsize, $bgsize $bgsize;
+
+    @if $direction == right {
+        background-image: 
+            linear-gradient(45deg, $color 50%, transparent 50%), 
+            linear-gradient(135deg, $color 50%, transparent 50%);
+        background-position: 
+            $side $inline-offset top $block-offset,
+            $side $inline-offset top #{$block-offset + $bgsize};
+    }
+    @if $direction == left {
+        background-image: 
+            linear-gradient(315deg, $color 50%, transparent 50%), 
+            linear-gradient(225deg, $color 50%, transparent 50%);
+        background-position: 
+            $side $inline-offset top $block-offset,
+            $side $inline-offset top #{$block-offset + $bgsize};
+    }
+    @if $direction == down {
+        background-image: 
+            linear-gradient(225deg, $color 50%, transparent 50%), 
+            linear-gradient(135deg, $color 50%, transparent 50%);
+        background-position: 
+            $side #{$inline-offset + $bgsize} top $block-offset,
+            $side $inline-offset top $block-offset;
+    }
+    @if $direction == up {
+        background-image: 
+            linear-gradient(315deg, $color 50%, transparent 50%), 
+            linear-gradient(45deg, $color 50%, transparent 50%);
+        background-position: 
+            $side #{$inline-offset + $bgsize} top $block-offset,
+            $side $inline-offset top $block-offset;
     }
 }

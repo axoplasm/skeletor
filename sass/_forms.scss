@@ -1,4 +1,4 @@
-form {} // IMPORTANT: do not add layout or styling to <form>!
+orm {} // IMPORTANT: do not add layout or styling to <form>!
 form ul {
     list-style-type: none;
     margin: 0;
@@ -39,27 +39,8 @@ select, option {
 select {
     appearance: none;
     background-color: var(--silent);
-    background-image: 
-        linear-gradient(
-            45deg, 
-            transparent 50%, 
-            var(--hushed) 50%
-        ), 
-        linear-gradient(
-            135deg, 
-            var(--hushed) 50%, 
-            transparent 50%
-        )
-    ;
-    background-position: 
-        right 1rem top 1rem, 
-        right 0.7rem top 1rem;
-    background-repeat: no-repeat;
-    background-size: 
-        0.3rem 0.3rem, 
-        0.3rem 0.3rem; 
     padding-inline-end: 2rem;
-
+    @include caret($direction: down, $inline-offset: 0.75rem);
 }
 input[type=text],
 input[type=password],
@@ -113,13 +94,13 @@ input[type=range] {
     }
 }
 input[type=submit] {
-    @include make-button(var(--info), white);
+    @include buttonish(var(--info), white);
 }
 input[type=button] {
-    @include make-button(var(--hushed), white);
+    @include buttonish(var(--hushed), white);
 }
 input[type=reset] {
-    @include make-button(var(--danger), white);
+    @include buttonish(var(--danger), white);
 }
 input[type=checkbox],
 input[type=radio] {
