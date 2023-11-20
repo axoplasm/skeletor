@@ -27,7 +27,7 @@ html {
     --default-transition: 0.2s all ease-in-out;
 
     // misc appearance
-    --default-border-radius: 0;
+    --default-border-radius: 0.25rem;
     --default-border-width: 1px;
 
     // global defaults
@@ -64,6 +64,7 @@ address, article, aside, div, footer, header, main, nav, search, section {
 // details/summary
 details {
     border: 1px solid var(--whisper);
+    border-radius: var(--default-border-radius);
     margin-block: 2rem;
     padding: 1rem;
 }
@@ -136,6 +137,7 @@ p:not(:last-child) {
 }
 blockquote {
     background-color: var(--quiet);
+    border-radius: var(--default-border-radius);
     font-style: var(--oblique-style);
     margin-block: 1rem;
     padding: 1rem;

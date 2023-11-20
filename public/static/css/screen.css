@@ -129,7 +129,7 @@ html {
   --small-width: 600px;
   --x-small-width: 480px;
   --default-transition: 0.2s all ease-in-out;
-  --default-border-radius: 0;
+  --default-border-radius: 0.25rem;
   --default-border-width: 1px;
   font-size: var(--default-font-size);
 }
@@ -177,6 +177,7 @@ address, article, aside, div, footer, header, main, nav, search, section {
 
 details {
   border: 1px solid var(--whisper);
+  border-radius: var(--default-border-radius);
   margin-block: 2rem;
   padding: 1rem;
 }
@@ -258,6 +259,7 @@ p:not(:last-child) {
 
 blockquote {
   background-color: var(--quiet);
+  border-radius: var(--default-border-radius);
   font-style: var(--oblique-style);
   margin-block: 1rem;
   padding: 1rem;
@@ -397,6 +399,7 @@ form ul {
 
 fieldset {
   background-color: var(--quiet);
+  border-radius: var(--default-border-radius);
   display: block;
   margin-block-end: 2rem;
   margin-block-start: 2rem;
@@ -404,9 +407,12 @@ fieldset {
 }
 
 legend {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--default-border-radius);
   font-weight: var(--bold-weight);
-  margin-inline-start: 1rem;
-  padding: 0 0.5rem;
+  margin-inline-start: 0;
+  padding: 0.25rem 1rem;
 }
 
 label {
@@ -510,6 +516,7 @@ input[type=range]::-ms-thumb {
 input[type=submit] {
   background-color: var(--info);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);
@@ -525,6 +532,7 @@ input[type=submit]:hover {
 input[type=button] {
   background-color: var(--hushed);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);
@@ -540,6 +548,7 @@ input[type=button]:hover {
 input[type=reset] {
   background-color: var(--danger);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);
@@ -735,6 +744,7 @@ div[role=document] {
 a.button {
   background-color: var(--info);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);
@@ -750,6 +760,7 @@ a.button:hover {
 a.button-hot {
   background-color: var(--emphasis);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);
@@ -765,6 +776,7 @@ a.button-hot:hover {
 a.button-cool {
   background-color: var(--hushed);
   border: none;
+  border-radius: var(--default-border-radius);
   color: white;
   display: inline-block;
   font-weight: var(--bold-weight);

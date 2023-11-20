@@ -7,6 +7,7 @@
 @mixin buttonish($background-color: var(--hushed), $link-color: var(--white)) {
     background-color: $background-color;
     border: none;
+    border-radius: var(--default-border-radius);
     color: $link-color;
     display: inline-block;
     font-weight: var(--bold-weight);
