@@ -132,6 +132,7 @@ html {
   --default-border-radius: 0.25rem;
   --default-border-width: 1px;
   font-size: var(--default-font-size);
+  scroll-behavior: smooth;
 }
 @media (min-width: 600px) {
   html {
@@ -619,6 +620,29 @@ div[role=document] {
   div[role=document] {
     padding-inline: 0;
   }
+}
+div[role=document] > aside {
+  font-size: 85%;
+  margin-block: 1rem;
+  text-align: end;
+}
+div[role=document] > footer {
+  border-block-start: var(--default-border-width) solid var(--whisper);
+  font-size: 85%;
+  margin-block: 1rem;
+  padding-block-start: 1rem;
+}
+div[role=document] > main > nav menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 0;
+}
+div[role=document] > main > nav li {
+  margin-inline-end: 0.5rem;
+}
+div[role=document] > main > section {
+  border-block-start: var(--default-border-width) solid var(--whisper);
+  margin-block-end: 3rem;
 }
 
 .bg-loud {

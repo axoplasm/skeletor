@@ -35,6 +35,7 @@ html {
     @include breakpoint($small-width) {
         font-size: calc(var(--default-font-size) * 1.1);
     }
+    scroll-behavior: smooth;
 }
 @media (prefers-color-scheme: dark) {
     html {

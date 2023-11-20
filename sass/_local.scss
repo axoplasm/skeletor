@@ -6,6 +6,34 @@ div[role='document'] {
     @include breakpoint(calc($large-width + 2rem)) {
         padding-inline: 0;
     }
+    // styleguide page elements
+    & > aside {
+        font-size: 85%;
+        margin-block: 1rem;
+        text-align: end;
+    }
+    & > footer {
+        border-block-start: var(--default-border-width) solid var(--whisper);
+        font-size: 85%;
+        margin-block: 1rem;
+        padding-block-start: 1rem;
+    }
+    & > main {
+        & > nav {
+            menu {
+                display: flex;
+                flex-wrap: wrap;
+                margin-inline: 0;
+            }
+            li {
+                margin-inline-end: 0.5rem;
+            }
+        }
+        & > section {
+            border-block-start: var(--default-border-width) solid var(--whisper);
+            margin-block-end: 3rem;
+        }
+    }
 }
 
 // colors
