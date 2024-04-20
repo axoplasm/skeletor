@@ -104,7 +104,7 @@ input[type=button] {
     @include buttonish(var(--hushed), white);
 }
 input[type=reset] {
-    @include buttonish(var(--danger), white);
+    @include buttonish(white, var(--danger));
 }
 input[type=checkbox],
 input[type=radio] {

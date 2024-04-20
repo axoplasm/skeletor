@@ -547,10 +547,10 @@ input[type=button]:hover {
 }
 
 input[type=reset] {
-  background-color: var(--danger);
+  background-color: white;
   border: none;
   border-radius: var(--default-border-radius);
-  color: white;
+  color: var(--danger);
   display: inline-block;
   font-weight: var(--bold-weight);
   padding: 0.5rem 1rem;
