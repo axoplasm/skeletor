@@ -101,43 +101,43 @@ meter {
 
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Bold.woff2");
-  src: url("/static/fonts/publicsans-Bold.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-bold.woff2");
+  src: url("/static/fonts/publicsans-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Bold-Italic.woff2");
-  src: url("/static/fonts/publicsans-Bold-Italic.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-bold-italic.woff2");
+  src: url("/static/fonts/publicsans-bold-italic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Regular.woff2");
-  src: url("/static/fonts/publicsans-Regular.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-regular.woff2");
+  src: url("/static/fonts/publicsans-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Regular-Italic.woff2");
-  src: url("/static/fonts/publicsans-Regular-Italic.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-regular-italic.woff2");
+  src: url("/static/fonts/publicsans-regular-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Light.woff2");
-  src: url("/static/fonts/publicsans-Light.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-light.woff2");
+  src: url("/static/fonts/publicsans-light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "publicsans";
-  src: url("/static/fonts/publicsans-Light-Italic.woff2");
-  src: url("/static/fonts/publicsans-Light-Italic.woff2") format("woff2");
+  src: url("/static/fonts/publicsans-light-italic.woff2");
+  src: url("/static/fonts/publicsans-light-italic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }

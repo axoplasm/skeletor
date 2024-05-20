@@ -1,9 +1,9 @@
 $static-path: '/static/fonts/';
 $family-name: 'publicsans';
 $weights: (
-    700: Bold,
-    400: Regular,
-    300: Light,
+    700: bold,
+    400: regular,
+    300: light,
 );
 $format: 'woff2';
 
@@ -18,8 +18,8 @@ $format: 'woff2';
     }
     @font-face {
         font-family: $family-name;
-        src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}');
-        src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}') format($format);
+        src: url('/static/fonts/#{$family-name}-#{$name}-italic.#{$format}');
+        src: url('/static/fonts/#{$family-name}-#{$name}-italic.#{$format}') format($format);
         font-weight: $weight; 
         font-style: italic;
     }
