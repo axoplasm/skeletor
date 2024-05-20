@@ -99,6 +99,48 @@ meter {
   all: revert;
 }
 
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Bold.woff2");
+  src: url("/static/fonts/publicsans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Bold-Italic.woff2");
+  src: url("/static/fonts/publicsans-Bold-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Regular.woff2");
+  src: url("/static/fonts/publicsans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Regular-Italic.woff2");
+  src: url("/static/fonts/publicsans-Regular-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Light.woff2");
+  src: url("/static/fonts/publicsans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "publicsans";
+  src: url("/static/fonts/publicsans-Light-Italic.woff2");
+  src: url("/static/fonts/publicsans-Light-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
 html {
   --loud: hsl(0, 0%, 0%);
   --spoken: hsl(0, 0%, 0%);
@@ -141,7 +183,8 @@ html {
   --gray-9: hsl(0, 0%, 90%);
   --gray-95: hsl(0, 0%, 95%);
   --gray-100: hsl(0, 0%, 100%);
-  --sans-font: sans-serif;
+  --sans-font: "publicsans", sans-serif;
+  --serif-font: serif;
   --monospace-font: monospace;
   --default-font-size: 16px;
   --bold-weight: 700;
