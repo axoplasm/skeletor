@@ -37,6 +37,22 @@ div[role='document'] {
 }
 
 // colors
+@each $name, $color in $color-primitives {
+    .bg-#{$name} {
+        background: var(--#{$name});
+    }
+    .fg-#{$name} {
+        color: var(--#{$name});
+    }
+}
+@each $name, $color in $gray-primitives {
+    .bg-#{$name} {
+        background: var(--#{$name});
+    }
+    .fg-#{$name} {
+        color: var(--#{$name});
+    }
+}
 @each $name in $abstract-colors {
     .bg-#{$name} {
         background: var(--#{$name});

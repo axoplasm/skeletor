@@ -3,8 +3,10 @@ layout: base.html
 title: Skeletor
 abstract-colors:
 - loud
-- sottovoce
+- spoken
+- soft
 - hushed
+- breathy
 - whisper
 - quiet
 - silent
@@ -15,6 +17,37 @@ abstract-colors:
 - info
 - highlight
 - hero
+- strange
+
+color-primitives:
+- red
+- orange
+- brown
+- yellow
+- sage
+- green
+- forest
+- teal
+- sky
+- blue
+- navy
+- purple
+- pink
+
+gray-primitives:
+- gray-0
+- gray-1
+- gray-2
+- gray-3
+- gray-4
+- gray-5
+- gray-6
+- gray-7
+- gray-8
+- gray-9
+- gray-95
+- gray-100
+
 ---
 <nav id="page-nav">
     <menu>
@@ -302,6 +335,15 @@ abstract-colors:
 
 <section id="colors">
     <h2 class="fg-hushed"><small>Colors</small></h2>
+
+    <h3 class="fg-hushed"><small>Color primitives</small></h3>
+    {% include 'color-table.html', colors: color-primitives %}
+
+    <h3 class="fg-hushed"><small>Gray primitives</small></h3>
+    {% include 'color-table.html', colors: gray-primitives %}
+
+    <h3 class="fg-hushed"><small>Abstract colors</small></h3>
     {% include 'color-table.html', colors: abstract-colors %}
+
     <p><small><a href="#top">top ↑</a></small></p>
 </section>

@@ -19,7 +19,7 @@ $brown:   hsl(28, 54%,35%);  // #8b572a
 // Grays
 $gray-hue: 0;
 $gray-saturation: 0%;
-$black:     hsl($gray-hue, $gray-saturation, 0%);   // #000000
+$gray-0:    hsl($gray-hue, $gray-saturation, 0%);   // #000000
 $gray-1:    hsl($gray-hue, $gray-saturation, 10%);  // #1a1a1a
 $gray-2:    hsl($gray-hue, $gray-saturation, 20%);  // #333333
 $gray-3:    hsl($gray-hue, $gray-saturation, 30%);  // #4d4d4d
@@ -30,7 +30,9 @@ $gray-7:    hsl($gray-hue, $gray-saturation, 70%);  // #b3b3b3
 $gray-8:    hsl($gray-hue, $gray-saturation, 80%);  // #cccccc
 $gray-9:    hsl($gray-hue, $gray-saturation, 90%);  // #e6e6e6
 $gray-95:   hsl($gray-hue, $gray-saturation, 95%);  // #f2f2f2
-$white:     hsl($gray-hue, $gray-saturation, 100%); // #ffffff
+$gray-100:  hsl($gray-hue, $gray-saturation, 100%); // #ffffff
+$black:     $gray-0;
+$white:     $gray-100;
 
 
 // color maps
@@ -52,7 +54,7 @@ $color-primitives: (
 );
 $gray-primitives: (
 // unused?
-    'black':    $black,
+    'gray-0':   $gray-0,
     'gray-1':   $gray-1,
     'gray-2':   $gray-2,
     'gray-3':   $gray-3,
@@ -63,46 +65,52 @@ $gray-primitives: (
     'gray-8':   $gray-8,
     'gray-9':   $gray-9,
     'gray-95':  $gray-95,
-    'white':    $white,
+    'gray-100': $gray-100,
 );
 
 // color abstractions are repeated & mapped to values in the html elements of _base.scss
 $abstract-colors-light: (
     'loud':             $black,
-    'sottovoce':        $gray-4,
+    'spoken':           $black, // generally same as loud
+    'soft':             $gray-4,
     'hushed':           $gray-6,
+    'breathy':          $gray-6, // generally same as hushsed
     'whisper':          $gray-8,
     'quiet':            $gray-9,
     'silent':           $white,
     'emphasis':         $pink,
     'danger':           $red,
     'warning':          $orange,
-    'strange':          $purple,
     'success':          $green,
     'info':             $blue,
     'highlight':        $yellow,
     'hero':             $pink,
+    'strange':          $purple,
 );
 $abstract-colors-dark: (
     'loud':             $white,
-    'sottovoce':        $gray-6,
+    'spoken':           $white, // generally same as loud
+    'soft':             $gray-7,
     'hushed':           $gray-5,
+    'breathy':          $gray-5, // generally same as hushed
     'whisper':          $gray-4,
-    'quiet':            $gray-3,
+    'quiet':            $gray-2,
     'silent':           $black,
     'emphasis':         $pink,
     'danger':           $red,
     'warning':          $orange,
-    'strange':          $purple,
     'success':          $green,
     'info':             $blue,
     'highlight':        $yellow,
     'hero':             $pink,
+    'strange':          $purple,
 );
 $abstract-colors: (
     'loud',
-    'sottovoce',
+    'spoken',
+    'soft',
     'hushed',
+    'breathy',
     'whisper',
     'quiet',
     'silent',
