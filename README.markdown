@@ -10,6 +10,7 @@ Dependencies
 ------------
 - [The New CSS Reset](https://elad2412.github.io/the-new-css-reset/)
 - [11ty](https://www.11ty.dev)
+- [IBM Plex](https://github.com/IBM/plex/) *(Optional)*
 
 
 Installation 
