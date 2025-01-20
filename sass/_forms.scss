@@ -1,3 +1,6 @@
+@use "lib";
+@use "variables";
+
 orm {} // IMPORTANT: do not add layout or styling to <form>!
 form ul {
     list-style-type: none;
@@ -24,7 +27,7 @@ label {
     font-weight: var(--bold-weight);
 }
 input, textarea, select {
-    background: $white;
+    background: variables.$white;
     border: 1px solid var(--whisper);
 }
 input, textarea, select, option {
@@ -44,7 +47,7 @@ select {
     appearance: none;
     background-color: var(--silent);
     padding-inline-end: 2rem;
-    @include caret($direction: down, $inline-offset: 0.75rem);
+    @include lib.caret($direction: down, $inline-offset: 0.75rem);
 }
 input[type=text],
 input[type=password],
@@ -98,13 +101,13 @@ input[type=range] {
     }
 }
 input[type=submit] {
-    @include buttonish(var(--info), white);
+    @include lib.buttonish(var(--info), white);
 }
 input[type=button] {
-    @include buttonish(var(--hushed), white);
+    @include lib.buttonish(var(--hushed), white);
 }
 input[type=reset] {
-    @include buttonish(white, var(--danger));
+    @include lib.buttonish(white, var(--danger));
 }
 input[type=checkbox],
 input[type=radio] {

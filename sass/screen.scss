@@ -1,22 +1,21 @@
 // # Dependencies # //
 @use "sass:math";
 
-
 // Local libraries, these produce no css
-@import "variables"; // local sass variables for this project
-@import "lib"; // functions, mixins & pseudoclasses, import after variables
+@use "variables"; // local sass variables for this project
+@use "lib"; // functions, mixins & pseudoclasses, import after variables
 
 // Reset
-@import "../node_modules/the-new-css-reset/css/reset";
+@use "../node_modules/the-new-css-reset/css/reset";
 
 // Fonts
-@import "fonts";
+@use "fonts";
 
 // Base HTML
-@import "base"; 
-@import "forms"; 
+@use "base"; 
+@use "forms"; 
 
 // Layout, page regions, modules, custom selectors
-@import "local";
+@use "local";
 
 // Unsorted

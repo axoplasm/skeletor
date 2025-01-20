@@ -1,15 +1,18 @@
+@use "lib";
+@use "variables";
+
 // Block-level HTML elements
 html {
     // variables
     // primitive color css variables
     // light abstract css variables
-    @each $name, $color in $abstract-colors-light {
+    @each $name, $color in variables.$abstract-colors-light {
         --#{$name}: #{$color};
     }
-    @each $name, $color in $color-primitives {
+    @each $name, $color in variables.$color-primitives {
         --#{$name}: #{$color};
     }
-    @each $name, $color in $gray-primitives {
+    @each $name, $color in variables.$gray-primitives {
         --#{$name}: #{$color};
     }
 
@@ -26,7 +29,7 @@ html {
     --compact-line-height: 1.25;
 
     // layout
-    @each $name, $width in $device-widths {
+    @each $name, $width in variables.$device-widths {
         --#{$name}: #{$width};
     }
 
@@ -40,14 +43,14 @@ html {
     // global defaults
     font-size: var(--default-font-size);
     scroll-behavior: smooth;
-    @include breakpoint($small-width) {
+    @include lib.breakpoint(variables.$small-width) {
         font-size: calc(var(--default-font-size) * 1.1);
     }
 }
 @media (prefers-color-scheme: dark) {
     html {
         // dark abstract css variables
-        @each $name, $color in $abstract-colors-dark {
+        @each $name, $color in variables.$abstract-colors-dark {
             --#{$name}: #{$color};
         }
     }
@@ -86,12 +89,12 @@ summary {
         line-height: 1;
         margin-inline-end: 0.5rem;
         width: 0.75rem;
-        @include caret($direction:right, $inline-offset: 0.125rem, $block-offset: 0);
+        @include lib.caret($direction:right, $inline-offset: 0.125rem, $block-offset: 0);
     }
     details[open] > & {
         margin-block-end: 1rem;
         &:before {
-            @include caret($direction:down, $inline-offset: 0, $block-offset: 0.25rem);
+            @include lib.caret($direction:down, $inline-offset: 0, $block-offset: 0.25rem);
         }
     }
     &::-webkit-details-marker, &::marker {

@@ -1,9 +1,12 @@
+@use "lib";
+@use "variables";
+
 //  layout
 div[role='document'] {
     max-width: var(--large-width);
     margin-inline: auto;
     padding-inline: 1rem;
-    @include breakpoint(calc($large-width + 2rem)) {
+    @include lib.breakpoint(calc(variables.$large-width + 2rem)) {
         padding-inline: 0;
     }
     // styleguide page elements
@@ -37,7 +40,7 @@ div[role='document'] {
 }
 
 // colors
-@each $name, $color in $color-primitives {
+@each $name, $color in variables.$color-primitives {
     .bg-#{$name} {
         background: var(--#{$name});
     }
@@ -45,7 +48,7 @@ div[role='document'] {
         color: var(--#{$name});
     }
 }
-@each $name, $color in $gray-primitives {
+@each $name, $color in variables.$gray-primitives {
     .bg-#{$name} {
         background: var(--#{$name});
     }
@@ -53,7 +56,7 @@ div[role='document'] {
         color: var(--#{$name});
     }
 }
-@each $name in $abstract-colors {
+@each $name in variables.$abstract-colors {
     .bg-#{$name} {
         background: var(--#{$name});
     }
@@ -71,13 +74,13 @@ div[role='document'] {
 
 // Buttons
 a.button {
-    @include buttonish(var(--info), white);
+    @include lib.buttonish(var(--info), white);
 }
 a.button-hot {
-    @include buttonish(var(--emphasis), white);
+    @include lib.buttonish(var(--emphasis), white);
 }
 a.button-cool {
-    @include buttonish(var(--hushed), white);
+    @include lib.buttonish(var(--hushed), white);
 }
 
 // images
