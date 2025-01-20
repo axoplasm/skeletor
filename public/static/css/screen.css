@@ -191,8 +191,8 @@ meter {
 }
 @font-face {
   font-family: "IBMPlexSans";
-  src: url("/static/fonts/IBMPlexSans-Italic.woff2");
-  src: url("/static/fonts/IBMPlexSans-Italic.woff2") format("woff2");
+  src: url("/static/fonts/IBMPlexSansItalic.woff2");
+  src: url("/static/fonts/IBMPlexSansItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -238,6 +238,258 @@ meter {
   font-weight: 100;
   font-style: italic;
 }
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Black.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Black-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Black-Italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-ExtraBold.woff2");
+  src: url("/static/fonts/IBMPlexSerif-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-ExtraBold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-ExtraBold-Italic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Bold.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Bold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Bold-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-SemiBold.woff2");
+  src: url("/static/fonts/IBMPlexSerif-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-SemiBold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-SemiBold-Italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Medium.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Medium-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Medium-Italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Regular.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerifItalic.woff2");
+  src: url("/static/fonts/IBMPlexSerifItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Light.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Light-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Light-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-ExtraLight.woff2");
+  src: url("/static/fonts/IBMPlexSerif-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-ExtraLight-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-ExtraLight-Italic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Thin.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSerif";
+  src: url("/static/fonts/IBMPlexSerif-Thin-Italic.woff2");
+  src: url("/static/fonts/IBMPlexSerif-Thin-Italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Black.woff2");
+  src: url("/static/fonts/IBMPlexMono-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Black-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-Black-Italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-ExtraBold.woff2");
+  src: url("/static/fonts/IBMPlexMono-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-ExtraBold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-ExtraBold-Italic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Bold.woff2");
+  src: url("/static/fonts/IBMPlexMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Bold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-Bold-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-SemiBold.woff2");
+  src: url("/static/fonts/IBMPlexMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-SemiBold-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-SemiBold-Italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Medium.woff2");
+  src: url("/static/fonts/IBMPlexMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Medium-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-Medium-Italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Regular.woff2");
+  src: url("/static/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMonoItalic.woff2");
+  src: url("/static/fonts/IBMPlexMonoItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Light.woff2");
+  src: url("/static/fonts/IBMPlexMono-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Light-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-Light-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-ExtraLight.woff2");
+  src: url("/static/fonts/IBMPlexMono-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-ExtraLight-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-ExtraLight-Italic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Thin.woff2");
+  src: url("/static/fonts/IBMPlexMono-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url("/static/fonts/IBMPlexMono-Thin-Italic.woff2");
+  src: url("/static/fonts/IBMPlexMono-Thin-Italic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
 html {
   --loud: hsl(0, 0%, 0%);
   --spoken: hsl(0, 0%, 0%);
@@ -280,9 +532,9 @@ html {
   --gray-9: hsl(0, 0%, 90%);
   --gray-95: hsl(0, 0%, 95%);
   --gray-100: hsl(0, 0%, 100%);
-  --sans-font: "IBMPlexSans", sans-serif;
-  --serif-font: serif;
-  --monospace-font: monospace;
+  --sans-font: IBMPlexSans, sans-serif;
+  --serif-font: IBMPlexSerif, serif;
+  --monospace-font: IBMPlexMono, monospace;
   --default-font-size: 16px;
   --black-weight: 900;
   --extrabold-weight: 800;
@@ -1167,40 +1419,60 @@ div[role=document] > main > section {
   width: 50%;
 }
 
-.weight-black {
+.black, .black-weight {
   font-weight: var(--black-weight);
 }
 
-.weight-extrabold {
+.extrabold, .extrabold-weight {
   font-weight: var(--extrabold-weight);
 }
 
-.weight-bold {
+.bold, .bold-weight {
   font-weight: var(--bold-weight);
 }
 
-.weight-semibold {
+.semibold, .semibold-weight {
   font-weight: var(--semibold-weight);
 }
 
-.weight-medium {
+.medium, .medium-weight {
   font-weight: var(--medium-weight);
 }
 
-.weight-regular {
+.regular, .regular-weight {
   font-weight: var(--regular-weight);
 }
 
-.weight-light {
+.light, .light-weight {
   font-weight: var(--light-weight);
 }
 
-.weight-extralight {
+.extralight, .extralight-weight {
   font-weight: var(--extralight-weight);
 }
 
-.weight-thin {
+.thin, .thin-weight {
   font-weight: var(--thin-weight);
+}
+
+.sans-family, .sans {
+  font-family: var(--sans-font);
+}
+
+.serif-family, .serif {
+  font-family: var(--serif-font);
+}
+
+.monospace-family, .monospace {
+  font-family: var(--monospace-font);
+}
+
+.normal-style {
+  font-style: normal;
+}
+
+.italic-style {
+  font-style: italic;
 }
 
 a.button {

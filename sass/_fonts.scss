@@ -1,38 +1,40 @@
 $static-path: '/static/fonts/';
-$family-name: 'IBMPlexSans';
+$sans-family: 'IBMPlexSans';
+$serif-family: 'IBMPlexSerif';
+$mono-family: 'IBMPlexMono';
 $weights: (
-    900: Black,
-    800: ExtraBold,
-    700: Bold,
-    600: SemiBold,
-    500: Medium,
-    400: Regular,
-    300: Light,
-    200: ExtraLight,
-    100: Thin,
+    900: 'Black',
+    800: 'ExtraBold',
+    700: 'Bold',
+    600: 'SemiBold',
+    500: 'Medium',
+    400: 'Regular',
+    300: 'Light',
+    200: 'ExtraLight',
+    100: 'Thin',
 );
 $format: 'woff2';
 
-
-@each $weight, $name in $weights {
-    @font-face {
-        font-family: $family-name;
-        src: url('/static/fonts/#{$family-name}-#{$name}.#{$format}');
-        src: url('/static/fonts/#{$family-name}-#{$name}.#{$format}') format($format);
-        font-weight: $weight; 
-        font-style: normal;
-    }
-    @font-face {
-        font-family: $family-name;
-        @if $name == 'Regular' {
-            src: url('/static/fonts/#{$family-name}-Italic.#{$format}');
-            src: url('/static/fonts/#{$family-name}-Italic.#{$format}') format($format);
-        } @else {
-            src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}');
-            src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}') format($format);
+@each $family-name in $sans-family, $serif-family, $mono-family {
+    @each $weight, $name in $weights {
+        @font-face {
+            font-family: $family-name;
+            src: url('/static/fonts/#{$family-name}-#{$name}.#{$format}');
+            src: url('/static/fonts/#{$family-name}-#{$name}.#{$format}') format($format);
+            font-weight: $weight; 
+            font-style: normal;
         }
-        font-weight: $weight; 
-        font-style: italic;
+        @font-face {
+            font-family: $family-name;
+            @if $name == 'Regular' {
+                src: url('/static/fonts/#{$family-name}Italic.#{$format}');
+                src: url('/static/fonts/#{$family-name}Italic.#{$format}') format($format);
+            } @else {
+                src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}');
+                src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}') format($format);
+            }
+            font-weight: $weight; 
+            font-style: italic;
+        }
     }
 }
-

@@ -19,9 +19,9 @@ html {
     }
 
     // typography 
-    --sans-font: 'IBMPlexSans', sans-serif;
-    --serif-font: serif;
-    --monospace-font: monospace;
+    --sans-font: #{fonts.$sans-family}, sans-serif;
+    --serif-font: #{fonts.$serif-family}, serif;
+    --monospace-font: #{fonts.$mono-family}, monospace;
     --default-font-size: 16px;
     @each $weight, $name in fonts.$weights {
         $_name: string.to-lower-case(#{$name});

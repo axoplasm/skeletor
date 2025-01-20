@@ -59,6 +59,11 @@ font-weights:
 - extralight
 - thin
 
+font-families:
+- sans
+- serif
+- monospace
+
 ---
 <nav id="page-nav">
     <menu>
@@ -138,12 +143,25 @@ font-weights:
 
     <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var></p>
 
-    <h3>Font weights</h3>
-    <ul>
-        {% for weight in font-weights %}
-        <li><span class="weight-{{ weight }}">{{ weight }}</span></li>
-        {% endfor %}
-    </ul>
+    <h3>Font weights &amp; families</h3>
+    <table>
+        <tbody>
+            {% for weight in font-weights %}
+            <tr>
+                {% for family in font-families %}
+                <td>
+                    <span class="{{ weight }}-weight {{ family }}-family ">
+                        {{ family }} {{ weight }}
+                    </span>
+                    <span class="{{ weight }}-weight {{ family }}-family italic-style">
+                        (italic)
+                    </span>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
     <p><small><a href="#top">top ↑</a></small></p>
 </section>

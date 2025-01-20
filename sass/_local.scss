@@ -75,14 +75,31 @@ div[role='document'] {
 }
 
 // font weights
-// font-weights
 @each $weight, $name in fonts.$weights {
-    $_name: string.to-lower-case(#{$name});
-    .weight-#{$_name} {
+    $_name: string.to-lower-case($name);
+    .#{$_name}, .#{$_name}-weight {
         font-weight: var(--#{$_name}-weight);
     }
 }
 
+// font families
+.sans-family, .sans {
+    font-family: var(--sans-font);
+}
+.serif-family, .serif {
+    font-family: var(--serif-font);
+}
+.monospace-family, .monospace {
+    font-family: var(--monospace-font);
+}
+
+// font styles
+.normal-style {
+    font-style: normal;
+}
+.italic-style {
+    font-style: italic;
+}
 
 // Buttons
 a.button {
