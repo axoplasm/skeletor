@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setServerOptions({
         port: 8000
     });
+    eleventyConfig.addPassthroughCopy('static');
     return {
         dir: {
             input: "views",
