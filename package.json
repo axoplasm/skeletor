@@ -5,15 +5,15 @@
   "author": "Paul Souders <paul@scrubjay.works>",
   "license": "",
   "main": "index.js",
-    "scripts": {
-        "watch:eleventy": "npx @11ty/eleventy --serve",
-        "watch:sass": "npx sass sass/screen.scss:public/static/css/screen.css --watch --poll",
-        "start": "npm run watch:eleventy & npm run watch:sass"
-    },
-    "devDependencies": {
-        "@11ty/eleventy": "^3.0",
-        "sass": "^1.83",
-        "the-new-css-reset": "^1.11"
-    }
+  "scripts": {
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass sass/screen.scss:public/static/css/screen.css --watch --poll",
+    "start": "npm run watch:eleventy & npm run watch:sass"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0",
+    "@ibm/plex": "^6.4.1",
+    "sass": "^1.83",
+    "the-new-css-reset": "^1.11"
+  }
 }
-  

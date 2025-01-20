@@ -1,5 +1,7 @@
 @use "lib";
 @use "variables";
+@use "fonts";
+@use "sass:string";
 
 //  layout
 div[role='document'] {
@@ -71,6 +73,16 @@ div[role='document'] {
     padding: 0.25rem;
     width: 50%;
 }
+
+// font weights
+// font-weights
+@each $weight, $name in fonts.$weights {
+    $_name: string.to-lower-case(#{$name});
+    .weight-#{$_name} {
+        font-weight: var(--#{$_name}-weight);
+    }
+}
+
 
 // Buttons
 a.button {

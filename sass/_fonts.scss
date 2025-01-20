@@ -1,9 +1,15 @@
 $static-path: '/static/fonts/';
-$family-name: 'publicsans';
+$family-name: 'IBMPlexSans';
 $weights: (
-    700: bold,
-    400: regular,
-    300: light,
+    900: Black,
+    800: ExtraBold,
+    700: Bold,
+    600: SemiBold,
+    500: Medium,
+    400: Regular,
+    300: Light,
+    200: ExtraLight,
+    100: Thin,
 );
 $format: 'woff2';
 
@@ -18,8 +24,13 @@ $format: 'woff2';
     }
     @font-face {
         font-family: $family-name;
-        src: url('/static/fonts/#{$family-name}-#{$name}-italic.#{$format}');
-        src: url('/static/fonts/#{$family-name}-#{$name}-italic.#{$format}') format($format);
+        @if $name == 'Regular' {
+            src: url('/static/fonts/#{$family-name}-Italic.#{$format}');
+            src: url('/static/fonts/#{$family-name}-Italic.#{$format}') format($format);
+        } @else {
+            src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}');
+            src: url('/static/fonts/#{$family-name}-#{$name}-Italic.#{$format}') format($format);
+        }
         font-weight: $weight; 
         font-style: italic;
     }

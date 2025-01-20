@@ -48,6 +48,17 @@ gray-primitives:
 - gray-95
 - gray-100
 
+font-weights:
+- black
+- extrabold
+- bold
+- semibold
+- medium
+- regular
+- light
+- extralight
+- thin
+
 ---
 <nav id="page-nav">
     <menu>
@@ -126,6 +137,13 @@ gray-primitives:
     <p><samp>This is sample output from a computer program</samp></p>
 
     <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var></p>
+
+    <h3>Font weights</h3>
+    <ul>
+        {% for weight in font-weights %}
+        <li><span class="weight-{{ weight }}">{{ weight }}</span></li>
+        {% endfor %}
+    </ul>
 
     <p><small><a href="#top">top ↑</a></small></p>
 </section>

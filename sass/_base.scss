@@ -1,5 +1,7 @@
 @use "lib";
 @use "variables";
+@use "fonts";
+@use "sass:string";
 
 // Block-level HTML elements
 html {
@@ -17,13 +19,14 @@ html {
     }
 
     // typography 
-    --sans-font: 'publicsans', sans-serif;
+    --sans-font: 'IBMPlexSans', sans-serif;
     --serif-font: serif;
     --monospace-font: monospace;
     --default-font-size: 16px;
-    --bold-weight: 700;
-    --regular-weight: 400;
-    --light-weight: 300;
+    @each $weight, $name in fonts.$weights {
+        $_name: string.to-lower-case(#{$name});
+        --#{$_name}-weight: #{$weight};
+    }
     --oblique-style: italic;
     --default-line-height: 1.5;
     --compact-line-height: 1.25;
